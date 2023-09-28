@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ReclamationController;
+/*
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +26,4 @@ Route::get('/', function () {
 Route::get('/Admin/dashboard', function () {
     return view('admin.components.Dashboard');
 });
+Route::resource('reclamation',ReclamationController::class);
