@@ -37,7 +37,7 @@ class AnnonceController extends Controller
             [
                 'title' => 'required',
                 'tags' => 'required',
-                'description' => 'required',
+                'description' => 'required|max:250',
                 'echangetype' => 'required',
 
             ]
@@ -46,6 +46,7 @@ class AnnonceController extends Controller
         if($request->Hasfile('imageannonce')){
             $formFields['image']=$request->file('imageannonce')->store('imageannonces','public');
         }
+ 
         annonce::create($formFields);
         
         return redirect()->route('Annonce.index')
@@ -56,8 +57,11 @@ class AnnonceController extends Controller
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        //
+    {   
+        $annonce = annonce::find($id) ;
+        return view('Userinterface.Annonce.show', [
+            'annonce' => $annonce
+        ]);
     }
 
     /**
@@ -81,7 +85,7 @@ class AnnonceController extends Controller
             [
                 'title' => 'required',
                 'tags' => 'required',
-                'description' => 'required',
+                'description' => 'required'|'max:250',
                 'echangetype' => 'required',
 
             ]

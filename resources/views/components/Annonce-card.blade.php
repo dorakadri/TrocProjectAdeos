@@ -16,6 +16,7 @@
                          <h5 class="mb-0 d-inline-block">Dorra Kadri</h5>
                    
                          <p class="mb-0 text-primary">{{$annonce->created_at->diffForHumans()}}</p>
+
                       </div>
                    
                       <div class="card-post-toolbar">
@@ -35,6 +36,17 @@
                                      </div>
                                   </div>
                                </a>
+                               <a class="dropdown-item p-3" href="{{ route('Annonce.show', $annonce->id) }}">
+                                 <div class="d-flex align-items-top">
+                                    <span class="material-symbols-outlined">
+                                    info
+                                    </span>
+                                    <div class="data ms-2">
+                                       <h6>Show details</h6>
+                                       <p class="mb-0">Show detailed information</p>
+                                    </div>
+                                 </div>
+                              </a>
                                <form  action="{{ route('Annonce.destroy', $annonce->id) }}" method="POST">
                                  @csrf
                                  @method('DELETE')
@@ -71,6 +83,7 @@
             </div>
          
           @endif
+          <div class=" me-4 d-flex align-items-center pb-1 "><i class="material-symbols-outlined pe-2 md-18 ">     person_pin_circle</i>{{ $annonce->location }}</div>
             <h4>{{$annonce->title}}</h4>
              <p>{{$annonce->description}}</p>
           </div>

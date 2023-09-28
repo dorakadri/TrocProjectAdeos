@@ -287,7 +287,7 @@
                 <a href="javascript:void(0);" class="d-flex align-items-center dropdown-toggle"
                     id="drop-down-arrow" data-bs-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    <img      src="images/pdf.jpg"  class="img-fluid rounded-circle me-3"
+                    <img    src="{{ asset('images/pdf.jpg')}}" class="img-fluid rounded-circle me-3"
                         alt="user" loading="lazy">
                   
                 </a>
