@@ -28,16 +28,16 @@
                             <i class="right-icon material-symbols-outlined">chevron_right</i>
                         </a>
                         <ul class="sub-nav collapse" id="profile" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                    href="https://templates.iqonic.design/socialv/bs5/html/dist/app/profile.html">
-                                    <i class="icon material-symbols-outlined filled">
-                                        fiber_manual_record
-                                    </i>
-                                    <i class="sidenav-mini-icon"> P </i>
-                                    <span class="item-name"> my claims </span>
-                                </a>
-                            </li>
+                      <li class="nav-item">
+    <a class="nav-link" href="{{ route('reclamation.store') }}">
+        <i class="icon material-symbols-outlined filled">
+            fiber_manual_record
+        </i>
+        <i class="sidenav-mini-icon"> P </i>
+        <span class="item-name">my claims</span>
+    </a>
+</li>
+
                             <li class="nav-item">
                                 <a class="nav-link " href="profile1.html">
                                     <i class="icon material-symbols-outlined filled">
