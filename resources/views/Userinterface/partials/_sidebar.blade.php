@@ -4,14 +4,14 @@
             <div class="sidebar-list">
                 <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
                     <li class="nav-item static-item">
-                        <a class="nav-link static-item disabled" href="#" tabindex="-1">
+                        <a class="nav-link static-item disabled" href="{{route('Annonce.index')}}" tabindex="-1">
                             <span class="default-icon">Social</span>
                             <span class="mini-icon" data-bs-toggle="tooltip" title="Social"
                                 data-bs-placement="right">-</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">
+                        <a class="nav-link" aria-current="page" href="{{route('Annonce.index')}}">
                             <i class="icon material-symbols-outlined">
                                 newspaper
                             </i>

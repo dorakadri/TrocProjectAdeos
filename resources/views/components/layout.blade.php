@@ -56,7 +56,13 @@
 
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
+    <script>
+        $(document).ready(function() {
+            @if($errors->any())
+                $('#post-modal').modal('show');
+            @endif
+        });
+      </script>
 
 
 </body>

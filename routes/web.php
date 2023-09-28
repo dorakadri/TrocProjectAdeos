@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnonceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //just for test mba3ed bich tkoun 3ana ressources 
-Route::get('/profile', function () {
+/* Route::get('/profile', function () {
     return view('components.profile');
 });
 Route::get('/', function () {
@@ -24,4 +25,9 @@ Route::get('/', function () {
 //just for test mba3ed bich tkoun 3ana ressources 
 Route::get('/Admin/dashboard', function () {
     return view('admin.components.Dashboard');
-});
+}); */  
+
+Route::redirect('/', '/Annonce');
+Route::resource ('Annonce',AnnonceController::class) ;
+Route::get('/profile',[AnnonceController::class,'UserList']);
+

@@ -1,1334 +1,3138 @@
 @extends('components.layout')
 @section('content')
-
 <div class="row">
-    <div class="col-lg-12">
-       <div class="card">
-          <div class="card-body">
-             <div class="row">
-                <div class="col-lg-2">
-                   <div class="item1 ms-1">
-                      <img src="../assets/images/user/15.jpg" class="img-fluid rounded profile-image" alt="profile-image" loading="lazy">
-                   </div>
-                </div>
-                <div class="col-lg-10">
-                   <div class="d-flex justify-content-between">
-                      <div class="item2 ">
-                         <h4 class="">Mathilda Gvarliani</h4>
-                         <span>60 630 followers</span>       
-                      </div>
-                      <div class="item4 ms-1">
-                         <div class="d-flex justify-content-between align-items-center ms-1 flex-wrap">
-                            <div class="d-flex align-items-center">
-                               <span class="material-symbols-outlined writ-icon md-18">
-                               send
-                               </span>
-                               <h6 class="ms-1">Write a message</h6>
-                            </div>
-                            <button type="button" class="btn btn-primary ms-2 btn-sm d-flex align-items-center"><span class="material-symbols-outlined  md-16">
-                            add
-                            </span>Follow</button>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="row">
-                      <div class="col-lg-5">
-                         <div class="item5 mt-3">
-                            <div class="d-flex align-items-center mb-1">
-                               <span class="material-symbols-outlined  md-18">
-                               business_center
-                               </span>
-                               <a href="#" class="link-primary h6 ms-2">Model at next model management</a>
-                            </div>
-                            <div class="d-flex align-items-center mb-1">
-                               <span class="material-symbols-outlined md-18">
-                               import_contacts
-                               </span>
-                               <span class="ms-2">Studies public relations at <a href="#" class="link-primary h6">Cacus University</a></span>
-                            </div>
-                            <div class="d-flex align-items-center mb-1">
-                               <span class="material-symbols-outlined md-18">
-                               bookmark_border
-                               </span>
-                               <span class="ms-2"><a href="#" class="link-primary h6">Born on October 9, 2000</a></span>
-                            </div>
-                         </div>
-                      </div>
-                      <div class="col-lg-3">
-                         <div class="item6 border-light border-end border-start">
-                            <div class="ms-2">
-                               <h6 class="mb-2">People Mathilda follows</h6>
-                            </div>
-                            <div class="iq-media-group ms-2">
-                               <a href="#" class="iq-media">
-                               <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/05.jpg" alt="" loading="lazy">
-                               </a>
-                               <a href="#" class="iq-media">
-                               <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/06.jpg" alt="" loading="lazy">
-                               </a>
-                               <a href="#" class="iq-media">
-                               <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/07.jpg" alt="" loading="lazy">
-                               </a>
-                               <a href="#" class="iq-media">
-                               <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/08.jpg" alt="" loading="lazy">
-                               </a>
-                            </div>
-                         </div>
-                      </div>
-                      <div class="col-lg-4">
-                         <div class="item7 ms-2">
-                            <div class="d-flex justify-content-between mb-2 flex-wrap">
-                               <h6>Mathilda's Interests</h6>
-                               <a href="#">See all</a>
-                            </div>
-                            <div class="d-flex ">
-                               <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill">Fashion</button>
-                               <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill ms-1">CS</button>
-                               <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill ms-1">Cats</button>
-                               <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill ms-1">Politics</button>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </div>
- <div class="row">
-    <div class="col-lg-4">
-       <div class="card">
-          <div class="card-header d-flex justify-content-between">
-             <div class="header-title">
-                <h4 class="card-title">Bio</h4>
-             </div>
-             <div class="d-flex align-items-center">
-                <p class="m-0"><a href="#"> Know More </a></p>
-             </div>
-          </div>
-          <div class="card-body">
-             <div class="d-flex flex-column justify-content-between">
-                <h6 class="mb-1">Mathilda Mariam Gvarliani - Georgian</h6>
-                <h6 class="mb-1">@lookmodelsmanagement</h6>
-                <h6 class="mb-1">@nextmodels</h6>
-                <h6 class="mb-1">@munichmodels</h6>
-                <h6 class="mb-1">@elite_copenenhagen</h6>
-                <h6>been unpredictable since childhood</h6>
-             </div>
-             <hr>
-             <div class="d-flex flex-column justify-content-between">
-                <div class="d-flex align-items-center mb-1">
-                   <span class="material-symbols-outlined  md-18 me-2">
-                   business_center
-                   </span>
-                   <a href="#" class="link-primary">Model at next model management</a>
-                </div>
-                <div class="d-flex align-items-center mb-1">
-                   <span class="material-symbols-outlined md-18 me-2">
-                   import_contacts
-                   </span>
-                   <span>Studies public relations at <a href="#" class="link-primary ">Cacucasus University</a></span>
-                </div>
-                <div class="d-flex align-items-center mb-1">
-                   <span class="material-symbols-outlined md-18 me-2">
-                   bookmark_border
-                   </span>
-                   <span>Born on October 9, 2000</span>
-                </div>
-                <div class="d-flex align-items-center">
-                   <span class="material-symbols-outlined  md-18 me-2">
-                   hide_source
-                   </span>
-                   <span>Lives in <a href="#" class="link-primary ">Tbilisi, Georgia</a></span>
-                </div>
-             </div>
-          </div>
-       </div>
-       <div class="card">
-          <div class="card-header d-flex align-items-center justify-content-between">
-             <div class="header-title">
-                <h4 class="card-title">Photos</h4>
-             </div>
-             <a>See all photos</a>
-          </div>
-          <div class="card-body">
-             <div class="d-grid gap-2 grid-cols-3">
-                <a data-fslightbox="gallery" href="../assets/images/page-img/g2.jpg">
-                <img src="../assets/images/page-img/g2.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/g3.jpg">
-                <img src="../assets/images/page-img/g3.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/g4.jpg">
-                <img src="../assets/images/page-img/g4.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/g5.jpg">
-                <img src="../assets/images/page-img/g5.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/g6.jpg">
-                <img src="../assets/images/page-img/g6.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/g7.jpg">
-                <img src="../assets/images/page-img/g7.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/g8.jpg">
-                <img src="../assets/images/page-img/g8.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/gi-7.jpg">
-                <img src="../assets/images/page-img/g9.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-                <a data-fslightbox="gallery" href="../assets/images/page-img/gi-7.jpg">
-                <img src="../assets/images/page-img/g7.jpg" class="img-fluid bg-soft-info img-size" alt="photo-profile" loading="lazy">
-                </a>
-             </div>
-          </div>
-       </div>
-       <div class="card">
-          <div class="card-header d-flex align-items-center justify-content-between">
-             <div class="header-title">
-                <h4 class="card-title">Videos</h4>
-             </div>
-             <a>See all videos</a>
-          </div>
-          <div class="card-body">
-             <div class="d-grid gap-2">
-                <div class="ratio ">
-                   <iframe class="rounded embed-responsive-item" src="../../../../../../www.youtube.com/embed/zpOULjyy-n8f622.html?rel=0" allowfullscreen></iframe>
-                </div>
-                <div class="ratio">
-                   <iframe class="rounded embed-responsive-item" src="../../../../../../www.youtube.com/embed/zpOULjyy-n8f622.html?rel=0" allowfullscreen></iframe>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-    <div class="col-lg-8">
-       <div id="post-modal-data" class="card">
-          <div class="card-header d-flex justify-content-between">
-             <div class="header-title">
-                <h4 class="card-title">Create Post</h4>
-             </div>
-          </div>
-          <div class="card-body">
-             <div class="d-flex align-items-center">
-                <div class="user-img me-3">
-                   <img src="../assets/images/user/1.jpg" alt="userimg" class="avatar-60 rounded-circle" loading="lazy">
-                </div>
-                <form class="post-text w-100 "  data-bs-toggle="modal" data-bs-target="#post-modal" action="#">
-                   <input type="text" class="form-control rounded" placeholder="Write something here..." style="border:none;">
-                </form>
-             </div>
-             <hr>
-             <ul class=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">
-                <li class="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3 mb-md-0 mb-2"><img src="../assets/images/small/07.png" alt="icon" class="img-fluid me-2" loading="lazy"> Photo/Video</li>
-                <li class="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3 mb-md-0 mb-2"><img src="../assets/images/small/08.png" alt="icon" class="img-fluid me-2" loading="lazy"> Tag Friend</li>
-                <li class="bg-soft-primary rounded p-2 pointer d-flex align-items-center me-3"><img src="../assets/images/small/09.png" alt="icon" class="img-fluid me-2" loading="lazy"> Feeling/Activity</li>
-                <li class="bg-soft-primary rounded p-2 pointer text-center">
-                   <div class="card-header-toolbar d-flex align-items-center">
-                      <div class="dropdown">
-                         <div class="dropdown-toggle lh-1" id="post-option"   data-bs-toggle="dropdown">
-                            <span class="material-symbols-outlined"> more_horiz</span>
-                           
-                         </div>
-                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="post-option" style="">
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#post-modal">Check in</a>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#post-modal">Live Video</a>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#post-modal">Gif</a>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#post-modal">Watch Party</a>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#post-modal">Play with Friend</a>
-                         </div>
-                      </div>
-                   </div>
-                </li>
-             </ul>
-          </div>
-          <div class="modal fade" id="post-modal" tabindex="-1"  aria-labelledby="post-modalLabel" aria-hidden="true" >
-             <div class="modal-dialog  modal-lg modal-fullscreen-sm-down">
-                <div class="modal-content">
-                   <div class="modal-header">
-                      <h5 class="modal-title" id="post-modalLabel">Create Post</h5>
-                      <a href="javascript:void(0);" class="lh-1" data-bs-dismiss="modal">
-                         <span class="material-symbols-outlined">close</span>
-                      </a>
-                   </div>
-                   <div class="modal-body">
-                      <div class="d-flex align-items-center">
-                         <div class="user-img me-3">
-                            <img src="../assets/images/user/1.jpg" alt="userimg" class="avatar-60 rounded-circle img-fluid" loading="lazy">
-                         </div>
-                         <form class="post-text w-100" action="#">
-                            <input type="text" class="form-control rounded" placeholder="Write something here..." style="border:none;">
-                         </form>
-                      </div>
-                      <hr>
-                      <ul class="d-flex flex-wrap align-items-center list-inline m-0 p-0">
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/07.png" alt="icon" class="img-fluid" loading="lazy"> Photo/Video</div>
-                         </li>
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/08.png" alt="icon" class="img-fluid" loading="lazy"> Tag Friend</div>
-                         </li>
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/09.png" alt="icon" class="img-fluid" loading="lazy"> Feeling/Activity</div>
-                         </li>
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/10.png" alt="icon" class="img-fluid" loading="lazy"> Check in</div>
-                         </li>
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/11.png" alt="icon" class="img-fluid" loading="lazy"> Live Video</div>
-                         </li>
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/12.png" alt="icon" class="img-fluid" loading="lazy"> Gif</div>
-                         </li>
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/13.png" alt="icon" class="img-fluid" loading="lazy"> Watch Party</div>
-                         </li>
-                         <li class="col-md-6 mb-3">
-                            <div class="bg-soft-primary rounded p-2 pointer me-3"><a href="#"></a><img src="../assets/images/small/14.png" alt="icon" class="img-fluid" loading="lazy"> Play with Friends</div>
-                         </li>
-                      </ul>
-                      <hr>
-                      <div class="other-option">
-                         <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                               <div class="user-img me-3">
-                                  <img src="../assets/images/user/1.jpg" alt="userimg" class="avatar-60 rounded-circle img-fluid" loading="lazy">
-                               </div>
-                               <h6>Your Story</h6>
-                            </div>
-                            <div class="card-post-toolbar">
-                               <div class="dropdown">
-                                  <span class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                  <span class="btn btn-primary">Friend</span>
-                                  </span>
-                                  <div class="dropdown-menu m-0 p-0">
-                                     <a class="dropdown-item p-3" href="#">
-                                        <div class="d-flex align-items-top">
-                                           <span class="material-symbols-outlined">
-                                           save
-                                           </span>
-                                           <div class="data ms-2">
-                                              <h6>Public</h6>
-                                              <p class="mb-0">Anyone on or off Facebook</p>
-                                           </div>
-                                        </div>
-                                     </a>
-                                     <a class="dropdown-item p-3" href="#">
-                                        <div class="d-flex align-items-top">
-                                           <span class="material-symbols-outlined">
-                                           cancel
-                                           </span>
-                                           <div class="data ms-2">
-                                              <h6>Friends</h6>
-                                              <p class="mb-0">Your Friend on facebook</p>
-                                           </div>
-                                        </div>
-                                     </a>
-                                     <a class="dropdown-item p-3" href="#">
-                                        <div class="d-flex align-items-top">
-                                           <span class="material-symbols-outlined">
-                                           person_remove
-                                           </span>
-                                           <div class="data ms-2">
-                                              <h6>Friends except</h6>
-                                              <p class="mb-0">Don't show to some friends</p>
-                                           </div>
-                                        </div>
-                                     </a>
-                                     <a class="dropdown-item p-3" href="#">
-                                        <div class="d-flex align-items-top">
-                                           <span class="material-symbols-outlined">
-                                           notifications
-                                           </span>
-                                           <div class="data ms-2">
-                                              <h6>Only Me</h6>
-                                              <p class="mb-0">Only me</p>
-                                           </div>
-                                        </div>
-                                     </a>
-                                  </div>
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-                      <button type="submit" class="btn btn-primary d-block w-100 mt-3">Post</button>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-       <div class="card card-2">
-          <div class="card-body">
-             <ul class="post-comments p-0 m-0">
-                <li class="">
-                   <div class="d-flex justify-content-between">
-                      <div class="user-img me-3">
-                         <img src="../assets/images/user/1.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid" loading="lazy">
-                      </div>
-                      <div class="w-100">
-                         <form class="post-text mt-2">
-                            <input type="text" class="form-control rounded" placeholder="Write something here..." style="border:none;">                      
-                         </form>
-                         <hr>
-                         <div class="d-flex justify-content-between">
-                            <div class="">
-                               Add:
-                            </div>
-                            <div class="">
-                               <svg fill="none" width="18px" stroke="currentColor" viewBox="0 0 24 24" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                               </svg>
-                            </div>
-                            <div class="">
-                               <svg fill="none" width="18px" stroke="currentColor" viewBox="0 0 24 24" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                               </svg>
-                            </div>
-                            <div class="">
-                               <svg fill="none" width="18px" stroke="currentColor" viewBox="0 0 24 24" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z"></path>
-                               </svg>
-                            </div>
-                            <button class="btn btn-primary btn-sm">Publish</button>
-                         </div>
-                      </div>
-                   </div>
-                </li>
-             </ul>
-          </div>
-       </div>
-       <div class="card">
-          <div class="card-body">
-             <ul class="post-comments p-0 m-0">
-                <li class="mb-2">
-                   <div class="d-flex justify-content-between">
-                      <div class="user-img me-3">
-                         <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid" loading="lazy">
-                      </div>
-                      <div class="w-100 text-margin">
-                         <h5>Mathilda Gvarliana</h5>
-                         <small class=" d-flex align-items-center "> <i class="material-symbols-outlined md-14 me-1">
-                         schedule
-                         </i> March 14, 23:00</small>
-                         <p>Hi, I am flying to Los Angeles to attend #VSFS2020 castings. I hope it will happen and my dream comes true. Wish me luck. </p>
-                         <hr>
-                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <div class="d-flex justify-content-between align-items-center">
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  favorite_border
-                                  </span>
-                                  <span class="card-text-1 ms-1">Love it</span>
-                               </div>
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  comment
-                                  </span>
-                                  <span class="card-text-1 ms-1">Comment</span>
-                               </div>
-                               <div class="d-flex align-items-center">
-                                  <span class="material-symbols-outlined md-18">
-                                  share
-                                  </span>
-                                  <span class="card-text-1 ms-1">Share</span>
-                               </div>
-                            </div>
-                            <span class="card-text-2">
-                            5.2k people love it
-                            </span>
-                            <div class="d-flex justify-content-between align-items-center">
-                               <span class="card-text-1 me-1">5.2k people love it</span>
-                               <div class="iq-media-group ms-2">
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/05.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/06.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/07.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/08.jpg" alt="" loading="lazy">
-                                  </a>
-                               </div>
-                            </div>
-                         </div>
-                         <div class="d-flex align-items-center mt-3" >
-                            <input type="text" class="form-control rounded" placeholder="Write your comment">
-                            <div class="comment-attagement d-flex align-items-center me-4">
-                               <span class="material-symbols-outlined md-18 me-1">
-                               comment
-                               </span>
-                               <h6 class="card-text-1">Comment</h6>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </li>
-             </ul>
-          </div>
-       </div>
-       <div class="card">
-          <div class="card-body">
-             <ul class="post-comments p-0 m-0">
-                <li class="mb-2">
-                   <div class="d-flex justify-content-between">
-                      <div class="user-img me-3">
-                         <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid">
-                      </div>
-                      <div class="w-100 text-margin">
-                         <h5>Mathilda Gvarliana</h5>
-                         <small class="d-flex align-items-center "><i class="material-symbols-outlined md-16 me-1">
-                            schedule
-                            </i> March 14, 23:00</small>
-                         <div class="mt-2 mb-2 ratio">
-                            <iframe class="rounded embed-responsive-item" src="../../../../../../www.youtube.com/embed/zpOULjyy-n8f622.html?rel=0" allowfullscreen></iframe>
-                         </div>
-                         <p>Dolce Spring Summer 2020 - Women's Show</p>
-                         <hr>
-                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <div class="d-flex justify-content-between align-items-center">
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  favorite_border
-                                  </span>
-                                  <span class="card-text-1 ms-1">Love it</span>
-                               </div>
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  comment
-                                  </span>
-                                  <span class="card-text-1 ms-1">Comment</span>
-                               </div>
-                               <div class="d-flex align-items-center">
-                                  <span class="material-symbols-outlined md-18">
-                                  share
-                                  </span>
-                                  <span class="card-text-1 ms-1">Share</span>
-                               </div>
-                            </div>
-                            <span class="card-text-2">
-                            5.2k people love it
-                            </span>                                                     
-                            <div class="d-flex justify-content-between align-items-center">
-                               <span class="card-text-1 me-1">5.2k people love it</span>
-                               <div class="iq-media-group ms-2">
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/05.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/06.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/07.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/08.jpg" alt="" loading="lazy">
-                                  </a>
-                               </div>
-                            </div>
-                         </div>
-                         <div class="d-flex align-items-center mt-3" >
-                            <input type="text" class="form-control rounded" placeholder="Write your comment ">
-                            <div class="comment-attagement d-flex align-items-center me-4">
-                               <span class="material-symbols-outlined md-18 me-1">
-                               comment
-                               </span>
-                               <h6 class="card-text-1">Comment</h6>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </li>
-             </ul>
-          </div>
-       </div>
-       <div class="card">
-          <div class="card-body">
-             <ul class="post-comments p-0 m-0">
-                <li class="mb-2">
-                   <div class="d-flex justify-content-between">
-                      <div class="user-img  me-3">
-                         <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60 rounded-circle img-fluid" loading="lazy">
-                      </div>
-                      <div class="w-100 text-margin">
-                         <h5>Mathilda Gvarliana</h5>
-                         <small class=""><i class="material-symbols-outlined md-16 me-1">
-                            schedule
-                            </i> March 14, 23:00</small>
-                         <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                         <hr>
-                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <div class="d-flex justify-content-between align-items-center">
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  favorite_border
-                                  </span>
-                                  <span class="card-text-1 ms-1">Love it</span>
-                               </div>
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  comment
-                                  </span>
-                                  <span class="card-text-1 ms-1">Comment</span>
-                               </div>
-                               <div class="d-flex align-items-center">
-                                  <span class="material-symbols-outlined md-18">
-                                  share
-                                  </span>
-                                  <span class="card-text-1 ms-1">Share</span>
-                               </div>
-                            </div>
-                            <span class="card-text-2">
-                            5.2k people love it
-                            </span>                                                       
-                            <div class="d-flex justify-content-between align-items-center">
-                               <span class="card-text-1 me-1">5.2k people love it</span>
-                               <div class="iq-media-group ms-2">
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/05.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/06.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/07.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/08.jpg" alt="" loading="lazy">
-                                  </a>
-                               </div>
-                            </div>
-                         </div>
-                         <div class="text-center mt-4">
-                            <p>Hide 203 comments</p>
-                         </div>
-                         <ul class="post-comments p-2  card rounded">
-                            <li class="mb-2">
-                               <div class="d-flex justify-content-between">
-                                  <div class="user-img me-3">
-                                     <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid">
-                                  </div>
-                                  <div class="w-100 text-margin">
-                                     <div class="">
-                                        <h5 class="mb-0 d-inline-block me-1">Emma Labelle</h5>
-                                        <h6 class=" mb-0 d-inline-block">2 weeks ago</h6>
-                                     </div>
-                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           <div class="d-flex align-items-center me-3">
-                                              <span class="material-symbols-outlined md-18">
-                                              favorite_border
-                                              </span>
-                                              <span class="card-text-1 ms-1">Love it</span>
-                                           </div>
-                                           <div class="d-flex align-items-center me-3">
-                                              <span class="material-symbols-outlined md-18">
-                                              comment
-                                              </span>
-                                              <span class="card-text-1 ms-1">Comment</span>
-                                           </div>
-                                           <div class="d-flex align-items-center">
-                                              <span class="material-symbols-outlined md-18">
-                                              share
-                                              </span>
-                                              <span class="card-text-1 ms-1">Share</span>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                            </li>
-                         </ul>
-                         <ul class="post-comments p-2 m-0 card rounded ">
-                            <li class="mb-2">
-                               <div class="d-flex justify-content-between">
-                                  <div class="user-img me-3">
-                                     <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid" loading="lazy">
-                                  </div>
-                                  <div class="w-100 text-margin">
-                                     <div class="">
-                                        <h5 class="mb-0 d-inline-block me-1">Emma Labelle</h5>
-                                        <small class=" mb-0 d-inline-block">2 weeks ago</small>
-                                     </div>
-                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                           <div class="d-flex align-items-center me-3">
-                                              <span class="material-symbols-outlined md-18">
-                                              favorite_border
-                                              </span>
-                                              <span class="card-text-1 ms-1">Love it</span>
-                                           </div>
-                                           <div class="d-flex align-items-center me-3">
-                                              <span class="material-symbols-outlined md-18">
-                                              comment
-                                              </span>
-                                              <span class="card-text-1 ms-1">Comment</span>
-                                           </div>
-                                           <div class="d-flex align-items-center">
-                                              <span class="material-symbols-outlined md-18">
-                                              share
-                                              </span>
-                                              <span class="card-text-1 ms-1">Share</span>
-                                           </div>
-                                        </div>
-                                     </div>
-                                     <ul class="post-comments p-0 mt-4">
-                                        <li class="mb-2">
-                                           <div class="d-flex justify-content-between">
-                                              <div class="user-img me-3">
-                                                 <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid avatar-1" loading="lazy">
-                                              </div>
-                                              <div class="w-100 text-margin">
-                                                 <div class="">
-                                                    <h5 class="mb-0 d-inline-block me-1">Emma Labelle</h5>
-                                                    <h6 class=" mb-0 d-inline-block">2 weeks ago</h6>
-                                                 </div>
-                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                                 <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                       <div class="d-flex align-items-center me-3">
-                                                          <span class="material-symbols-outlined md-18">
-                                                          favorite_border
-                                                          </span>
-                                                          <span class="card-text-1 ms-1">Love it</span>
-                                                       </div>
-                                                       <div class="d-flex align-items-center me-3">
-                                                          <span class="material-symbols-outlined md-18">
-                                                          comment
-                                                          </span>
-                                                          <span class="card-text-1 ms-1">Comment</span>
-                                                       </div>
-                                                       <div class="d-flex align-items-center">
-                                                          <span class="material-symbols-outlined md-18">
-                                                          share
-                                                          </span>
-                                                          <span class="card-text-1 ms-1">Share</span>
-                                                       </div>
-                                                    </div>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </li>
-                                     </ul>
-                                     <ul class="post-comments p-0 mt-4 ">
-                                        <li class="mb-2">
-                                           <div class="d-flex justify-content-between">
-                                              <div class="user-img me-3">
-                                                 <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid avatar-1" loading="lazy">
-                                              </div>
-                                              <div class="w-100 text-margin">
-                                                 <div class="">
-                                                    <h5 class="mb-0 d-inline-block me-1">Emma Labelle</h5>
-                                                    <h6 class=" mb-0 d-inline-block">2 weeks ago</h6>
-                                                 </div>
-                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                                                 <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                       <div class="d-flex align-items-center me-3">
-                                                          <span class="material-symbols-outlined md-18">
-                                                          favorite_border
-                                                          </span>
-                                                          <span class="card-text-1 ms-1">Love it</span>
-                                                       </div>
-                                                       <div class="d-flex align-items-center me-3">
-                                                          <span class="material-symbols-outlined md-18">
-                                                          comment
-                                                          </span>
-                                                          <span class="card-text-1 ms-1">Comment</span>
-                                                       </div>
-                                                       <div class="d-flex align-items-center">
-                                                          <span class="material-symbols-outlined md-18">
-                                                          share
-                                                          </span>
-                                                          <span class="card-text-1 ms-1">Share</span>
-                                                       </div>
-                                                    </div>
-                                                 </div>
-                                                 <div class="d-flex align-items-center mt-3" >
-                                                    <input type="text" class="form-control rounded" placeholder="Write your comment">
-                                                    <div class="comment-attagement d-flex align-items-center me-4">
-                                                       <span class="material-symbols-outlined md-18 me-1">
-                                                       comment
-                                                       </span>
-                                                       <h6 class="card-text-1">Comment</h6>
-                                                    </div>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </li>
-                                     </ul>
-                                  </div>
-                               </div>
-                            </li>
-                         </ul>
-                         <ul class="post-comments p-2 mt-4 ">
-                            <li class="mb-2">
-                               <div class="d-flex justify-content-between">
-                                  <div class="user-img me-3">
-                                     <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid " loading="lazy">
-                                  </div>
-                                  <div class="w-100 text-margin">
-                                     <div class="">
-                                        <h5 class="mb-0 d-inline-block me-1">Emma Labelle</h5>
-                                        <span class=" mb-0 d-inline-block">2 weeks ago</span>
-                                     </div>
-                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                     <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                        <div class="d-flex justify-content-around align-items-center">
-                                           <div class="me-3 d-flex align-items-center">
-                                              <span class="material-symbols-outlined md-18 me-1">
-                                              favorite_border
-                                              </span>
-                                              <span class="card-text-1"> Love it</span>
-                                           </div>
-                                           <div class="me-3 d-flex align-items-center">
-                                              <span class="material-symbols-outlined md-18 me-1">
-                                              comment
-                                              </span>
-                                              <span class="card-text-1 ">Comment</span>
-                                           </div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                            </li>
-                            <li class="d-flex align-items-center mt-3" >
-                               <input type="text" class="form-control rounded" placeholder="Write your comment ">
-                               <div class="comment-attagement d-flex align-items-center me-4">
-                                  <span class="material-symbols-outlined md-18 me-1">
-                                  comment
-                                  </span>
-                                  <h6 class="card-text-1 me-2">Comment</h6>
-                               </div>
-                            </li>
-                         </ul>
-                      </div>
-                   </div>
-                </li>
-             </ul>
-          </div>
-       </div>
-       <div class="card">
-          <div class="card-body">
-             <ul class="post-comments p-0 m-0">
-                <li class="mb-2">
-                   <div class="d-flex justify-content-between">
-                      <div class="user-img me-3">
-                         <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-60  rounded-circle img-fluid">
-                      </div>
-                      <div class="w-100 text-margin">
-                         <h4>Mathilda Gvarliana</h4>
-                         <p class="mb-4">June 30, 12: 26</p>
-                         <div class="d-grid gap-2 grid-cols-2 mb-2">
-                            <a>
-                            <img src="../assets/images/page-img/52.jpg" class="img-fluid bg-soft-info rounded  image-size" alt="profile-image" loading="lazy">
-                            </a>
-                            <a>
-                            <img src="../assets/images/page-img/53.jpg" class="img-fluid bg-soft-primary rounded  image-size" alt="profile-image" loading="lazy">
-                            </a>
-                            <a>
-                            <img src="../assets/images/page-img/54.jpg" class="img-fluid bg-soft-info rounded  image-size" alt="profile-image" loading="lazy">
-                            </a>
-                            <a>
-                            <img src="../assets/images/page-img/55.jpg" class="img-fluid bg-soft-primary rounded  image-size" alt="profile-image" loading="lazy">
-                            </a>
-                         </div>
-                         <span class="">Photoshoot for Buyers Magazine - 2019</span>
-                         <hr>
-                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <div class="d-flex justify-content-between align-items-center">
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  favorite_border
-                                  </span>
-                                  <span class="card-text-1 ms-1">Love it</span>
-                               </div>
-                               <div class="d-flex align-items-center me-3">
-                                  <span class="material-symbols-outlined md-18">
-                                  comment
-                                  </span>
-                                  <span class="card-text-1 ms-1">Comment</span>
-                               </div>
-                               <div class="d-flex align-items-center">
-                                  <span class="material-symbols-outlined md-18">
-                                  share
-                                  </span>
-                                  <span class="card-text-1 ms-1">Share</span>
-                               </div>
-                            </div>
-                            <span class="card-text-2">
-                            5.2k people love it
-                            </span>
-                            <div class="d-flex justify-content-between align-items-center">
-                               <span class="card-text-1 me-1">5.2k people love it </span>
-                               <div class="iq-media-group ms-2">
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/05.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/06.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/07.jpg" alt="" loading="lazy">
-                                  </a>
-                                  <a href="#" class="iq-media">
-                                  <img class="img-fluid avatar-30 rounded-circle" src="../assets/images/user/08.jpg" alt="" loading="lazy">
-                                  </a>
-                               </div>
-                            </div>
-                         </div>
-                         <div class="d-flex align-items-center mt-3">
-                            <input type="text" class="form-control rounded" placeholder="Write your comment">
-                            <div class="comment-attagement d-flex align-items-center me-4">
-                               <span class="material-symbols-outlined md-18 me-1">
-                               comment
-                               </span>
-                               <h6 class="card-text-1">Comment</h6>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </li>
-             </ul>
-          </div>
-       </div>
-    </div>
- </div>
-</div>
-  </div>
-</div>
-<!-- Wrapper End-->
-<!-- offcanvas start -->
-<div class="right-sidebar-mini right-sidebar">
-    <div class="right-sidebar-panel p-0">
-       <div class="card shadow-none">
-          <div class="card-body p-0">
-             <div class="media-height p-3" data-scrollbar="init">
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-online">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/01.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Anna Sthesia</h6>
-                      <p class="mb-0">Just Now</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-online">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/02.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Paul Molive</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-online">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/03.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Anna Mull</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-online">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/04.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Paige Turner</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-online">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/11.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Bob Frapples</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-online">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/02.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Barb Ackue</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-online">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/03.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Greta Life</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-away">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/12.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Ira Membrit</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center mb-4">
-                   <div class="iq-profile-avatar status-away">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/01.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Pete Sariya</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-                <div class="d-flex align-items-center">
-                   <div class="iq-profile-avatar">
-                      <img class="rounded-circle avatar-50" src="../assets/images/user/02.jpg" alt="" loading="lazy">
-                   </div>
-                   <div class="ms-3">
-                      <h6 class="mb-0">Monty Carlo</h6>
-                      <p class="mb-0">Admin</p>
-                   </div>
-                </div>
-             </div>
-               <div class="right-sidebar-toggle bg-primary text-white mt-3 d-flex">
-                  <span class="material-symbols-outlined">chat</span>
+   <div class="col-sm-12">
+      <div class="card">
+         <div class="card-body profile-page p-0">
+            <div class="profile-header">
+               <div class="position-relative">
+                  <img src="images/bgcover.jpg" alt="profile-bg" class="rounded img-fluid">
+                  <ul class="header-nav list-inline d-flex flex-wrap justify-end p-0 m-0">
+                     <li><a href="#"  class="d-flex justify-content-center align-items-center"><i class="material-symbols-outlined">   settings</i></a></li>
+
+             
+                     <li><a href="#"  class="d-flex justify-content-center align-items-center"><i class="material-symbols-outlined">
+                        edit
+                        </i></a></li>
+                  </ul>
                </div>
-          </div>
-       </div>
-    </div>
- </div>  
-<footer class="iq-footer bg-white">
-   <div class="container-fluid">
-      <div class="row">
-         <div class="col-lg-6">
-            <ul class="list-inline mb-0">
-               <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-               <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
-            </ul>
+               <div class="user-detail text-center mb-3">
+                  <div class="profile-img">
+                     <img  src="images/pdf.jpg" alt="profile-img" class="avatar-130 img-fluid" />
+                  </div>
+                  <div class="profile-detail">
+                     <h3 class="">Kadri Dorra</h3>
+                  </div>
+               </div>
+               <div class="profile-info p-3 d-flex align-items-center justify-content-between position-relative">
+               
+                  <div class="social-info">
+                     <ul class="social-data-block d-flex align-items-center justify-content-between list-inline p-0 m-0">
+                        <li class="text-center ps-3">
+                           <h6>Posts</h6>
+                           <p class="mb-0">690</p>
+                        </li>
+                        <li class="text-center ps-3">
+                           <h6>Followers</h6>
+                           <p class="mb-0">206</p>
+                        </li>
+                        <li class="text-center ps-3">
+                           <h6>Following</h6>
+                           <p class="mb-0">100</p>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-            <div class="col-lg-6 d-flex justify-content-end">
-            Copyright 2020
-            <a href="#">SocialV</a>
-            All Rights Reserved.
-       </div>
-       </div>
+         </div>
       </div>
-   </footer>  <!-- Live Customizer start -->
-<!-- Setting offcanvas start here -->
-<div class="offcanvas offcanvas-end live-customizer" tabindex="-1" id="live-customizer" data-bs-backdrop="false" data-bs-scroll="true" aria-labelledby="live-customizer-label">
-    <div class="offcanvas-header pb-0">
-        <div class="d-flex align-items-center">
-            <h4 class="offcanvas-title" id="live-customizer-label">Setting Pannel</h4>
-        </div>
-        <div class="close-icon" data-bs-dismiss="offcanvas">
-            <svg xmlns="http://www.w3.org/2000/svg"  width="24px" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-        </div>
-    </div>
-    <div class="offcanvas-body data-scrollbar">
-        <div class="row">
-            <div class="col-lg-12">
-                <div>
-                    <div class="text-center mb-4">
-                        <h5 class="d-inline-block">Style Setting</h5>
-                    </div>
-                    <div>
-                        <!-- Theme start here -->
-                        <div class="mb-4">
-                            <h5 class="mb-3">Theme</h5>
-                            <div class=" mb-3" data-setting="radio">
-                                <div class="form-check mb-0 w-100" >
-                                    <input class="form-check-input custum-redio-btn" type="radio" value="light" name="theme_scheme" id="color-mode-light" checked>
-                                    <label class="form-check-label h6 d-flex align-items-center justify-content-between" for="color-mode-light">
-                                       <span>Light Theme</span> 
-                                        <div class="text-primary ">
-                                            <svg width="60" height="27" viewBox="0 0 60 27" fill="none" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                                <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125" fill="white"/>
-                                                <circle cx="9.75" cy="9.75" r="3.75" fill="#80868B"/>
-                                                <rect x="16.5" y="8.25" width="37.5" height="3" rx="1.5" fill="#DADCE0"/>
-                                                <rect x="6" y="18" width="48" height="3" rx="1.5" fill="currentColor"/>
-                                                <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125" stroke="#DADCE0" stroke-width="0.75"/>
-                                            </svg>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                             <div class=" mb-3" data-setting="radio">
-                                <div class="form-check mb-0 w-100 ">
-                                    <input class="form-check-input custum-redio-btn" type="radio" value="dark"  name="theme_scheme" id="color-mode-dark">
-                                    <label class="form-check-label h6 d-flex align-items-center justify-content-between"  for="color-mode-dark">
-                                       <span>Dark Theme</span>
-                                       <div class="text-primary ">
-                                           <svg width="60" height="27" viewBox="0 0 60 27" fill="none" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                                <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125" fill="#1E2745"/>
-                                                <circle cx="9.75" cy="9.75" r="3.75" fill="#80868B"/>
-                                                <rect x="16.5" y="8.25" width="37.5" height="3" rx="1.5" fill="#DADCE0"/>
-                                                <rect x="6" y="18" width="48" height="3" rx="1.5" fill="currentColor"/>
-                                                <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125" stroke="currentColor" stroke-width="0.75"/>
-                                            </svg>
-                                       </div>                                    
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between" data-setting="radio">
-                                <div class="form-check mb-0 w-100">
-                                    <input class="form-check-input custum-redio-btn" type="radio" value="auto"  name="theme_scheme" id="color-mode-auto">
-                                    <label class="form-check-label h6 d-flex align-items-center justify-content-between"  for="color-mode-auto">
-                                       <span>Device Default</span> 
-                                       <div class="text-primary ">
-                                            <svg class="rounded" width="60" height="27" viewBox="0 0 60 27" fill="none" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                                <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125" fill="#1E2745"/>
-                                                <circle cx="9.75" cy="9.75" r="3.75" fill="#80868B"/>
-                                                <rect x="16.5" y="8.25" width="37.5" height="3" rx="1.5" fill="#DADCE0"/>
-                                                <rect x="6" y="18" width="48" height="3" rx="1.5" fill="currentColor"/>
-                                                <g clip-path="url(#clip0_507_92)">
-                                                <rect width="30" height="27" fill="white"/>
-                                                <circle cx="9.75" cy="9.75" r="3.75" fill="#80868B"/>
-                                                <rect x="16.5" y="8.25" width="37.5" height="3" rx="1.5" fill="#DADCE0"/>
-                                                <rect x="6" y="18" width="48" height="3" rx="1.5" fill="currentColor"/>
-                                                </g>
-                                                <rect x="0.375" y="0.375" width="59.25" height="26.25" rx="4.125" stroke="#DADCE0" stroke-width="0.75"/>
-                                                <defs>
-                                                <clipPath id="clip0_507_92">
-                                                <rect width="30" height="27" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                            </svg>
-                                       </div>
-                                    </label>
-                                </div>
-                                
-                            </div>
+      <div class="card">
+         <div class="card-body p-0">
+            <div class="user-tabing">
+               <ul class="nav nav-pills d-flex align-items-center justify-content-center profile-feed-items p-0 m-0">
+                  <li class="nav-item col-12 col-sm-3 p-0">
+                     <a class="nav-link active" href="#pills-timeline-tab" data-bs-toggle="pill" data-bs-target="#timeline" role="button">Timeline</a>
+                  </li>
+                  <li class="nav-item col-12 col-sm-3 p-0">
+                     <a class="nav-link" href="#pills-about-tab" data-bs-toggle="pill" data-bs-target="#about" role="button">About</a>
+                  </li>
+                  <li class="nav-item col-12 col-sm-3 p-0">
+                     <a class="nav-link" href="#pills-friends-tab" data-bs-toggle="pill" data-bs-target="#friends" role="button">Friends</a>
+                  </li>
+                  <li class="nav-item col-12 col-sm-3 p-0">
+                     <a class="nav-link" href="#pills-photos-tab" data-bs-toggle="pill" data-bs-target="#photos" role="button">Photos</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-sm-12">
+      <div class="tab-content">
+         <div class="tab-pane fade show active" id="timeline" role="tabpanel">
+            <div class="card-body p-0">
+               <div class="row">
+                  <div class="col-lg-4">
+                     <div class="card">
+                        <div class="card-body">
+                           <a href="#"><span class="badge badge-pill bg-primary font-weight-normal ms-auto me-1"><i class="ri-star-line"></i></span> 27 Items for yoou</a>
                         </div>
-                        <!-- Color customizer end here -->
-                        <hr class="hr-horizontal">
-                        <!-- Menu Style start here -->
-                        <div>
-                            <h5 class="mt-4 mb-3">Menu Style</h5>
-                            <div class="d-grid gap-3 grid-cols-3 mb-4">
-                                <div data-setting="checkbox" class="text-center">
-                                    <input type="checkbox" value="sidebar-mini" class="btn-check" name="sidebar_type" id="sidebar-mini">
-                                    <label class="btn btn-border btn-setting-panel d-block overflow-hidden" for="sidebar-mini">
-                                        Mini
-                                    </label>
-                                </div>
-                                <div data-setting="checkbox" class="text-center">
-                                    <input type="checkbox" value="sidebar-hover" data-extra="{target: '.sidebar', ClassListAdd: 'sidebar-mini'}"
-                                        class="btn-check" name="sidebar_type" id="sidebar-hover">
-                                    <label class="btn btn-border btn-setting-panel d-block overflow-hidden" for="sidebar-hover">
-                                        Hover
-                                    </label>
-                                </div>
-                                <div data-setting="checkbox" class="text-center">
-                                    <input type="checkbox" value="sidebar-soft" class="btn-check" name="sidebar_type" id="sidebar-soft">
-                                    <label class="btn btn-border btn-setting-panel d-block overflow-hidden" for="sidebar-soft">
-                                        Soft
-                                    </label>
-                                </div>
-                            </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                           <div class="header-title">
+                              <h4 class="card-title">Life Event</h4>
+                           </div>
+                           <div class="card-header-toolbar d-flex align-items-center">
+                              <p class="m-0"><a href="javacsript:void();"> Create </a></p>
+                           </div>
                         </div>
-
-                        <!-- Menu Style end here -->
-
-                        <hr class="hr-horizontal">
-
-                        <!-- Active Menu Style start here -->
-
-                        <div class="mb-4">
-                            <h5 class="mt-4 mb-3">Active Menu Style</h5>
-                            <div class="d-grid gap-3 grid-cols-2">
-                                <div data-setting="radio" class="text-center">
-                                    <input type="radio" value="navs-rounded" class="btn-check" name="sidebar_menu_style" id="navs-rounded">
-                                    <label class="btn btn-border btn-setting-panel d-block overflow-hidden" for="navs-rounded">
-                                        Rounded One
-                                    </label>
-                                </div>
-                                <div data-setting="radio" class="text-center">
-                                    <input type="radio" value="navs-rounded-all" class="btn-check" name="sidebar_menu_style" id="navs-rounded-all">
-                                    <label class="btn btn-border btn-setting-panel d-block overflow-hidden" for="navs-rounded-all">
-                                        Rounded All
-                                    </label>
-                                </div>
-                                <div data-setting="radio" class="text-center">
-                                    <input type="radio" value="navs-pill" class="btn-check" name="sidebar_menu_style" id="navs-pill">
-                                    <label class="btn btn-border btn-setting-panel d-block overflow-hidden" for="navs-pill">
-                                        Pill One Side
-                                    </label>
-                                </div>
-                                <div data-setting="radio" class="text-center">
-                                    <input type="radio" value="navs-pill-all" class="btn-check" name="sidebar_menu_style" id="navs-pill-all">
-                                    <label class="btn btn-border btn-setting-panel d-block overflow-hidden" for="navs-pill-all">
-                                        Pill All
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                         <hr class="hr-horizontal">
-                        <!-- Color customizer start here -->
-                        <div>
-                            <div class="d-flex align-items-center justify-content-between my-3">
-                                <h5>Color Customizer</h5>
-                                <div class="d-flex align-items-center">
-                                    <div data-setting="radio">
-                                        <input type="radio" value="theme-color-default" class="btn-check" name="theme_color" id="theme-color-default" data-colors='{"primary": "#50b5ff", "info": "#d592ff"}'>
-                                        <label class="btn bg-transparent border-0" for="theme-color-default" data-bs-toggle="tooltip" data-bs-placement="top" title="Reset Color" data-bs-original-title="Reset color">
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                                <path d="M21.4799 12.2424C21.7557 12.2326 21.9886 12.4482 21.9852 12.7241C21.9595 14.8075 21.2975 16.8392 20.0799 18.5506C18.7652 20.3986 16.8748 21.7718 14.6964 22.4612C12.518 23.1505 10.1711 23.1183 8.01299 22.3694C5.85488 21.6205 4.00382 20.196 2.74167 18.3126C1.47952 16.4293 0.875433 14.1905 1.02139 11.937C1.16734 9.68346 2.05534 7.53876 3.55018 5.82945C5.04501 4.12014 7.06478 2.93987 9.30193 2.46835C11.5391 1.99683 13.8711 2.2599 15.9428 3.2175L16.7558 1.91838C16.9822 1.55679 17.5282 1.62643 17.6565 2.03324L18.8635 5.85986C18.945 6.11851 18.8055 6.39505 18.549 6.48314L14.6564 7.82007C14.2314 7.96603 13.8445 7.52091 14.0483 7.12042L14.6828 5.87345C13.1977 5.18699 11.526 4.9984 9.92231 5.33642C8.31859 5.67443 6.8707 6.52052 5.79911 7.74586C4.72753 8.97119 4.09095 10.5086 3.98633 12.1241C3.8817 13.7395 4.31474 15.3445 5.21953 16.6945C6.12431 18.0446 7.45126 19.0658 8.99832 19.6027C10.5454 20.1395 12.2278 20.1626 13.7894 19.6684C15.351 19.1743 16.7062 18.1899 17.6486 16.8652C18.4937 15.6773 18.9654 14.2742 19.0113 12.8307C19.0201 12.5545 19.2341 12.3223 19.5103 12.3125L21.4799 12.2424Z" fill="#31BAF1"/>
-                                                <path d="M20.0941 18.5594C21.3117 16.848 21.9736 14.8163 21.9993 12.7329C22.0027 12.4569 21.7699 12.2413 21.4941 12.2512L19.5244 12.3213C19.2482 12.3311 19.0342 12.5633 19.0254 12.8395C18.9796 14.283 18.5078 15.6861 17.6628 16.8739C16.7203 18.1986 15.3651 19.183 13.8035 19.6772C12.2419 20.1714 10.5595 20.1483 9.01246 19.6114C7.4654 19.0746 6.13845 18.0534 5.23367 16.7033C4.66562 15.8557 4.28352 14.9076 4.10367 13.9196C4.00935 18.0934 6.49194 21.37 10.008 22.6416C10.697 22.8908 11.4336 22.9852 12.1652 22.9465C13.075 22.8983 13.8508 22.742 14.7105 22.4699C16.8889 21.7805 18.7794 20.4073 20.0941 18.5594Z" fill="#0169CA"/>
-                                            </svg>
-                                        </label>
+                        <div class="card-body">
+                           <div class="row">
+                              <div class="col-sm-12">
+                                 <div class="event-post position-relative">
+                                    <a href="#"><img src="../assets/images/page-img/07.jpg" alt="gallary-image" class="img-fluid rounded"></a>
+                                    <div class="job-icon-position">
+                                       <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-briefcase-line text-white"></i></div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="grid-cols-5 mb-4 d-grid gap-3">
-                                <div data-setting="radio">
-                                    <input type="radio" value="theme-color-blue" class="btn-check" name="theme_color"
-                                        id="theme-color-1" data-colors='{"primary": "#4285F4", "info": "#EA4335"}'>
-                                    <label class="btn btn-border d-block bg-transparent p-2" for="theme-color-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Gmail" data-bs-original-title="Gmail">
-                                        <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26">
-                                            <circle cx="12" cy="12" r="10" fill="#4285F4" />
-                                            <path d="M2,12 a1,1 1 1,0 20,0" fill="#EA4335" />
-                                        </svg>
-                                    </label>
-                                </div>
-                                <div data-setting="radio">
-                                    <input type="radio" value="theme-color-red" class="btn-check" name="theme_color" id="theme-color-2" data-colors='{"primary": "#FF4500", "info": "#1A73E8"}'>
-                                    <label class="btn btn-border  d-block bg-transparent p-2" for="theme-color-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Reddit" data-bs-original-title="Reddit">
-                                        <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26">
-                                            <circle cx="12" cy="12" r="10" fill="#FF4500" />
-                                            <path d="M2,12 a1,1 1 1,0 20,0" fill="#1A73E8" />
-                                        </svg>
-                                    </label>
-                                </div>
-                                <div data-setting="radio">
-                                    <input type="radio" value="theme-color-purple" class="btn-check" name="theme_color" id="theme-color-3" data-colors='{"primary": "#8755f2", "info": "#EE4266"}'>
-                                    <label class="btn btn-border d-block bg-transparent p-2" for="theme-color-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitch" data-bs-original-title="Twitch">
-                                        <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26">
-                                            <circle cx="12" cy="12" r="10" fill="#8755f2" />
-                                            <path d="M2,12 a1,1 1 1,0 20,0" fill="#EE4266" />
-                                        </svg>
-                                    </label>
-                                </div>
-                                <div data-setting="radio">
-                                    <input type="radio" value="theme-color-cyan" class="btn-check" name="theme_color" id="theme-color-4" data-colors='{"primary": "#0A66C2", "info": "#333333"}'>
-                                    <label class="btn btn-border d-block bg-transparent p-2" for="theme-color-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Linkdin" data-bs-original-title="Linkdin">
-                                        <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26">
-                                            <circle cx="12" cy="12" r="10" fill="#0A66C2" />
-                                            <path d="M2,12 a1,1 1 1,0 20,0" fill="#333333" />
-                                        </svg>
-                                    </label>
-                                </div>
-                                <div data-setting="radio">
-                                    <input type="radio" value="theme-color-green" class="btn-check" name="theme_color" id="theme-color-5" data-colors='{"primary": "#00b75a", "info": "#000000"}'>
-                                    <label class="btn btn-border d-block bg-transparent p-2" for="theme-color-5" data-bs-toggle="tooltip" data-bs-placement="top" title="Spotify" data-bs-original-title="Spotify">
-                                        <svg class="customizer-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26">
-                                            <circle cx="12" cy="12" r="10" fill="#00b75a" />
-                                            <path d="M2,12 a1,1 1 1,0 20,0" fill="#000000" />
-                                        </svg>
-                                    </label>
-                                </div>
-                            </div>
+                                    <div class="card-body text-center p-2">
+                                       <h5>Started New Job at Apple</h5>
+                                       <p>January 24, 2019</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-12">
+                                 <div class="event-post position-relative">
+                                    <a href="#"><img src="../assets/images/page-img/06.jpg" alt="gallary-image" class="img-fluid rounded"></a>
+                                    <div class="job-icon-position">
+                                       <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-briefcase-line text-white"></i></div>
+                                    </div>
+                                    <div class="card-body text-center p-2">
+                                       <h5>Freelance Photographer</h5>
+                                       <p class="mb-0">January 24, 2019</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                          <!-- Theme end here -->
-                        <hr class="hr-horizontal">
-                        <div>
-                            <h5 class="mb-3 mt-4">Direction</h5>
-                            <div class=" mb-3" data-setting="radio">
-                                <div class="form-check mb-0 w-100">
-                                    <input class="form-check-input custum-redio-btn" type="radio" value="ltr" name="theme_scheme_direction" data-prop="dir" id="theme-scheme-direction-ltr" checked>
-                                    <label class="form-check-label h6 d-flex align-items-center justify-content-between"  for="theme-scheme-direction-ltr">
-                                       <span>LTR</span>
-                                        <svg class="text-primary" width="60" height="27" viewBox="0 0 60 27" fill="none" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                            <circle cx="11.5" cy="13.5002" r="6.5" fill="currentColor"/>
-                                            <rect x="21" y="7.70026" width="34" height="5" rx="2" fill="#80868B"/>
-                                            <rect opacity="0.5" x="21" y="16.1003" width="25.6281" height="3.2" rx="1.6" fill="#80868B"/>
-                                            <rect x="0.375" y="0.375244" width="59.25" height="26.25" rx="4.125" stroke="currentColor" stroke-width="0.75"/>
-                                        </svg>
-                                    </label>
-                                </div>
-                               
-                            </div>
-                             <div class="mb-3" data-setting="radio">
-                                <div class="form-check mb-0 w-100">
-                                    <input class="form-check-input custum-redio-btn" type="radio" value="rtl" class="btn-check" name="theme_scheme_direction" data-prop="dir" id="theme-scheme-direction-rtl">
-                                    <label class="form-check-label h6 d-flex align-items-center justify-content-between "  for="theme-scheme-direction-rtl">
-                                        <span>RTL</span>
-                                        <svg class="text-primary" width="60" height="27" viewBox="0 0 60 27" fill="none" xmlns="../../../../../../www.w3.org/2000/svg.html">
-                                            <circle r="6.5" transform="matrix(-1 0 0 1 48.5 13.5002)" fill="currentColor"/>
-                                            <rect width="34" height="5" rx="2" transform="matrix(-1 0 0 1 39 7.70026)" fill="#80868B"/>
-                                            <rect opacity="0.5" width="25.6281" height="3.2" rx="1.6" transform="matrix(-1 0 0 1 39 16.1003)" fill="#80868B"/>
-                                            <rect x="-0.375" y="0.375" width="59.25" height="26.25" rx="4.125" transform="matrix(-1 0 0 1 59.25 0.000244141)" stroke="currentColor" stroke-width="0.75"/>
-                                        </svg>
-                                    </label>
-                                </div>
-                                
-                            </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                           <div class="header-title">
+                              <h4 class="card-title">Photos</h4>
+                           </div>
+                           <div class="card-header-toolbar d-flex align-items-center">
+                              <p class="m-0"><a href="javacsript:void();">Add Photo </a></p>
+                           </div>
                         </div>
-                        <!-- Theme end here -->
-                        <!-- Active Menu Style end here -->
-                    </div>
-                </div>
+                        <div class="card-body">
+                           <ul class="profile-img-gallary p-0 m-0 list-unstyled">
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g1.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g2.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g3.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g4.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g5.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g6.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g7.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g8.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                              <li class=""><a href="#"><img src="../assets/images/page-img/g9.jpg" alt="gallary-image" class="img-fluid" /></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                           <div class="header-title">
+                              <h4 class="card-title">Friends</h4>
+                           </div>
+                           <div class="card-header-toolbar d-flex align-items-center">
+                              <p class="m-0"><a href="javacsript:void();">Add New </a></p>
+                           </div>
+                        </div>
+                        <div class="card-body">
+                           <ul class="profile-img-gallary p-0 m-0 list-unstyled">
+                              <li class="">
+                                 <a href="#">
+                                 <img src="../assets/images/user/05.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Anna Rexia</h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/06.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Tara Zona</h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/07.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Polly Tech</h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/08.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Bill Emia</h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/09.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Moe Fugga</h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/10.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Hal Appeno </h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/07.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Zack Lee</h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/06.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Terry Aki</h6>
+                              </li>
+                              <li class="">
+                                 <a href="#"><img src="../assets/images/user/05.jpg" alt="gallary-image" class="img-fluid" /></a>
+                                 <h6 class="mt-2 text-center">Greta Life</h6>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-8">
+                     @include('Userinterface.Annonce.create')
+                     @unless (count($annonces)==0)
+
+
+                     @foreach ($annonces as $annonce )
+            
+                   <x-Annonce-card  :annonce="$annonce" />
+                    @endforeach
+                    
+                    @else 
+                    <p>no Annonce found</p>
+                    @endunless 
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- Settings sidebar end here -->
-
-<a class="btn btn-fixed-end btn-danger btn-icon btn-setting" id="settingbutton"
-    data-bs-toggle="offcanvas" data-bs-target="#live-customizer" role="button" aria-controls="live-customizer">
-    <span class="icon material-symbols-outlined animated-rotate text-white">
-        settings
-    </span>
-</a>  <!-- Live Customizer end -->
-
-<div class="offcanvas offcanvas-bottom share-offcanvas" tabindex="-1" id="share-btn" aria-labelledby="shareBottomLabel">
-   <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="shareBottomLabel">Share</h5>
-       <div class="close-icon" data-bs-dismiss="offcanvas">
-            <svg xmlns="http://www.w3.org/2000/svg"  width="24px" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-        </div>
-   </div>
-   <div class="offcanvas-body small">
-      <div class="d-flex flex-wrap align-items-center">
-         <div class="text-center me-3 mb-3">
-            <img src="../assets/images/icon/08.png" class="img-fluid rounded mb-2" alt="" loading="lazy">
-            <h6>Facebook</h6>
          </div>
-         <div class="text-center me-3 mb-3">
-            <img src="../assets/images/icon/09.png" class="img-fluid rounded mb-2" alt="" loading="lazy">
-            <h6>Twitter</h6>
+         <div class="tab-pane fade" id="about" role="tabpanel" >
+            <div class="card">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col-md-3">
+                        <ul class="nav nav-pills basic-info-items list-inline d-block p-0 m-0">
+                           <li>
+                              <a class="nav-link active" href="#v-pills-basicinfo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-basicinfo-tab" role="button">Contact and Basic Info</a>
+                           </li>
+                           <li>
+                              <a class="nav-link" href="#v-pills-family-tab" data-bs-toggle="pill" data-bs-target="#v-pills-family" role="button">Family and Relationship</a>
+                           </li>
+                           <li>
+                              <a class="nav-link" href="#v-pills-work-tab" data-bs-toggle="pill" data-bs-target="#v-pills-work-tab" role="button">Work and Education</a>
+                           </li>
+                           <li>
+                              <a class="nav-link" href="#v-pills-lived-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lived-tab" role="button">Places You've Lived</a>
+                           </li>
+                           <li>
+                              <a class="nav-link" href="#v-pills-details-tab" data-bs-toggle="pill" data-bs-target="#v-pills-details-tab" role="button">Details About You</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-9 ps-4">
+                        <div class="tab-content" >
+                           <div class="tab-pane fade active show" id="v-pills-basicinfo-tab" role="tabpanel"  aria-labelledby="v-pills-basicinfo-tab">
+                              <h4>Contact Information</h4>
+                              <hr>
+                              <div class="row">
+                                 <div class="col-3">
+                                    <h6>Email</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">Bnijohn@gmail.com</p>
+                                 </div>
+                                 <div class="col-3">
+                                    <h6>Mobile</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">(001) 4544 565 456</p>
+                                 </div>
+                                 <div class="col-3">
+                                    <h6>Address</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">United States of America</p>
+                                 </div>
+                              </div>
+                              <h4 class="mt-3">Websites and Social Links</h4>
+                              <hr>
+                              <div class="row">
+                                 <div class="col-3">
+                                    <h6>Website</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">www.bootstrap.com</p>
+                                 </div>
+                                 <div class="col-3">
+                                    <h6>Social Link</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">www.bootstrap.com</p>
+                                 </div>
+                              </div>
+                              <h4 class="mt-3">Basic Information</h4>
+                              <hr>
+                              <div class="row">
+                                 <div class="col-3">
+                                    <h6>Birth Date</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">24 January</p>
+                                 </div>
+                                 <div class="col-3">
+                                    <h6>Birth Year</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">1994</p>
+                                 </div>
+                                 <div class="col-3">
+                                    <h6>Gender</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">Female</p>
+                                 </div>
+                                 <div class="col-3">
+                                    <h6>interested in</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">Designing</p>
+                                 </div>
+                                 <div class="col-3">
+                                    <h6>language</h6>
+                                 </div>
+                                 <div class="col-9">
+                                    <p class="mb-0">English, French</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="tab-pane fade" id="v-pills-family" role="tabpanel">
+                              <h4 class="mb-3">Relationship</h4>
+                              <ul class="suggestions-lists m-0 p-0">
+                                 <li class="d-flex mb-4 align-items-center">
+                                    <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                    <div class="media-support-info ms-3">
+                                       <h6>Add Your Relationship Status</h6>
+                                    </div>
+                                 </li>
+                              </ul>
+                              <h4 class="mt-3 mb-3">Family Members</h4>
+                              <ul class="suggestions-lists m-0 p-0">
+                                 <li class="d-flex mb-4 align-items-center">
+                                    <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                    <div class="media-support-info ms-3">
+                                       <h6>Add Family Members</h6>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex mb-4 align-items-center justify-content-between">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/01.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>Paul Molive</h6>
+                                             <p class="mb-0">Brothe</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex justify-content-between mb-4  align-items-center">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/02.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex flex-wrap justify-content-between">
+                                          <div class=" ms-3">
+                                             <h6>Anna Mull</h6>
+                                             <p class="mb-0">Sister</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex mb-4 align-items-center justify-content-between">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/03.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>Paige Turner</h6>
+                                             <p class="mb-0">Cousin</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-pane fade" id="v-pills-work-tab" role="tabpanel" aria-labelledby="v-pills-work-tab">
+                              <h4 class="mb-3">Work</h4>
+                              <ul class="suggestions-lists m-0 p-0">
+                                 <li class="d-flex justify-content-between mb-4  align-items-center">
+                                    <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                    <div class="ms-3">
+                                       <h6>Add Work Place</h6>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex mb-4 align-items-center justify-content-between">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/01.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>Themeforest</h6>
+                                             <p class="mb-0">Web Designer</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex mb-4 align-items-center justify-content-between">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/02.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex flex-wrap justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>iqonicdesign</h6>
+                                             <p class="mb-0">Web Developer</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex mb-4 align-items-center justify-content-between">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/03.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex flex-wrap justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>W3school</h6>
+                                             <p class="mb-0">Designer</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                              <h4 class="mb-3">Professional Skills</h4>
+                              <ul class="suggestions-lists m-0 p-0">
+                                 <li class="d-flex mb-4 align-items-center">
+                                    <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                    <div class="ms-3">
+                                       <h6>Add Professional Skills</h6>
+                                    </div>
+                                 </li>
+                              </ul>
+                              <h4 class="mt-3 mb-3">College</h4>
+                              <ul class="suggestions-lists m-0 p-0">
+                                 <li class="d-flex mb-4 align-items-center">
+                                    <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                    <div class="ms-3">
+                                       <h6>Add College</h6>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex mb-4 align-items-center">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/01.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex flex-wrap justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>Lorem ipsum</h6>
+                                             <p class="mb-0">USA</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-pane fade" id="v-pills-lived-tab" role="tabpanel" aria-labelledby="v-pills-lived-tab">
+                              <h4 class="mb-3">Current City and Hometown</h4>
+                              <ul class="suggestions-lists m-0 p-0">
+                                 <li class="d-flex mb-4 align-items-center justify-content-between">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/01.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex flex-wrap justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>Georgia</h6>
+                                             <p class="mb-0">Georgia State</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="d-flex mb-4 align-items-center justify-content-between">
+                                    <div class="user-img img-fluid"><img src="../assets/images/user/02.jpg" alt="story-img" class="rounded-circle avatar-40"></div>
+                                    <div class="w-100">
+                                       <div class="d-flex flex-wrap justify-content-between">
+                                          <div class="ms-3">
+                                             <h6>Atlanta</h6>
+                                             <p class="mb-0">Atlanta City</p>
+                                          </div>
+                                          <div class="edit-relation"><a href="#"><i class="ri-edit-line me-2"></i>Edit</a></div>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                              <h4 class="mt-3 mb-3">Other Places Lived</h4>
+                              <ul class="suggestions-lists m-0 p-0">
+                                 <li class="d-flex mb-4 align-items-center">
+                                    <div class="user-img img-fluid"><i class="ri-add-fill"></i></div>
+                                    <div class="ms-3">
+                                       <h6>Add Place</h6>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="tab-pane fade" id="v-pills-details-tab" role="tabpanel" aria-labelledby="v-pills-details-tab">
+                              <h4 class="mb-3">About You</h4>
+                              <p>Hi, I’m Bni, I’m 26 and I work as a Web Designer for the iqonicdesign.</p>
+                              <h4 class="mt-3 mb-3">Other Name</h4>
+                              <p>Bini Rock</p>
+                              <h4 class="mt-3 mb-3">Favorite Quotes</h4>
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
-         <div class="text-center me-3 mb-3">
-            <img src="../assets/images/icon/10.png" class="img-fluid rounded mb-2" alt="" loading="lazy">
-            <h6>Instagram</h6>
+         <div class="tab-pane fade" id="friends" role="tabpanel">
+            <div class="card">
+               <div class="card-body">
+                  <h2>Friends</h2>
+                  <div class="friend-list-tab mt-2">
+                     <ul class="nav nav-pills d-flex align-items-center justify-content-left friend-list-items p-0 mb-2">
+                        <li>
+                           <a class="nav-link active" data-bs-toggle="pill" href="#pill-all-friends" data-bs-target="#all-feinds">All Friends</a>
+                        </li>
+                        <li>
+                           <a class="nav-link" data-bs-toggle="pill" href="#pill-recently-add" data-bs-target="#recently-add">Recently Added</a>
+                        </li>
+                        <li>
+                           <a class="nav-link" data-bs-toggle="pill" href="#pill-closefriends" data-bs-target="#closefriends"> Close friends</a>
+                        </li>
+                        <li>
+                           <a class="nav-link" data-bs-toggle="pill" href="#pill-home" data-bs-target="#home-town"> Home/Town</a>
+                        </li>
+                        <li>
+                           <a class="nav-link" data-bs-toggle="pill" href="#pill-following" data-bs-target="#following">Following</a>
+                        </li>
+                     </ul>
+                     <div class="tab-content">
+                        <div class="tab-pane fade active show" id="all-friends" role="tabpanel">
+                           <div class="card-body p-0">
+                              <div class="row">
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Petey Cruiser</h5>
+                                                <p class="mb-0">15  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton01" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton01">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Anna Sthesia</h5>
+                                                <p class="mb-0">50  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton02" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton02">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/07.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Paul Molive</h5>
+                                                <p class="mb-0">10  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton03" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton03">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/08.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Gail Forcewind</h5>
+                                                <p class="mb-0">20  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton04" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton04">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/09.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Paige Turner</h5>
+                                                <p class="mb-0">12  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton05" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton05">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/10.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>b Frapples</h5>
+                                                <p class="mb-0">6  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton06" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton06">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/13.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Walter Melon</h5>
+                                                <p class="mb-0">30  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton07" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton07">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/14.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Barb Ackue</h5>
+                                                <p class="mb-0">14  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton08" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton08">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/15.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Buck Kinnear</h5>
+                                                <p class="mb-0">16  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton09" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton09">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/16.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Ira Membrit</h5>
+                                                <p class="mb-0">22  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton10" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton10">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/17.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Shonda Leer</h5>
+                                                <p class="mb-0">10  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton11" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton11">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/18.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>ock Lee</h5>
+                                                <p class="mb-0">18  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton12" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton12">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/19.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Maya Didas</h5>
+                                                <p class="mb-0">40  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton13" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton13">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Rick O'Shea</h5>
+                                                <p class="mb-0">50  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton14" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton14">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Pete Sariya</h5>
+                                                <p class="mb-0">5  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton15" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton15">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/07.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Monty Carlo</h5>
+                                                <p class="mb-0">2  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton16" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton16">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/08.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Sal Monella</h5>
+                                                <p class="mb-0">0  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton17" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton17">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/09.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Sue Vaneer</h5>
+                                                <p class="mb-0">25  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton18" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton18">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/10.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Cliff Hanger</h5>
+                                                <p class="mb-0">18  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton19" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton19">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Barb Dwyer</h5>
+                                                <p class="mb-0">23  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton20" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton20">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Terry Aki</h5>
+                                                <p class="mb-0">8  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton21" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton21">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/13.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Cory Ander</h5>
+                                                <p class="mb-0">7  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton22" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton22">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/14.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Robin Banks</h5>
+                                                <p class="mb-0">14  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton23" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton23">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/15.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Jimmy Changa</h5>
+                                                <p class="mb-0">10  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton24" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton24">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/16.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Barry Wine</h5>
+                                                <p class="mb-0">18  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton25" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton25">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/17.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Poppa Cherry</h5>
+                                                <p class="mb-0">16  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton26" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton26">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/18.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Zack Lee</h5>
+                                                <p class="mb-0">33  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton27" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton27">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/19.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Don Stairs</h5>
+                                                <p class="mb-0">15  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton28" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton28">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Peter Pants</h5>
+                                                <p class="mb-0">12  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton29" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton29">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Hal Appeno </h5>
+                                                <p class="mb-0">13  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton30" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton30">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="recently-add" role="tabpanel">
+                           <div class="card-body p-0">
+                              <div class="row">
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/07.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Otto Matic</h5>
+                                                <p class="mb-0">4  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton31" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton31">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/08.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Moe Fugga</h5>
+                                                <p class="mb-0">16  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton32" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton32">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/09.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Tom Foolery</h5>
+                                                <p class="mb-0">14  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton33" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton33">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/10.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Bud Wiser</h5>
+                                                <p class="mb-0">16  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton34" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton34">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/15.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Polly Tech</h5>
+                                                <p class="mb-0">10  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton35" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton35">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/16.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Holly Graham</h5>
+                                                <p class="mb-0">8  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton36" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton36">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/17.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Tara Zona</h5>
+                                                <p class="mb-0">5  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton37" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton37">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/18.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Barry Cade</h5>
+                                                <p class="mb-0">20  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton38" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton38">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="closefriends" role="tabpanel">
+                           <div class="card-body p-0">
+                              <div class="row">
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/19.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Bud Wiser</h5>
+                                                <p class="mb-0">32  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton39" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton39">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Otto Matic</h5>
+                                                <p class="mb-0">9  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton40" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton40">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Peter Pants</h5>
+                                                <p class="mb-0">2  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton41" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton41">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/07.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Zack Lee</h5>
+                                                <p class="mb-0">15  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton42" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton42">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/08.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Barry Wine</h5>
+                                                <p class="mb-0">36  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton43" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton43">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/09.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Robin Banks</h5>
+                                                <p class="mb-0">22  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton44" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton44">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/10.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Cory Ander</h5>
+                                                <p class="mb-0">18  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton45" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton45">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/15.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Moe Fugga</h5>
+                                                <p class="mb-0">12  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton46" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton46">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/16.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Polly Tech</h5>
+                                                <p class="mb-0">30  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton47" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton47">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/17.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Hal Appeno</h5>
+                                                <p class="mb-0">25  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton48" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton48">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="home-town" role="tabpanel">
+                           <div class="card-body p-0">
+                              <div class="row">
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/18.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Paul Molive</h5>
+                                                <p class="mb-0">14  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton49" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton49">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/19.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Paige Turner</h5>
+                                                <p class="mb-0">8  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton50" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton50">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Barb Ackue</h5>
+                                                <p class="mb-0">23  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton51" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton51">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Ira Membrit</h5>
+                                                <p class="mb-0">16  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton52" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton52">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/07.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Maya Didas</h5>
+                                                <p class="mb-0">12  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton53" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton53">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="following" role="tabpanel">
+                           <div class="card-body p-0">
+                              <div class="row">
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Maya Didas</h5>
+                                                <p class="mb-0">20  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton54" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton54">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Monty Carlo</h5>
+                                                <p class="mb-0">3  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton55" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton55">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/07.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Cliff Hanger</h5>
+                                                <p class="mb-0">20  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton56" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton56">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/08.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>b Ackue</h5>
+                                                <p class="mb-0">12  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton57" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton57">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/09.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Bob Frapples</h5>
+                                                <p class="mb-0">12  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton58" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton58">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/10.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Anna Mull</h5>
+                                                <p class="mb-0">6  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton59" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton59">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/15.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>ry Wine</h5>
+                                                <p class="mb-0">15  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton60" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton60">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/16.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Don Stairs</h5>
+                                                <p class="mb-0">12  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton61" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton61">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/17.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Peter Pants</h5>
+                                                <p class="mb-0">8  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton62" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton62">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/18.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Polly Tech</h5>
+                                                <p class="mb-0">18  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton63" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton63">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/19.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Tara Zona</h5>
+                                                <p class="mb-0">30  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton64" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton64">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/05.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Arty Ficial</h5>
+                                                <p class="mb-0">15  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton65" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton65">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/06.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Bill Emia</h5>
+                                                <p class="mb-0">25  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton66" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton66">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/07.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Bill Yerds</h5>
+                                                <p class="mb-0">9  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton67" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton67">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6 col-lg-6 mb-3">
+                                    <div class="iq-friendlist-block">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="d-flex align-items-center">
+                                             <a href="#">
+                                             <img src="../assets/images/user/08.jpg" alt="profile-img" class="img-fluid">
+                                             </a>
+                                             <div class="friend-info ms-3">
+                                                <h5>Matt Innae</h5>
+                                                <p class="mb-0">19  friends</p>
+                                             </div>
+                                          </div>
+                                          <div class="card-header-toolbar d-flex align-items-center">
+                                             <div class="dropdown">
+                                                <span class="dropdown-toggle btn btn-secondary me-2" id="dropdownMenuButton68" data-bs-toggle="dropdown" aria-expanded="true" role="button">
+                                                <i class="ri-check-line me-1 text-white"></i> Friend
+                                                </span>
+                                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton68">
+                                                   <a class="dropdown-item" href="#">Get Notification</a>
+                                                   <a class="dropdown-item" href="#">Close Friend</a>
+                                                   <a class="dropdown-item" href="#">Unfollow</a>
+                                                   <a class="dropdown-item" href="#">Unfriend</a>
+                                                   <a class="dropdown-item" href="#">Block</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
-         <div class="text-center me-3 mb-3">
-            <img src="../assets/images/icon/11.png" class="img-fluid rounded mb-2" alt="" loading="lazy">
-            <h6>Google Plus</h6>
-         </div>
-         <div class="text-center me-3 mb-3">
-            <img src="../assets/images/icon/13.png" class="img-fluid rounded mb-2" alt="" loading="lazy">
-            <h6>LinkedIn</h6>
-         </div>
-         <div class="text-center me-3 mb-3">
-            <img src="../assets/images/icon/12.png" class="img-fluid rounded mb-2" alt="" loading="lazy">
-            <h6>YouTube</h6>
+         <div class="tab-pane fade" id="photos" role="tabpanel">
+            <div class="card">
+               <div class="card-body">
+                  <h2>Photos</h2>
+                  <div class="friend-list-tab mt-2">
+                     <ul class="nav nav-pills d-flex align-items-center justify-content-left friend-list-items p-0 mb-2">
+                        <li>
+                           <a class="nav-link active" data-bs-toggle="pill" href="#pill-photosofyou" data-bs-target="#photosofyou">Photos of You</a>
+                        </li>
+                        <li>
+                           <a class="nav-link" data-bs-toggle="pill" href="#pill-your-photos" data-bs-target="#your-photos">Your Photos</a>
+                        </li>
+                     </ul>
+                     <div class="tab-content">
+                        <div class="tab-pane fade active show" id="photosofyou" role="tabpanel">
+                           <div class="card-body p-0">
+                              <div class="d-grid gap-2 d-grid-template-1fr-13">
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/../assets/images/page-img/51.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/52.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/53.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/54.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/55.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/56.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/57.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/58.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/59.jpg" class="img-fluid rounded" alt="image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/60.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/61.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/62.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/63.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/64.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/65.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/51.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/52.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/53.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/54.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/55.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/56.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/57.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/58.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/59.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="your-photos" role="tabpanel">
+                           <div class="card-body p-0">
+                              <div class="d-grid gap-2 d-grid-template-1fr-13 ">
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/51.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/52.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/53.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/54.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/55.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/56.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/57.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/58.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/59.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                                 <div class="">
+                                    <div class="user-images position-relative overflow-hidden">
+                                       <a href="#">
+                                       <img src="../assets/images/page-img/60.jpg" class="img-fluid rounded" alt="Responsive image">
+                                       </a>
+                                       <div class="image-hover-data">
+                                          <div class="product-elements-icon">
+                                             <ul class="d-flex align-items-center m-0 p-0 list-inline">
+                                                <li><a href="#" class="pe-3 text-white"> 60 <i class="ri-thumb-up-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 30 <i class="ri-chat-3-line"></i> </a></li>
+                                                <li><a href="#" class="pe-3 text-white"> 10 <i class="ri-share-forward-line"></i> </a></li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="#" class="image-edit-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit or Remove"><i class="ri-edit-2-fill"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
-</div>  
 
+  
 @endsection
