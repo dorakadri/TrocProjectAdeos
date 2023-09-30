@@ -48,7 +48,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="profile2.html">
+                            <a class="nav-link" href="{{ route('post.index') }}">
                                     <i class="icon material-symbols-outlined filled">
                                         fiber_manual_record
                                     </i>
