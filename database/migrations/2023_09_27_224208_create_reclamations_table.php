@@ -17,7 +17,7 @@ return new class extends Migration
              $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('status');
+            $table->enum('status', ['treated', 'not_treated']); // Define enum values
             $table->timestamps();
         });
     }

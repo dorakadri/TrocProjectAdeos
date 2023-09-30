@@ -31,20 +31,24 @@
         @csrf 
         @method('put')
                     
-                        <div class="form-group">
-                            <label class="form-label" for="title">title</label>
-                            <input type="text" class="form-control" name="title" placeholder="title" value="{{$reclamation->title}}">
-                        </div>
-                            <div class="form-group">
-                            <label class="form-label" for="exampleInputPlaceholder">description</label>
-                            <input type="text" class="form-control" name="description" placeholder="description" value="{{$reclamation->description}}">
-                        </div>
+                       <div class="form-group">
+    <label class="form-label" for="title">Title</label>
+    <input type="text" class="form-control" name="title" placeholder="Title" value="{{$reclamation->title}}" readonly>
+</div>
+<div class="form-group">
+    <label class="form-label" for="description">Description</label>
+    <input type="text" class="form-control" name="description" placeholder="Description" value="{{$reclamation->description}}" readonly>
+</div>
+
                       
-                       </div>
-                            <div class="form-group">
-                            <label class="form-label" for="exampleInputPlaceholder">status</label>
-                            <input type="text" class="form-control" name="status" placeholder="status" value="{{$reclamation->status}}">
-                        </div>
+                      <div class="form-group">
+    <label class="form-label" for="status">Status</label>
+    <select class="form-control" name="status" id="status">
+        <option value="treated" {{ $reclamation->status === 'treated' ? 'selected' : '' }}>Treated</option>
+        <option value="not_treated" {{ $reclamation->status === 'not_treated' ? 'selected' : '' }}>Not Treated</option>
+    </select>
+</div>
+
                       
 
                          

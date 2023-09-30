@@ -45,11 +45,13 @@
                             <input type="text" class="form-control" name="description" placeholder="description">
                         </div>
                       
-                       </div>
-                            <div class="form-group">
-                            <label class="form-label" for="exampleInputPlaceholder">status</label>
-                            <input type="text" class="form-control" name="status" placeholder="status">
-                        </div>
+ <div class="form-group">
+    <label class="form-label" for="status">Status</label>
+    <input type="hidden" name="status" value="not_treated">
+    <span class="form-control">Not Treated</span>
+</div>
+
+
                       
 
                          

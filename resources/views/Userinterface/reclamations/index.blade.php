@@ -22,7 +22,7 @@
                <div id="table" class="table-editable">
                   <span class="table-add float-end mb-3 me-2">
 
-                  <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success d-flex align-items-center">Add Reclamation</a>
+                  <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success d-flex align-items-center">+ Add Reclamation</a>
 
                   </span>
                   <table class="table table-bordered table-responsive-md table-striped text-center">
@@ -34,6 +34,7 @@
                 <th>status</th>
                 <th>Edit</th>
                 <th>Delete</th>
+                   <th>Answer</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -58,6 +59,7 @@
 </span>
 
                            </td>
+                              <td> </td>
                         </tr>
                           @endforeach
                      </tbody>
