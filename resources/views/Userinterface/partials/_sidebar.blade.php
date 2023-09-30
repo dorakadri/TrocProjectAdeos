@@ -57,6 +57,14 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+    <a class="nav-link" href="{{ route('associations.index') }}">
+        <i class="icon material-symbols-outlined filled">
+            fiber_manual_record
+        </i>
+        <i class="sidenav-mini-icon"> Associations </i>
+    </a>
+</li>
+                            <li class="nav-item">
                                 <a class="nav-link " href="profile3.html">
                                     <i class="icon material-symbols-outlined filled">
                                         fiber_manual_record
