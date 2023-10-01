@@ -57,7 +57,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="profile3.html">
+                                <a class="nav-link " href="{{route('Community.index')}}">
                                     <i class="icon material-symbols-outlined filled">
                                         fiber_manual_record
                                     </i>
@@ -87,7 +87,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page"
-                            href="https://templates.iqonic.design/socialv/bs5/html/dist/app/group.html">
+                        href="/communities">
                             <i class="icon material-symbols-outlined">
                                 groups
                             </i>
