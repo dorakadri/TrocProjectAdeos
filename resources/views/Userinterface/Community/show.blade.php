@@ -18,7 +18,7 @@
 
     <div class="background-header position-relative">
  
-    <img src="{{ asset('images/100.jpg')}}" class="img-fluid  w-100  " style="height: 15rem; object-fit: cover;" alt="group-bg"  >
+    <img src="{{ asset('images/community/03.jpg')}}" class="img-fluid  w-100  " style="height: 15rem; object-fit: cover;" alt="group-bg"  >
          
     </div>
     @endif
