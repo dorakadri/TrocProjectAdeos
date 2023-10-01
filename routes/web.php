@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DonationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +25,12 @@ Route::get('/', function () {
 Route::get('/Admin/dashboard', function () {
     return view('admin.components.Dashboard');
 });
+
+
+
+Route::get('/Donation', [DonationController::class,'index'])->name( 'donations.index'); 
+Route::get('/Donation/create', [DonationController::class,'create'])->name( 'donations.create');
+Route::post('/Donation/create', [DonationController::class,'add'])->name( 'donations.add');  
+Route::get('/Donation/{donation}/edit', [DonationController::class,'edit'])->name( 'donations.edit'); 
+Route::put('/Donation/{donation}/update', [DonationController::class,'update'])->name( 'donations.update');
+Route::delete('/Donation/{donation}/delete', [DonationController::class,'delete'])->name( 'donations.delete');  
