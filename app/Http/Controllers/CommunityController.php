@@ -40,8 +40,24 @@ class CommunityController extends Controller
      */
     public function store(Request $request)
     {
-        $formFields = $request->all();
-        Community::create($formFields);
+         
+
+        $formFields = $request->validate(
+            [
+                'name' => 'required',
+                'description' => 'required',
+                'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', 
+
+            ]
+
+        ); 
+     
+        if($request->Hasfile('image')){
+            $formFields['image']=$request->file('image')->store('image','public');
+        }
+    
+        community::create($formFields);
+
         return redirect()->route('Community.index')->with('message','Community added successfully') ;
 
         }
@@ -91,10 +107,14 @@ class CommunityController extends Controller
             ]
 
         ); 
+        if($request->Hasfile('image')){
+            $formFields['image']=$request->file('image')->store('image','public');
+        }
         
         $community->update($formFields);
         
         return redirect()->route('Community.index') ->with('message','Community updated successfully') ;
+ 
     }
 
     /**

@@ -1,3 +1,6 @@
+
+
+
 @extends('components.layout')
 @section('content')
  
@@ -30,12 +33,25 @@
                      <div class="card-body">
                         <ul class="notification-list m-0 p-0">
                            <li class="d-flex align-items-center justify-content-between">
-                              <div class="user-img img-fluid"><img src="{{ asset('images/profile-bg8.jpg')}}" alt="story-img"
-                                    class="rounded-circle avatar-40"></div>
+
+                           
+                              <div class="user-img img-fluid">
+
+                                    @if($community->image)
+                                    <img src="{{ asset('storage/' . $community->image) }}" alt="story-img"class="rounded-circle avatar-40">
+
+                                     @else
+                                    <img src="{{ asset('images/community/03.jpg')}}" alt="story-img"class="rounded-circle avatar-40">
+
+                                    @endif
+                              
+                                    </div>
                               <div class="w-100">
                                  <div class="d-flex justify-content-between">
-                                    <div class=" ms-3"  >
-                                       <h5>{{$community->name}}</h5>
+                                    <div class=" ms-3" class="group-info mt-0" >
+                                       <h4 > <a  href="{{route('Community.show',$community->id )}}">{{$community->name}}  </a></h4>
+
+                                     
                                        <p class="mb-0">{{$community->description}}</p>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -53,24 +69,25 @@
                                                 aria-labelledby="dropdownMenuButton" style="">
                                              
                                                    <a class="dropdown-item d-flex align-items-center" href="{{route('Community.edit',$community->id )}}"> 
-                                                   <button type="submit" class="btn  py-0  my-0">
-                                                      Edit 
-                                                      </button></a>
+                                                 
+                                                   <button type="submit" class="btn  py-0 my-0"> Edit </button>  
+                                                      </a>
                                                     <form method="post" action="{{ route('Community.destroy', $community->id) }}">
                                                       @csrf 
                                                       @method('DELETE')
                                                       <a class="dropdown-item d-flex align-items-center"  > 
-                                                      <button type="submit" class="btn  py-0 my-0">
+                                                      <button type="submit" class="btn   py-0 my-0">
                                                       Delete 
                                                       </button> </a>
+                                                      
 
                                                      
                                                    </form>
                                                
                                                    <a class="dropdown-item d-flex align-items-center" href="#"> 
-                                                   <button type="submit" class="btn  py-0 my-0">
-                                                      Leave 
-                                                      </button> </a>
+                                                  
+                                                   <button type="submit" class="btn   py-0 my-0"> Leave </button>  
+                                                    </a>
                                                
                                           
                                              </div>

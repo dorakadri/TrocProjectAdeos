@@ -6,10 +6,24 @@
  
 
 <div class="header-for-bg">
+@if($community->image)
+
+         <div class="background-header position-relative  bg-gradient bg-transparent border ">
+         
+                <img src="{{ asset('storage/' . $community->image) }}" class="img-fluid  w-100  " style="height: 15rem; object-fit: cover;" alt="group-bg"  >
+               
+         </div>
+    @else
+    
+
     <div class="background-header position-relative">
-        <img src="{{ asset('images/profile-bg8.jpg')}}" class="img-fluid w-100" alt="header-bg" loading="lazy">
+ 
+    <img src="{{ asset('images/100.jpg')}}" class="img-fluid  w-100  " style="height: 15rem; object-fit: cover;" alt="group-bg"  >
          
     </div>
+    @endif
+
+    
     </div>
     <!-- Page Content  -->    </div>
     <div id="content-page" class="content-page">
@@ -35,7 +49,7 @@
                         </div>
                      </div>
                      <div class="row mt-2">
-                        <div class="col-lg-5">
+                        <div class="col-lg-12">
                         <h6 class="mb-2"> {{$community->description}} </h6>
 
                         </div>
@@ -721,7 +735,7 @@
                               <li class="mb-2">
                                  <div class="d-flex justify-content-between">
                                     <div class="user-img me-3">
-                                       <img src="{{ asset('images/profile-bg8.jpg')}}" alt="userimg" class="avatar-60  rounded-circle img-fluid " loading="lazy">
+                                       <img src="{{ asset('images/100.jpg')}}" alt="userimg" class="avatar-60  rounded-circle img-fluid " loading="lazy">
                                     </div>
                                     <div class="w-100 text-margin">
                                        <div class="">

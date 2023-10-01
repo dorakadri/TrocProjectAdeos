@@ -49,6 +49,38 @@
                             value="{{$community->description}}">
                         </div >
 
+                                 @if($community->image)
+                                  
+                                 <div class="col-sm-12 d-flex   justify-content-center">
+
+                                 <div class="col-sm-10  mt-2  ">
+                                    <div class="card position-relative border-1 inner-page-bg"  style="height: 150px;">
+                                       <img src="{{ asset('storage/' . $community->image) }}" class="img-fluid  w-100  " style="  object-fit: cover;" alt="group-bg" loading="lazy">
+
+                                    </div>
+                                </div>
+                          
+ 
+                                </div>
+ 
+                                @else
+
+                          
+                                    
+                              
+                                <div class="nav nav-pills nav-fill stepwizard-row "   role="tablist"  style="cursor: default; ">
+                                     
+                                    <a class="nav-link btn" style="cursor: default; "  >
+                                        <i class="material-symbols-outlined bg-soft-success text-success">photo_camera</i><span>No photo</span>
+                                    </a>
+                                    
+                                </div>
+                         
+                                   
+                                 
+                                    @endif
+                       
+
                         <div class="form-group">
                         <label class="form-label" for="image">Image</label>
                         <input type="file" class="form-control" name="image" accept="image/*">
@@ -59,7 +91,7 @@
                             
                           
                     
-                        <button type="submit" class="btn btn-primary">Create</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
                        
                     </form>
                 </div>

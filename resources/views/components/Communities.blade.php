@@ -4,10 +4,17 @@
 <div class="row">
    @foreach ($communities as $community)            
 
-        <div class="   col-md-4 col-sm-6 "   >
+        <div class="   col-md-4 col-sm-6 mb-3"   >
              <div class="card mb-0 ">
-                         <div class="top-bg-image">
-                             <img src="{{ asset('images/profile-bg8.jpg')}}" class="img-fluid w-100" alt="group-bg" loading="lazy">
+                         <div class="top-bg-image"  >
+                         @if($community->image)
+                         <img src="{{ asset('storage/' . $community->image) }}" class="img-fluid  w-100  " style="height: 7rem; object-fit: cover;" alt="group-bg"  >
+                                    @else
+                                         
+                                        <img src="{{  asset('images/community/03.jpg') }}" class="img-fluid w-100" style="height: 7rem; object-fit: cover;" alt="group-bg">
+ 
+ 
+                                    @endif
                           </div>
                 <div class="card-body text-center">
                      
@@ -45,3 +52,4 @@
          @endforeach    
 </div>
 @endsection
+
