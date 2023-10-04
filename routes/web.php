@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReclamationController;
+use App\Http\Controllers\ReponseController;
 /*
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get('/Admin/dashboard', function () {
 
 
 Route::resource('reclamation',ReclamationController::class);
+
+Route::resource('reponse',ReponseController::class);
