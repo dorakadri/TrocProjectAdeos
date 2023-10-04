@@ -79,12 +79,12 @@ class="card card-block card-stretch "
                   
                   </li>
               <li class="col-md-5 mb-3">
-                <label class="form-label" for="exchangeType">Exchange type</label>
-                <select class="form-select me-3" name="exchangeType" aria-label="Default select example">
+                <label class="form-label" for="echangetype">Exchange type</label>
+                <select class="form-select me-3" name="echangetype" aria-label="Default select example">
                   <option disabled value="">Choose Type of exchange</option>
-                  <option value="ob_ob" {{ old('exchangeType') == 'ob_ob' ? 'selected' : '' }}>Object against Object</option>
-                  <option value="ob_serv" {{ old('exchangeType') == 'ob_serv' ? 'selected' : '' }}>Object against Service</option>
-                  <option value="donate" {{ old('exchangeType') == 'donate' ? 'selected' : '' }}>Donation</option>
+                  <option value="ob_ob" {{ old('echangetype') == 'ob_ob' ? 'selected' : '' }}>Object against Object</option>
+                  <option value="ob_serv" {{ old('echangetype') == 'ob_serv' ? 'selected' : '' }}>Object against Service</option>
+                  <option value="donate" {{ old('echangetype') == 'donate' ? 'selected' : '' }}>Donation</option>
               </select>
               
                 @error('echangetype')

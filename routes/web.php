@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AnnonceController;
+use App\Http\Controllers\ExchangedemandsController;
+use App\Models\Exchangedemands;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,5 +43,7 @@ Route::get('/Admin/Profile', function () {
 
 Route::redirect('/', '/Annonce');
 Route::resource ('Annonce',AnnonceController::class) ;
+Route::resource ('Exchanges',ExchangedemandsController::class) ;
+Route::get('/Exchange/createbyid/{id}', [ExchangedemandsController::class, 'createbyid']);
 Route::get('/profile',[AnnonceController::class,'UserList']);
 

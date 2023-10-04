@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\AnnonceEchangeTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class annonce extends Model
 {
@@ -35,4 +36,9 @@ class annonce extends Model
                
         }
     }
+
+public function exchangesdemands() :HasMany{
+    return  $this->hasMany(Exchangedemands::class,"annonce_id");
+
+}
 }

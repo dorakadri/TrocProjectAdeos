@@ -48,6 +48,15 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link " href="{{route('Exchanges.index')}}">
+                                    <i class="icon material-symbols-outlined filled">
+                                        fiber_manual_record
+                                    </i>
+                                    <i class="sidenav-mini-icon"> P </i>
+                                    <span class="item-name">my exchanges demands </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link " href="profile2.html">
                                     <i class="icon material-symbols-outlined filled">
                                         fiber_manual_record

@@ -9,13 +9,22 @@
             <label class="col-sm-2 align-self-center mb-0">Title:</label>
             <div class="col-sm-8">
               <input class="form-control" value="{{$annonce->title}}" name="title" placeholder="Give your Post a Title" name="postTitle" />
+              @error('title')
+              <p class="text-danger">{{$message}}</p>
+                  
+              @enderror
             </div>
           </div>
         <div class="form-group row mb-3">
             <label class="col-sm-2 align-self-center mb-0">description:</label>
             <div class="col-sm-8">
                 <input type="text" name="description" value="{{$annonce->description}}" class="form-control" placeholder="Write something here..." />
-            </div>
+                @error('description')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
+           
+              </div>
           </div>
 
 
@@ -38,18 +47,26 @@
             
             </li>
             <li class="col-md-5 mb-3">
-                <label class="form-label" for="exchangeType">Exchange type</label>
+                <label class="form-label" for="echangetype">Exchange type</label>
                 <select class="form-select me-3" name="echangetype" aria-label="Default select example">
                     <option disabled>Choose Type of exchange</option>
-                    <option value="ob_ob" {{ $annonce->exchangeType === 'ob_ob' ? 'selected' : '' }}>Object against Object</option>
-                    <option value="ob_serv" {{ $annonce->exchangeType === 'ob_serv' ? 'selected' : '' }}>Object against Service</option>
-                    <option value="donate" {{ $annonce->exchangeType === 'donate' ? 'selected' : '' }}>Donation</option>
+                    <option value="ob_ob" {{ $annonce->echangetype === 'ob_ob' ? 'selected' : '' }}>Object against Object</option>
+                    <option value="ob_serv" {{ $annonce->echangetype === 'ob_serv' ? 'selected' : '' }}>Object against Service</option>
+                    <option value="donate" {{ $annonce->echangetype === 'donate' ? 'selected' : '' }}>Donation</option>
                 </select>
+                @error('echangetype')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
             </li>
             
         <li class="col-md-5 mb-3">
           <label for="tags" class="inline-block text-lg mb-2">Tags (Comma Separated)</label>
           <input type="text" value="{{$annonce->tags}}"  class="form-control rounded ml-3" name="tags" placeholder="Example: Wood, Table, etc" />
+          @error('tags')
+          <p class="text-danger">{{$message}}</p>
+              
+          @enderror
         </li>
       </ul>
       <div class="d-flex gap-3">

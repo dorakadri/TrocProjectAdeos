@@ -12,7 +12,7 @@ class AnnonceController extends Controller
      */
     public function index()
     {
-        $annonces = Annonce::latest()->  where('taken', false)->filter(request(['tag' , 'search']))->get(); 
+        $annonces = Annonce::latest()->where('taken', false)->filter(request(['tag' , 'search']))->get(); 
     
         return view('Userinterface.Annonce.index', [
             'annonces' => $annonces ,
@@ -37,7 +37,7 @@ class AnnonceController extends Controller
             [
                 'title' => 'required',
                 'tags' => 'required',
-                'description' => 'required|max:250',
+                'description' => 'required|max:25',
                 'echangetype' => 'required',
 
             ]
@@ -85,7 +85,7 @@ class AnnonceController extends Controller
             [
                 'title' => 'required',
                 'tags' => 'required',
-                'description' => 'required'|'max:250',
+                'description' => 'required|max:250',
                 'echangetype' => 'required',
 
             ]

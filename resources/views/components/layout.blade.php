@@ -58,13 +58,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            @if($errors->any())
+            @if ($errors->any())
                 $('#post-modal').modal('show');
             @endif
         });
-      </script>
+    </script>
 
 
+    <script>
+        $(document).ready(function() {
+            $('#echangetype').on('change', function() {
+                var selectedValue = $(this).val();
+                if (selectedValue === 'ob_ob' || selectedValue === 'ob_serv') {
+                    $('.image-input').show();
+                    $('.description-input').show();
+
+                } else {
+                    $('.image-input').hide();
+                    $('.description-input').hide();
+                }
+            });
+        });
+    </script>
 </body>
 
 
