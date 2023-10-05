@@ -23,7 +23,7 @@
                             <table class="table table-bordered table-responsive-md table-striped text-center">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                      
                                         <th>Title</th>
                                         <th>Description</th>
                                         <th>Status</th>
@@ -35,7 +35,7 @@
                                 <tbody>
                                     @foreach($reclamations as $reclamation)
                                     <tr>
-                                        <td>{{ $reclamation->id }}</td>
+                                      
                                         <td>{{ $reclamation->title }}</td>
                                         <td>{{ $reclamation->description }}</td>
                                         <td>{{ $reclamation->status }}</td>
@@ -49,7 +49,7 @@
                                         </td>
                                     
 <td>
-    <a href="{{ route('reponse.create', ['reclamation_id' => $reclamation->id]) }}" class="btn btn-sm btn-success d-flex align-items-center">Add Response</a>
+    <a href="{{ route('reponse.create', ['reclamation_id' => $reclamation->id]) }}" class="btn btn-sm btn-success ">Add Response</a>
 </td>
 
 

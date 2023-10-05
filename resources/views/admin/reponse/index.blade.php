@@ -23,7 +23,7 @@
                             <table class="table table-bordered table-responsive-md table-striped text-center">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                    
                                         <th>description</th>
                                         <th>reclamation</th>
                                         <th>Edit</th>
@@ -33,7 +33,7 @@
                                 <tbody>
                                     @foreach($reponses as $reponse)
                                     <tr>
-                                        <td>{{ $reponse->id }}</td>
+                                       
                                         <td>{{ $reponse->description }}</td>
                                         <td>{{ $reponse->reclamation->title }}</td>
 

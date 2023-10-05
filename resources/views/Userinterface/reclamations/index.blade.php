@@ -13,29 +13,27 @@
       </div>
     </div>
     <div class="row mt-3">
-      <div class="col-sm-3">
-        <span class="">
-          <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success d-flex align-items-center">+ Add Reclamation</a>
-        </span>
+      <div class="col-sm-12">
+        <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success">+ Add Reclamation</a>
       </div>
     </div>
     <div class="row mt-3">
       @foreach($reclamations as $reclamation)
-      <div class="col-sm-3 mb-3">
+      <div class="col-sm-4 mb-3">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body" style="min-height: 150px;"> <!-- Set a minimum height -->
             <h4 class="card-title">Title: {{ $reclamation->title }}</h4>
-            <h4 class="card-title">Status: {{ $reclamation->status }}</h4>
+            <h5 class="card-title">Status: {{ $reclamation->status }}</h5>
             <p class="card-text">Description: {{ $reclamation->description }}</p>
             @foreach($reclamation->reponses as $reponse)
-            <p class="card-text"> Responses: {{ $reponse->description }}</p>
+            <p class="card-text">Responses: {{ $reponse->description }}</p>
             @endforeach
           </div>
-          <div class="card-footer">
+          <div class="card-footer text-center">
             <form method="post" action="{{ route('reclamation.destroy', ['reclamation' => $reclamation]) }}">
               @csrf
               @method('delete')
-              <button type="submit" class="btn btn-danger btn-sm float-right">Delete</button>
+              <button type="submit" class="btn btn-danger btn-sm">Delete</button>
             </form>
           </div>
         </div>
