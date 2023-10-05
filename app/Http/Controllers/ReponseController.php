@@ -19,7 +19,7 @@ class ReponseController extends Controller
      $reclamations = Reclamation::with('reponses')->get();
     $reponses = Reponse::with('reclamation')->get();
 
-    return view('Userinterface.reponse.index', compact('reponses', 'reclamations'));
+    return view('admin.reponse.index', compact('reponses', 'reclamations'));
     }
 
     /**
@@ -27,13 +27,18 @@ class ReponseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-public function create()
+public function create($reclamation_id)
 {
-    // Retrieve the list of Reclamations with the status "not_treated"
-    $reclamations = Reclamation::where('status', 'not_treated')->get();
+    // Find the Reclamation by ID
+    $reclamation = Reclamation::find($reclamation_id);
 
-    return view('Userinterface.reponse.create', compact('reclamations'));
+    if (!$reclamation) {
+        return redirect()->route('reclamation.index')->with('error', 'Reclamation not found');
+    }
+
+    return view('admin.reponse.create', ['reclamation' => $reclamation]);
 }
+
 
 
     /**
@@ -52,7 +57,7 @@ public function create()
     // Create a new Reponse record
     $reponse = Reponse::create($data);
 
-    return redirect(route('reponse.index'));
+    return redirect(route('admin.reclamations.index'));
 }
 
     /**
@@ -74,7 +79,7 @@ public function create()
      */
  public function edit(Reponse $reponse)
 {
-    return view('Userinterface.reponse.edit', ['reponse' => $reponse]);
+    return view('admin.reponse.edit', ['reponse' => $reponse]);
 }
     /**
      * Update the specified resource in storage.

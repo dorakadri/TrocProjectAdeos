@@ -16,6 +16,11 @@ class ReclamationController extends Controller
           $reclamations = Reclamation::all();
          return view ('Userinterface.reclamations.index', compact('reclamations')) ;
     }
+public function index2()
+{
+    $reclamations = Reclamation::all();
+    return view('admin.reclamations.index', compact('reclamations'));
+}
 
     /**
      * Show the form for creating a new resource.
@@ -66,7 +71,7 @@ class ReclamationController extends Controller
      */
     public function edit(Reclamation $reclamation)
     {
-       return view('Userinterface.reclamations.edit', ['reclamation' => $reclamation]);
+       return view('admin.reclamations.edit', ['reclamation' => $reclamation]);
     }
 
     /**
@@ -86,7 +91,7 @@ class ReclamationController extends Controller
 
         $reclamation->update($data);
 
-        return redirect(route('reclamation.index'))->with('success', 'reclamation Updated Succesffully');
+        return redirect(route('admin.reclamations.index'))->with('success', 'reclamation Updated Succesffully');
 
     }
 

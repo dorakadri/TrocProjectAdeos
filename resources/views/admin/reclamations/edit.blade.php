@@ -1,5 +1,5 @@
-@extends('components.layout')
-@section('content')
+@extends('admin.components.layout')
+@section('contentadmin')
     <div id="content-page" class="content-page">
           <div>
         @if($errors->any())

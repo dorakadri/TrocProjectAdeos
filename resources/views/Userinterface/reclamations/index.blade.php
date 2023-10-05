@@ -2,72 +2,47 @@
 @section('content')
 
 <div id="content-page" class="content-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card position-relative inner-page-bg bg-primary" style="height: 150px;">
-                    <div class="inner-page-title">
-                        <h3 class="text-white">Reclamations Area</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <!-- Editable table -->
-                <div class="card">
-                    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
-                        My Reclamations
-                    </h3>
-                    <div class="card-body">
-                        <div id="table" class="table-editable">
-                            <span class="table-add float-end mb-3 me-2">
-                                <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success d-flex align-items-center">+ Add Reclamation</a>
-                            </span>
-                            <table class="table table-bordered table-responsive-md table-striped text-center">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Status</th>
-                                        <th>Responses</th>
-                                        <th>Edit</th>
-                                        <th>Delete</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($reclamations as $reclamation)
-                                    <tr>
-                                        <td>{{ $reclamation->id }}</td>
-                                        <td>{{ $reclamation->title }}</td>
-                                        <td>{{ $reclamation->description }}</td>
-                                        <td>{{ $reclamation->status }}</td>
-                                        <td>
-                                            @foreach($reclamation->reponses as $reponse)
-                                                {{ $reponse->description }}<br>
-                                            @endforeach
-                                        </td>
-                                        <td>
-                                            <a href="{{ route('reclamation.edit', ['reclamation' => $reclamation]) }}" class="btn btn-warning btn-rounded btn-sm my-0">Edit</a>
-                                        </td>
-                                        <td>
-                                            <span class="table-remove">
-                                                <form method="post" action="{{ route('reclamation.destroy', ['reclamation' => $reclamation]) }}">
-                                                    @csrf
-                                                    @method('delete')
-                                                    <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
-                                                </form>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card position-relative inner-page-bg bg-primary" style="height: 150px">
+          <div class="inner-page-title">
+            <h3 class="text-white">My reclamations</h3>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="row mt-3">
+      <div class="col-sm-3">
+        <span class="">
+          <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success d-flex align-items-center">+ Add Reclamation</a>
+        </span>
+      </div>
+    </div>
+    <div class="row mt-3">
+      @foreach($reclamations as $reclamation)
+      <div class="col-sm-3 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Title: {{ $reclamation->title }}</h4>
+            <h4 class="card-title">Status: {{ $reclamation->status }}</h4>
+            <p class="card-text">Description: {{ $reclamation->description }}</p>
+            @foreach($reclamation->reponses as $reponse)
+            <p class="card-text"> Responses: {{ $reponse->description }}</p>
+            @endforeach
+          </div>
+          <div class="card-footer">
+            <form method="post" action="{{ route('reclamation.destroy', ['reclamation' => $reclamation]) }}">
+              @csrf
+              @method('delete')
+              <button type="submit" class="btn btn-danger btn-sm float-right">Delete</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      @endforeach
+    </div>
+  </div>
 </div>
 
 @endsection
