@@ -68,8 +68,9 @@ class ExchangedemandsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $exchange = Exchangedemands::find($id);
+        return view('Userinterface.Exchangedemands.show',compact('exchange'));
     }
 
     /**

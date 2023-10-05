@@ -57,11 +57,10 @@ class AnnonceController extends Controller
      * Display the specified resource.
      */
     public function show(string $id)
-    {   
-        $annonce = annonce::find($id) ;
-        return view('Userinterface.Annonce.show', [
-            'annonce' => $annonce
-        ]);
+ 
+    {    
+        $annonce = annonce::with('exchangesdemands')->find($id);
+        return view('Userinterface.Annonce.show', compact('annonce')) ;
     }
 
     /**

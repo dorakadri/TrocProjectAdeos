@@ -3,14 +3,19 @@
 
 
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-4">
             <div class="card card-block card-stretch card-height blog blog-detail">
     
             <x-Annonce-detail :annonce="$annonce" />
             </div>
-        </div>
-        <div class="col-lg-3">
+        </div>  
+
+        @include('Userinterface.Exchangedemands.index', ['exchanges' => $annonce->exchangesdemands])
+
+               {{-- this will display when users want to view details of a post --}}
+    {{--     <div class="col-lg-3">
             <div class="card">
+         
                 <div class="card-body">
                     <div class="text-center">
                         <img class="img-fluid rounded-circle avatar-130" src="{{ asset('images/pdf.jpg') }}"
@@ -37,6 +42,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>   --}}
+        {{-- this will display in view detail of the owner of the post  --}} 
+    
     </div>
 @endsection

@@ -139,7 +139,7 @@
                 <a type="button" href="/Exchange/createbyid/{{ $annonce->id }}"
                     class="btn btn-primary d-block mt-3 w-100">Exchange</a>
 
-
+                 
 
             </div>
 

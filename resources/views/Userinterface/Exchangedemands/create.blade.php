@@ -27,7 +27,7 @@
                                         with an object </option>
                                     <option value="ob_serv" {{ old('echangetype') == 'ob_serv' ? 'selected' : '' }}>exchange
                                         with a Service</option>
-                                    <option value="donate" {{ old('echangetype') == 'donate' ? 'selected' : '' }}>Take it
+                                    <option value="donate" {{ $annonce->echangetype->value !== 'donate' ? 'disabled' : '' }}  {{ old('echangetype') == 'donate' ? 'selected' : '' }}>Take it
                                     </option>
                                 </select>
 
