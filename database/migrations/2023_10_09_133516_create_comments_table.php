@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -13,12 +27,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 255);
-            $table->string('description', 255);
-            
-            $table->string('image')->nullable();
+            $table->string('description');
+            $table->integer('post_id');
+
             $table->timestamps();
         });
     }
@@ -30,6 +43,14 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('comments');
     }
 };
+
+
+
+
+
+
+
+
