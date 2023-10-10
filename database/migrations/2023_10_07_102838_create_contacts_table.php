@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('associations', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); 
-            $table->string('logo'); 
-            $table->string('description'); 
-            $table->string('responsable');
+            $table->unsignedBigInteger('association_id');
+            $table->foreign('association_id')->references('id')->on('associations')
+            ->onDelete('cascade')->onUpdate('cascade');
+            $table->string('number');
+            $table->string('address');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('associations');
+        Schema::dropIfExists('contacts');
     }
 };

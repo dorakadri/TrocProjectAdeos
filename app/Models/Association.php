@@ -9,9 +9,10 @@ class Association extends Model
 {
     use HasFactory;
 
-    protected $table = 'association';
-    protected $primaryKey='id';
     protected $fillable = ['name', 'logo', 'responsable', 'description'];
-
+    public function contact()
+    {
+        return $this->hasMany(Contact::class);
+    }
 
 }

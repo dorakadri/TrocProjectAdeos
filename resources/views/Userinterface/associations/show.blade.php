@@ -25,6 +25,16 @@
             <th>Status</th>
             <td>Not Treated</td>
         </tr>
+        @foreach($association->contact as $contact)
+        <tr>
+            <th>Contact</th>
+            <td>{{$contact->number}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{$contact->address}}</td>
+        </tr>
+        @endforeach
     </table>
 </div>
 

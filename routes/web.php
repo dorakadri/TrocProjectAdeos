@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AssociationController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +24,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/index2', [AssociationController::class, 'index2']);
 //just for test mba3ed bich tkoun 3ana ressources 
+
+
+Route::resource('associations',AssociationController::class);
+Route::resource('contacts', ContactController::class);
+    
 Route::get('/Admin/dashboard', function () {
     return view('admin.components.Dashboard');
 });
-
-Route::resource('associations',AssociationController::class);

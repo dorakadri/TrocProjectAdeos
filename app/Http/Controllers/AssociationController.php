@@ -16,6 +16,12 @@ class AssociationController extends Controller
     $associations = Association::all();
     return view('Userinterface.associations.index', compact('associations'));
   }
+  public function index2()
+  {
+    $associations = Association::all();
+    return view('Userinterface.associations.index2', compact('associations'));
+  }
+
     /**
    * Store a newly created resource in storage.
    *
@@ -25,9 +31,9 @@ class AssociationController extends Controller
   public function store(Request $request)
   {
     $request->validate([
-        'responsable' => 'required',
-        'description' => 'required',
-        'name' => 'required',
+        'responsable' => 'required|max:25',
+        'description' => 'required|max:2000',
+        'name' => 'required|max:2500|min:3',
         'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
     ]);
 
@@ -56,9 +62,9 @@ class AssociationController extends Controller
   public function update(Request $request, $id)
   {
       $request->validate([
-          'responsable' => 'required',
-          'description' => 'required',
-          'name' => 'required',
+      'responsable' => 'required|max:25',
+        'description' => 'required|max:2000',
+        'name' => 'required|max:25|min:3',
       ]);
   
       $association = Association::find($id);
@@ -112,11 +118,14 @@ class AssociationController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show($id)
-  {
+// AssociationController.php
+public function show($id)
+{
     $association = Association::find($id);
-    return view('Userinterface.associations.show', compact('association'));
-  }
+    $contacts = $association->contacts; // Retrieve contacts associated with this association
+    return view('Userinterface.associations.show', compact('association', 'contacts'));
+}
+
    /**
    * Show the form for editing the specified post.
    *

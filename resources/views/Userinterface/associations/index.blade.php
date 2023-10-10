@@ -16,19 +16,15 @@
          <!-- Editable table -->
          <div class="card">
             <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
-             My Associations
+             List Associations
             </h3>
             <div class="card-body">
                <div id="table" class="table-editable">
                   <span class="table-add float-end mb-3 me-2">
-
-                  <a href="{{ route('associations.create') }}" class="btn btn-sm btn-success d-flex align-items-center">+ Add Association</a>
-
                   </span>
                   <table class="table table-bordered table-responsive-md table-striped text-center">
                      <thead>
                         <tr>
-                            <th>ID</th>
                 <th>Name</th>
                 <th>Responsable</th>
                 <th>Logo</th>
@@ -41,7 +37,6 @@
                      <tbody>
                         @foreach($associations as $association )
                 <tr>
-                    <td>{{$association->id}}</td>
                     <td>{{$association->name}}</td>
                     <td>{{$association->responsable}}</td>
                     <td>  
@@ -53,7 +48,7 @@
 
                     </td>
                     <td>
-                      <a href="{{ route('associations.show', $association->id) }}" class="btn btn-default btn-rounded btn-sm my-0">show</a>
+                      <a href="{{ route('associations.show', $association->id) }}" class="btn btn-primary btn-rounded btn-sm my-0">show</a>
                     </td>
                            <td>
                              <span class="table-remove">
