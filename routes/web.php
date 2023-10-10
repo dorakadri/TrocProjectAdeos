@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +29,4 @@ Route::get('/Admin/dashboard', function () {
     return view('admin.components.Dashboard');
 });
 Route::resource('post',PostController::class);
+Route::resource('comment',CommentController::class);
