@@ -22,14 +22,14 @@
         @endforeach <!-- Fermez la boucle foreach ici -->
     </ul>
     @endif <!-- Fermez la condition if ici -->
-</div>
+                    </div>
                 </div>
                 </div>
             </div>
          
             <div class="col-sm-12 col-lg-12">
                 <div class="card-body">
-                    <form action="{{route('donations.add')}}" method="post">
+                    <form action="{{route('donations.add')}}" method="post"  enctype="multipart/form-data">
                     @csrf
                     @method('post')
                         <div class="form-group">
@@ -42,11 +42,12 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">Photo</label>
-                            <input type="text" name="photo" class="form-control"  placeholder="photo">
+                            <input type="file" name="photo" class="form-control"  placeholder="photo" accept="image/*">
+                          
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">Quantite</label>
-                            <input type="number" name="quantite" class="form-control"  >
+                            <input type="number" name="quantite" class="form-control">
                         </div>
                         <div class="card-body">
                
