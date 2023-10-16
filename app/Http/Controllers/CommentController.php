@@ -27,17 +27,49 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-public function create($post_id)
+/*public function create(Request $request, $postId)
 {
-    // Find the post by ID
+    $request->validate([
+        'content' => 'required|string|max:255',
+    ]);
+
+    // Create a new comment
+    Comment::create([
+        'content' => $request->input('content'),
+        'post_id' => $postId,
+        // Assuming you have a 'user_id' column in your comments table,  authenticated user.
+      //  'user_id' => auth()->user()->id,
+    ]);
+
+    
+    return redirect()->back()->with('success', 'Comment created successfully!');
+ // Find the post by ID
     $post = Post::find($post_id);
 
     if (!$post) {
         return redirect()->route('posts.index')->with('error', 'post not found');
     }
 
-    return view('Userinterface.posts.create', ['post' => $post]);
-}
+    return view('Userinterface.posts.index', ['post' => $post]);
+}*/
+public function create(Request $request)
+{
+    // Validate the request
+    $request->validate([
+        'description' => 'required|max:255',
+        'post_id' => 'required|exists:posts,id',
+    ]);
+
+    // Create a new comment
+    $comment = new Comment();
+    $comment->description = $request->input('description');
+    $post = Post::find($request->get('post_id'));    // Assuming you have authentication, set user ID here
+   // $comment->user_id = auth()->user()->id;
+   $post->comments()->save($comment);
+
+    // Return the created comment (or just a success message if you prefer)
+    return back();}
+
 
 
 
@@ -79,7 +111,7 @@ public function create($post_id)
      */
  public function edit(Commment $comment)
 {
-    return view('Userinterface.posts.edit', ['comment' => $comment]);
+    return view('Userinterface.posts.editComment', ['comment' => $comment]);
 }
     /**
      * Update the specified resource in storage.
@@ -97,9 +129,8 @@ public function create($post_id)
 
     $comment->update($data);
 
-    return redirect()->route('posts.index')->with('success', 'Comment Updated Successfully');
+    return view('Userinterface.posts.editComment', ['comment' => $comment]);
 }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -118,7 +149,7 @@ public function create($post_id)
     // Delete the comment
     $comment->delete();
 
-    return redirect()->route('comment.index')->with('success', 'comment deleted successfully');
+    return redirect()->route('post.index')->with('success', 'comment deleted successfully');
 }
 
 }

@@ -176,40 +176,47 @@
                      <hr>
                   
                      <ul class="post-comments list-inline p-0 m-0">
-                   
+                     @foreach($post->comments as $comment)
                         <li class="mb-2">
                            <div class="d-flex ">
-                              <div class="user-img">
+                           
+                              <!--<div class="user-img">
                                  <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid" loading="lazy">
-                              </div>
+                              </div>-->
                               <div class="comment-data-block ms-3">
                                  <!--<h6>user</h6>-->
                                  <p class="mb-0">
-                                
+                                 {{$comment->description}}
                                  </p>
                                  <div class="d-flex flex-wrap align-items-center comment-activity">
-                                    <a href="javascript:void(0);">like</a>
-                                    <a href="javascript:void(0);">reply</a>
+                                 <a href="{{ route('comment.edit', ['comment' => $comment]) }}" >Edit </a>
+                                    
+
                                  
+                             
+                                    <form method="post" action="{{ route('comment.destroy', ['comment' => $comment]) }}">
+                              @csrf 
+                              @method('delete')
+                               <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
+                            </form>
+
                                  </div>
                               </div>
                            </div>
                         </li>
-                        
-                     </ul>
-                  
-                       
-                     <form class="comment-text d-flex align-items-center mt-3" method="comment" action="{{route('comment.store')}}">
-                     @csrf 
-                       @method('comment')  
-                     <input type="text" class="form-control rounded" placeholder="Enter Your Comment">
-                        <div class="comment-attagement d-flex align-items-center">
-                          
-                        <a href="{{ route('comment.create', ['post_id' => $post->id]) }}" class="btn btn-primary d-block w-60 mt-0">paste</a>
-                          
-                        </div>
+                        @endforeach
 
-                     </form>
+                     </ul>
+                     <form class="comment-text d-flex align-items-center mt-3" method="POST" action="{{ route('comment.create', ['postId' => $post->id]) }}">
+    @csrf
+    <input type="text" class="form-control rounded" name="content" placeholder="Enter Your Comment">
+    <div class="comment-attagement d-flex align-items-center">
+        <button type="submit" class="btn btn-primary d-block w-60 mt-0">Post Comment</button>
+    </div>
+</form>
+
+                       
+              
                     
                   </div>
                </div>

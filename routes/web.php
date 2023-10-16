@@ -30,3 +30,8 @@ Route::get('/Admin/dashboard', function () {
 });
 Route::resource('post',PostController::class);
 Route::resource('comment',CommentController::class);
+Route::get('/posts', [PostController::class, 'index']);
+
+
+//Route::post('/post/{postId}/comment', 'CommentController@create')->name('comment.create');
+//Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
