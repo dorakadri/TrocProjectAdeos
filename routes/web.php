@@ -1,27 +1,44 @@
 <?php
 
+use App\Http\Controllers\AnnonceController;
+use App\Http\Controllers\ExchangedemandsController;
+use App\Models\Exchangedemands;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-//just for test mba3ed bich tkoun 3ana ressources 
-Route::get('/profile', function () {
-    return view('components.profile');
-});
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login'); 
 });
 
-//just for test mba3ed bich tkoun 3ana ressources 
-Route::get('/Admin/dashboard', function () {
-    return view('admin.components.Dashboard');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::middleware(['auth', 'checkrole:0'])->group(function () {
+        Route::resource ('Annonce',AnnonceController::class) ;
+        Route::resource ('Exchanges',ExchangedemandsController::class) ;
+        Route::get('/Exchange/createbyid/{id}', [ExchangedemandsController::class, 'createbyid']);
+        Route::get('/Exchange/confirmation/{action}/{id}', [ExchangedemandsController::class, 'confirmation']);
+        Route::get('/profile',[AnnonceController::class,'UserList']);
+    
+    });
+    
+    Route::middleware(['auth', 'checkrole:1'])->group(function () {
+        Route::get('/Admin/dashboard', function () {
+            return view('admin.components.Dashboard');
+        }); 
+        Route::get('/Admin/ExchangeClaims', function () {
+            return view('admin.components.ExchangeClaims');
+        }); 
+        Route::get('/Admin/ExchangeClaims/{id}', function () {
+            return view('admin.components.ClaimsDetail');
+        });
+        Route::get('/Admin/Profile', function () {
+            return view('admin.components.Profile');
+        });
+    
+    });
 });
+
+
+

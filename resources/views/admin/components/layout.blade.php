@@ -315,6 +315,53 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assetsadmin/js/material-dashboard.min.js?v=3.1.0"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+
+    var currentHref;
+    var routeName;
+  
+    $(document).ready(function() {
+
+      currentHref = window.location.pathname;
+  
+
+      routeName = extractRouteName(currentHref);
+
+      $(".breadcrumb-item.active").text(routeName);
+      $("h6.font-weight-bolder.mb-0").text(routeName);
+  
+      $(".nav-item a").each(function() {
+        var href = $(this).attr("href");
+        if (href === currentHref) {
+          $(this).addClass("active bg-gradient-primary");
+          $(this).closest(".nav-item").addClass("active");
+        }
+      });
+    });
+  
+ 
+    function extractRouteName(href) {
+ 
+      var parts = href.split("/");
+      return parts[parts.length - 1];
+    }
+  </script>
+  
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script>
+  
 </body>
 
 </html>

@@ -13,223 +13,14 @@
 
         </div>
 
-        <div class="iq-search-bar device-search  position-relative">
-            <form action="#" class="searchbox" data-bs-toggle="modal" data-bs-target="#searchmodal">
-                <a class="search-link d-none d-lg-block" href="javascript:void(0);">
-                    <span class="material-symbols-outlined">search</span>
-                </a>
-                <input type="text" class="text search-input form-control bg-soft-primary  d-none d-lg-block"
-                    placeholder="Search here...">
-                <a class="d-lg-none d-flex d-none d-lg-block" href="javascript:void(0);" data-bs-toggle="modal"
-                    data-bs-target="#searchmodal">
-                    <span class="material-symbols-outlined">search</span>
-                </a>
-            </form>
-            <div class="modal fade search-modal" id="searchmodal" aria-labelledby="searchmodalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-fullscreen-lg-down">
-                    <div class="modal-content">
-                        <div class="modal-header py-2">
-                            <div class="d-flex align-items-center justify-content-between d-lg-none w-100">
-                                <form action="#" class="searchbox w-50" data-bs-toggle="modal"
-                                    data-bs-target="#searchmodal">
-                                    <a class="search-link" href="javascript:void(0);">
-                                        <span class="material-symbols-outlined">search</span>
-                                    </a>
-                                    <input type="text" class="text search-input form-control bg-soft-primary"
-                                        placeholder="Search here...">
-                                </form>
-                                <a href="javascript:void(0);" class="material-symbols-outlined text-dark"
-                                    data-bs-dismiss="modal">close</a>
-                            </div>
-                            <div class="d-none d-lg-flex align-items-center justify-content-between w-100">
-                                <h4 class="modal-title" id="exampleModalFullscreenLabel">Recent</h4>
-                                <a class="text-dark" href="javascript:void(0);">Clear All</a>
-                            </div>
-                        </div>
-                        <div class="modal-body p-0">
-                            <div
-                                class="d-flex d-lg-none align-items-center justify-content-between w-100 p-3 pb-0">
-                                <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Recent</h5>
-                                <a href="javascript:void(0);" class="text-dark">Clear All</a>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                <div class="flex-shrink-0">
-                                    <img src="../assets/images/page-img/19.jpg"
-                                        class="align-self-center img-fluid avatar-50 rounded-pill"
-                                        alt="#">
-                                </div>
-                                <div class="d-flex flex-column ms-3 w-100">
-                                    <a href="javascript:void(0);" class="h5">Paige Turner</a>
-                                    <span>Paige001</span>
-                                </div>
-                                <div class="d-flex align-items-center ms-auto">
-                                    <a href="javascript:void(0);"
-                                        class="me-3 d-flex align-items-center"><small>Follow</small>
-                                    </a>
-                                    <a href="javascript:void(0);"
-                                        class="material-symbols-outlined text-dark">close</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom search-hover py-2 px-3">
-                                <div class="flex-shrink-0">
-                                    <img src="../assets/images/page-img/18.jpg"
-                                        class="align-self-center img-fluid avatar-50 rounded-pill"
-                                        alt="#">
-                                </div>
-                                <div class="d-flex flex-column ms-3 w-100">
-                                    <a href="javascript:void(0);" class="h5">Monty Carlo</a>
-                                    <span>Carlo.m</span>
-                                </div>
-                                <div class="d-flex align-items-center ms-auto">
-                                    <a href="javascript:void(0);"
-                                        class="me-3 d-flex align-items-center"><small>Unfollow</small> </a>
-                                    <a href="javascript:void(0);"
-                                        class="material-symbols-outlined text-dark">close</a>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center search-hover py-2 px-3 border-bottom">
-                                <div class="flex-shrink-0">
-                                    <img src="../assets/images/page-img/20.jpg"
-                                        class="align-self-center img-fluid avatar-50 rounded-pill"
-                                        alt="#">
-                                </div>
-                                <div class="d-flex flex-column ms-3 w-100">
-                                    <a href="javascript:void(0);" class="h5">Paul Molive</a>
-                                    <span>Paul.45</span>
-                                </div>
-                                <div class="d-flex align-items-center ms-auto">
-                                    <a href="javascript:void(0);"
-                                        class="me-3 d-flex align-items-center"><small>Request</small> </a>
-                                    <a href="javascript:void(0);"
-                                        class="material-symbols-outlined text-dark">close</a>
-                                </div>
-                            </div>
-                            <div class="">
-                                <h4 class="px-3 py-2">Suggestions</h4>
-                                <div class="suggestion-card px-3">
-                                    <div class="text-center story">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/20.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Ammy
-                                                Paul</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Follow</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story ">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/21.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Roger
-                                                Carlo</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Unfollow</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story ">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/22.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Justin
-                                                Molive</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-           class="d-lg-none align-items-center d-flex"><small>Follow</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/23.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Roy
-                                                Fisher</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Request</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/24.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Johan
-                                                Carlo</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Follow</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/09.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Medra
-                                                Miles</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Unfollow</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/03.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Aohan
-                                                Paul</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Request</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/02.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Rokni
-                                                Joy</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Follow</small>
-                                        </a>
-                                    </div>
-                                    <div class="text-center story">
-                                        <div class="story-profile">
-                                            <img src="../assets/images/page-img/01.jpg"
-                                                class=" avatar-50 rounded-pill" alt="#">
-                                            <a href="javascript:void(0);"
-                                                class="h6 mt-0 mt-lg-2 ms-3 ms-lg-0 text-ellipsis short-2 small">Sepid
-                                                Ryan</a>
-                                        </div>
-                                        <a href="javascript:void(0);"
-                                            class="d-lg-none align-items-center d-flex"><small>Unfollow</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @include('Userinterface.partials._navsearch')
         <ul class="navbar-nav navbar-list">
             <li class="nav-item">
                 <a href="index-2.html" class="d-flex align-items-center">
                     <i class="material-symbols-outlined">home</i>
                 </a>
             </li>
-            @include('Userinterface.partials._navsearch')
+      
             <li class="nav-item dropdown">
                 <a href="javascript:void(0);" class="dropdown-toggle d-flex align-items-center"
                     id="group-drop" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -496,64 +287,60 @@
                 <a href="javascript:void(0);" class="d-flex align-items-center dropdown-toggle"
                     id="drop-down-arrow" data-bs-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    <img     src="images/pdf.jpg" class="img-fluid rounded-circle me-3"
-                        alt="user" loading="lazy">
+                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                    <img    src="{{ Auth::user()->profile_photo_url }}" class="img-fluid rounded-circle me-3"
+                    alt="{{ Auth::user()->name }}"  loading="lazy">
+                    @else 
+                    <img    src="/public/images/logo.png" class="img-fluid rounded-circle me-3"
+                    alt="{{ Auth::user()->name }}"  loading="lazy">
+                    @endif
                   
                 </a>
                 <div class="sub-drop dropdown-menu caption-menu" aria-labelledby="drop-down-arrow">
                     <div class="card shadow-none m-0">
                         <div class="card-header ">
                             <div class="header-title">
-                                <h5 class="mb-0 ">Hello Bni Cyst</h5>
+                                <h5 class="mb-0 "> {{ Auth::user()->name }}</h5>
                             </div>
                         </div>
                         <div class="card-body p-0 ">
-                            <div class="d-flex align-items-center iq-sub-card border-0">
+                            <a class="d-flex align-items-center iq-sub-card border-0" href="/profile">
                                 <span class="material-symbols-outlined">
                                     line_style
                                 </span>
                                 <div class="ms-3">
                                
-                                    <a href="/profile"
+                                    <p 
                                         class="mb-0 h6">
                                         My Profile
-                                    </a>
+                                    </p>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center iq-sub-card border-0">
+                            </a>
+                            <a class="d-flex align-items-center iq-sub-card border-0" href="{{ route('profile.show') }}">
                                 <span class="material-symbols-outlined">
                                     edit_note
                                 </span>
                                 <div class="ms-3">
-                                    <a href="https://templates.iqonic.design/socialv/bs5/html/dist/app/profile-edit.html"
+                                    <p
                                         class="mb-0 h6">
                                         Edit Profile
-                                    </a>
+                                    </p>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center iq-sub-card border-0">
-                                <span class="material-symbols-outlined">
-                                    manage_accounts
-                                </span>
-                                <div class="ms-3">
-                                    <a href="https://templates.iqonic.design/socialv/bs5/html/dist/app/account-setting.html"
-                                        class="mb-0 h6">
-                                        Account settings
-                                    </a>
-                                </div>
-                            </div>
-                        
-                            <div class="d-flex align-items-center iq-sub-card">
+                            </a>
+                      
+                            <form method="POST" action="{{ route('logout') }}" x-data>
+                                @csrf
+                                <a class="d-flex align-items-center iq-sub-card" href="{{ route('logout') }}"       @click.prevent="$root.submit();">
                                 <span class="material-symbols-outlined">
                                     login
                                 </span>
                                 <div class="ms-3">
-                                    <a href="sign-in.html" class="mb-0 h6">
+                                    <p class="mb-0 h6">
                                         Sign out
-                                    </a>
+                                    </p>
                                 </div>
-                            </div>
-                  
+                            </a>
+                            </form>
                         </div>
                     </div>
                 </div>

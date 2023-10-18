@@ -2,6 +2,7 @@
 <html lang="en" class="theme-fs-md">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <title>we share</title>
 
 
@@ -56,9 +57,30 @@
 
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            @if ($errors->any())
+                $('#post-modal').modal('show');
+            @endif
+        });
+    </script>
 
 
+    <script>
+        $(document).ready(function() {
+            $('#echangetype').on('change', function() {
+                var selectedValue = $(this).val();
+                if (selectedValue === 'ob_ob' || selectedValue === 'ob_serv') {
+                    $('.image-input').show();
+                    $('.description-input').show();
 
+                } else {
+                    $('.image-input').hide();
+                    $('.description-input').hide();
+                }
+            });
+        });
+    </script>
 </body>
 
 
