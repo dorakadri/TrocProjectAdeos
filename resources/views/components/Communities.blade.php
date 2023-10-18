@@ -2,6 +2,14 @@
 @section('content')
 
 <div class="row">
+
+                <div class=" d-flex  flex-column justify-content-center  align-items-center" style="height: 30rem; ">
+                  <h3>No communities here yet! Be the first to create one</h3>
+                  <a href="{{route('Community.create')}}" class="btn btn-primary  mt-4 ">
+                    Create community
+                     </a>  
+
+                </div>
    @foreach ($communities as $community)            
 
         <div class="   col-md-4 col-sm-6 mb-3"   >

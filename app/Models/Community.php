@@ -10,5 +10,12 @@ class Community extends Model
     use HasFactory;
     protected $table = 'community';
     protected $primaryKey='id';
-    protected $fillable = ['name', 'description', 'image'];
+    protected $fillable = ['name', 'description', 'image','user_id'];
+
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
+
+     
 }

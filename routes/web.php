@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommunityController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,6 @@ Route::get('/Admin/dashboard', function () {
 
 Route::resource ('Community',CommunityController::class) ;
 Route::get('/communities',[CommunityController::class,'CommunitiesList']);
+Route::resource('Event', EventController::class)->parameters(['communities' => 'community']);
 
+ 

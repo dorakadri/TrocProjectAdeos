@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Community;
+use App\Models\Event;
+
 
 class CommunityController extends Controller
 {
@@ -71,7 +73,11 @@ class CommunityController extends Controller
     public function show($id)
     {
         $community = Community::find($id) ;
-        return view('Userinterface.Community.show', compact('community'));
+        $events = Event::where('community_id', $id)->latest()->get();
+        $userCreatedEvents = Event::where('user_id', 1)->where('community_id', $community->id)->latest()->get();
+
+
+        return view('Userinterface.Community.show', compact('community', 'events', 'userCreatedEvents'));
     }
 
     /**
