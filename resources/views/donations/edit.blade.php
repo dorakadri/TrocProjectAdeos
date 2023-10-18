@@ -8,13 +8,20 @@
                 <div class="card position-relative inner-page-bg bg-primary" style="height: 150px;">
                     <div class="inner-page-title">
                         <h3 class="text-white">Modifier une donation</h3>
+                        @if($errors->any())
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach <!-- Fermez la boucle foreach ici -->
+    </ul>
+    @endif <!-- Fermez la condition if ici -->
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-12 col-lg-12">
                 <div class="card-body">
-                    <form action="{{ route('donations.update', ['donation'=>$donation]) }}" method="post">
+                    <form action="{{ route('donations.update', ['donation'=>$donation]) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
 
@@ -30,7 +37,8 @@
 
                         <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">Photo</label>
-                            <input type="text" name="photo" class="form-control" placeholder="Photo" value="{{ old('photo', $donation->photo) }}">
+                            <input type="file" name="photo" class="form-control"  placeholder="photo" accept="image/*">
+                          
                         </div>
 
                         <div class="form-group">

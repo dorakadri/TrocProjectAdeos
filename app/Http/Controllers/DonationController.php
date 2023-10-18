@@ -56,10 +56,18 @@ class DonationController extends Controller
             'description' => 'required',
             'categorie' => 'required',
             'etat' => 'required',
-            'photo' => 'required',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif',
             'quantite' => 'required|numeric|min:1',
             'disponibilite' => 'required'
         ]);
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $filePath = 'donations/' . $fileName; // Path within the "public" disk
+            Storage::disk('public')->put($filePath, file_get_contents($file)); // Store the image in the 'public/donations' directory
+        
+            $data['photo'] = $fileName;
+        }
 
         $donation = Donation::find($donation->id);
 

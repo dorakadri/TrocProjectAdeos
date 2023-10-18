@@ -24,7 +24,7 @@
     
         <div class="card mb-4">
        
-        <img src="{{ asset('donations/'.$donation->photo) }}" class="card-img-top" alt="{{ $donation->photo }}" loading="lazy">
+        <img src="{{ asset('donations/'.$donation->photo) }}" class="card-img-top" alt="{{ $donation->photo }}" loading="lazy" style="width : auto ;height : 400px;">
             <div class="card-body">
                 <h4 class="card-title">{{ $donation->titre }}</h4>
                 <p class="card-text"><strong>Catégorie:</strong> {{ $donation->categorie }}</p>

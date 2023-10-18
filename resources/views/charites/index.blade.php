@@ -24,7 +24,8 @@
     @foreach($charites as $charite)
         <div class="col-md-6">
             <div class="card mb-4">
-                <img src="{{ asset('charites/'.$charite->photo) }}" class="card-img-top" alt="{{ $charite->photo }}" loading="lazy">
+                <img src="{{ asset('charites/'.$charite->photo) }}" class="card-img-top" alt="{{ $charite->photo }}" loading="lazy" 
+             >
                 <div class="card-body">
                     <h2 class="card-title">{{ $charite->nom }}</h2>
                     <p class="card-text"><strong>Date:</strong> {{ $charite->date }}</p>
