@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AnnonceController;
+use App\Http\Controllers\AssociationController;
 use App\Http\Controllers\ChariteController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\ExchangedemandsController;
 use App\Http\Controllers\PDFController;
@@ -26,6 +28,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+//Association and simple users
 
 Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::resource('Annonce', AnnonceController::class);
@@ -56,9 +59,12 @@ Route::resource('comment',CommentController::class);
 Route::get('/posts', [PostController::class, 'index']);
 Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
 Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
+
+//Asssociations 
+Route::get('/home/associations', [AssociationController::class, 'index2']);  
 });
 
-
+//Association only
 Route::middleware(['auth', 'checkrole:2'])->group(function () {
    //hne my charity event route jdida index2 
     Route::get('/Charite/create', [ChariteController::class,'create'])->name( 'charites.create');
@@ -66,10 +72,12 @@ Route::middleware(['auth', 'checkrole:2'])->group(function () {
     Route::get('/Charite/{charite}/edit', [ChariteController::class,'edit'])->name( 'charites.edit'); 
     Route::put('/Charite/{charite}/update', [ChariteController::class,'update'])->name( 'charites.update');
     Route::delete('/Charite/{charite}/delete', [ChariteController::class,'delete'])->name( 'charites.delete');  
-   
+
 
  });
 
+
+ //Admin
 
 Route::middleware(['auth', 'checkrole:1'])->group(function () {
     Route::get('/Admin/dashboard', function () {
@@ -92,11 +100,15 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
 
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
     Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
+
+       
+    Route::resource('associations',AssociationController::class);
+Route::resource('contacts', ContactController::class);
 });
 
-//ken andkom method inajm yaccedilha ladmin or il user
+// all
 Route::middleware(['auth'])->group(function () {
 
     Route::resource('reclamation', ReclamationController::class);
-
+    
 });

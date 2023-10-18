@@ -129,7 +129,15 @@
                         <span class="item-name">forum</span>
                     </a>
                 </li>
-     
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('associations.index') }}">
+                        <i class="icon material-symbols-outlined filled">
+                            fiber_manual_record
+                        </i>
+                        <i class="sidenav-mini-icon"> P </i>
+                        <span class="item-name"> Associations </span>
+                    </a>
+                </li>
           
 
             </ul>
