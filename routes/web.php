@@ -27,7 +27,7 @@ Route::middleware([
 });
 
 
-Route::middleware(['auth', 'checkrole:0'])->group(function () {
+Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::resource('Annonce', AnnonceController::class);
     Route::resource('Exchanges', ExchangedemandsController::class);
     Route::get('/Exchange/createbyid/{id}', [ExchangedemandsController::class, 'createbyid']);
@@ -46,14 +46,10 @@ Route::put('/Donation/{donation}/update', [DonationController::class,'update'])-
 Route::delete('/Donation/{donation}/delete', [DonationController::class,'delete'])->name( 'donations.delete');  
 
 Route::get('/Charite', [ChariteController::class,'index'])->name( 'charites.index'); 
-Route::get('/Charite/create', [ChariteController::class,'create'])->name( 'charites.create');
-Route::post('/Charite/create', [ChariteController::class,'add'])->name( 'charites.add');
-Route::get('/Charite/{charite}/edit', [ChariteController::class,'edit'])->name( 'charites.edit'); 
-Route::put('/Charite/{charite}/update', [ChariteController::class,'update'])->name( 'charites.update');
-Route::delete('/Charite/{charite}/delete', [ChariteController::class,'delete'])->name( 'charites.delete');  
-
-Route::post('donations/{donation}/choose-charite', [DonationController::class, 'chooseCharite'])->name('donations.chooseCharite');
+ 
 Route::post('/charites/{charite}/show-donations', [ChariteController::class,'showDonations'])->name('charites.showDonations');
+Route::post('donations/{donation}/choose-charite', [DonationController::class, 'chooseCharite'])->name('donations.chooseCharite');
+
 // Forum //
 Route::resource('post',PostController::class);
 Route::resource('comment',CommentController::class);
@@ -63,6 +59,16 @@ Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name
 });
 
 
+Route::middleware(['auth', 'checkrole:2'])->group(function () {
+   //hne my charity event route jdida index2 
+    Route::get('/Charite/create', [ChariteController::class,'create'])->name( 'charites.create');
+    Route::post('/Charite/create', [ChariteController::class,'add'])->name( 'charites.add');
+    Route::get('/Charite/{charite}/edit', [ChariteController::class,'edit'])->name( 'charites.edit'); 
+    Route::put('/Charite/{charite}/update', [ChariteController::class,'update'])->name( 'charites.update');
+    Route::delete('/Charite/{charite}/delete', [ChariteController::class,'delete'])->name( 'charites.delete');  
+   
+
+ });
 
 
 Route::middleware(['auth', 'checkrole:1'])->group(function () {

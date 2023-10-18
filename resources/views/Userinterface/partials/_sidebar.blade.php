@@ -68,16 +68,19 @@
                                 <span class="item-name">Events</span>
                             </a>
                         </li>
+                        @if (auth()->user()->role === '2')
                         <li class="nav-item">
                             <a class="nav-link " href="{{ route('charites.index') }}">
                                 <i class="icon material-symbols-outlined filled">
                                     fiber_manual_record
                                 </i>
                                 <i class="sidenav-mini-icon"> PI </i>
-                                <span class="item-name">My charity events</span>
+                                <span class="item-name"> MY charity events</span>
                             </a>
                         </li>
+  @endif
 
+  @if (auth()->user()->role === '0')
                         <li class="nav-item">
                             <a class="nav-link " href="{{ route('donations.index') }}">
                                 <i class="icon material-symbols-outlined filled">
@@ -87,7 +90,7 @@
                                 <span class="item-name">My donations</span>
                             </a>
                         </li>
-
+                        @endif
                     </ul>
                 </li>
                 <li class="nav-item static-item">
@@ -107,7 +110,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="notification.html">
+                    <a class="nav-link " aria-current="page" href="{{ route('charites.index') }}">
 
 
                         <i class=" icon material-symbols-outlined">
@@ -126,8 +129,8 @@
                         <span class="item-name">forum</span>
                     </a>
                 </li>
-       
-
+     
+          
 
             </ul>
 

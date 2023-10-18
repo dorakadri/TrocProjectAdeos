@@ -15,19 +15,15 @@ class RoleBasedRedirect
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next,$role)
+    public function handle($request, Closure $next, ...$roles)
     {
-          
-            $user = Auth::user();
+        $user = Auth::user();
     
-       
-            if ($user && $user->role === $role) {
-          
-                return $next($request);
-            }
+        // Check if the user's role matches any of the specified roles
+        if ($user && in_array($user->role, $roles)) {
+            return $next($request);
+        }
     
-    
-            return redirect('/unauthorized');
-    
+        return redirect('/unauthorized');
     }
 }
