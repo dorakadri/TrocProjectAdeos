@@ -23,6 +23,6 @@ class PDFController extends Controller
             
         $pdf = PDF::loadView('admin.reclamations.myPDF', $data);
      
-        return $pdf->download('laraveltuts.pdf');
+        return $pdf->download('Reclamations.pdf');
     }
 }
