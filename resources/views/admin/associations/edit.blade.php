@@ -1,7 +1,7 @@
+@extends('admin.components.layout')
+@section('contentadmin')
 
-@extends('components.layout')
-@section('content')
-
+<div class ="container  container-fluide" >
       <div>
     <div class="position-relative">
     </div>
@@ -23,13 +23,14 @@
             <div class="col-sm-12">
                 <div class="card position-relative inner-page-bg bg-primary" style="height: 150px;">
                 <div class="inner-page-title">
-                    <h3 class="text-white"> Add Association</h3>
+                    <h3 class="text-white text-center mt-5"  > Add Association</h3>
                   
                 </div>
                 </div>
             </div>
          
             <div class="col-sm-12 col-lg-12">
+                
                 <div class="card-body">
                   
                 <form method="post" action="{{route('associations.update', ['association' => $association])}}" enctype="multipart/form-data">
@@ -76,7 +77,7 @@
      </div>
        </div>
  
-
+</div>
 
 
 

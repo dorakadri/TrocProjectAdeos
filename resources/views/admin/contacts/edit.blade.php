@@ -1,7 +1,17 @@
-@extends('components.layout')
-@section('content')
+@extends('admin.components.layout')
+@section('contentadmin')
+<div class="container container-fluide px-5 py-5 " >
 
 <form action="{{ route('contacts.update', ['contact' => $contact->id]) }}" method="post">
+<div class="col-sm-12">
+         <div class="card position-relative inner-page-bg bg-primary" style="height: 150px;">
+            <div class="inner-page-title">
+            <h3 class="text-white text-center mt-5"  > Edit Contact </h3>
+              
+            </div>
+         </div>
+      </div>
+   
     @csrf
     @method('put')
     
@@ -21,7 +31,6 @@
                 <div class="row tab-pane fade show active" id="user-detail">
                     <div class="col-sm-12">
                         <div class="col-md-12 p-0">
-                            <h3 class="mb-4">Association Contact Information:</h3>
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <div class="form-group">
@@ -57,6 +66,7 @@
             </div>
         </div>
     </div>
+</div>
 </form>
 
 @endsection

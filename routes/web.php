@@ -24,7 +24,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index2', [AssociationController::class, 'index2']);
+Route::get('/home/associations', [AssociationController::class, 'index2']);
 //just for test mba3ed bich tkoun 3ana ressources 
 
 

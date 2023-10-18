@@ -57,7 +57,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-    <a class="nav-link" href="{{ route('associations.index') }}">
+    <a class="nav-link" href="{{url('/home/associations')}}">
         <i class="icon material-symbols-outlined filled">
             fiber_manual_record
         </i>

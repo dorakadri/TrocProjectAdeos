@@ -14,7 +14,7 @@ class AssociationController extends Controller
   public function index()
   {
     $associations = Association::all();
-    return view('Userinterface.associations.index', compact('associations'));
+    return view('admin.associations.index', compact('associations'));
   }
   public function index2()
   {
@@ -54,7 +54,7 @@ class AssociationController extends Controller
 
     Association::create($associationData);
 
-    return redirect()->route('associations.index')->with('success', 'Association created successfully.');
+    return redirect()->route('admin.associations.index')->with('success', 'Association created successfully.');
    
   }
 
@@ -99,7 +99,7 @@ class AssociationController extends Controller
   {
     $association = Association::find($id);
     $association->delete();
-    return redirect()->route('associations.index')
+    return redirect()->route('admin.associations.index')
       ->with('success', 'Association deleted successfully');
   }
    // routes functions
@@ -123,7 +123,7 @@ public function show($id)
 {
     $association = Association::find($id);
     $contacts = $association->contacts; // Retrieve contacts associated with this association
-    return view('Userinterface.associations.show', compact('association', 'contacts'));
+    return view('admin.associations.show', compact('association', 'contacts'));
 }
 
    /**
@@ -135,6 +135,6 @@ public function show($id)
   public function edit($id)
   {
     $association = Association::find($id);
-    return view('Userinterface.associations.edit', compact('association'));
+    return view('admin.associations.edit', compact('association'));
   }
 }
