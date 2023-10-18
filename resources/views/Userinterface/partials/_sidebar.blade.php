@@ -76,6 +76,25 @@
                                     <span class="item-name">Events</span>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link "  href="{{ route('charites.index') }}">
+                                    <i class="icon material-symbols-outlined filled">
+                                        fiber_manual_record
+                                    </i>
+                                    <i class="sidenav-mini-icon"> PI </i>
+                                    <span class="item-name">My charity events</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link "  href="{{ route('donations.index') }}">
+                                    <i class="icon material-symbols-outlined filled">
+                                        fiber_manual_record
+                                    </i>
+                                    <i class="sidenav-mini-icon"> PI </i>
+                                    <span class="item-name">My donations</span>
+                                </a>
+                            </li>
                  
                         </ul>
                     </li>
