@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="row">
-
+                @if(count($communities) == 0)
                 <div class=" d-flex  flex-column justify-content-center  align-items-center" style="height: 30rem; ">
                   <h3>No communities here yet! Be the first to create one</h3>
                   <a href="{{route('Community.create')}}" class="btn btn-primary  mt-4 ">
@@ -10,6 +10,7 @@
                      </a>  
 
                 </div>
+                @endif
    @foreach ($communities as $community)            
 
         <div class="   col-md-4 col-sm-6 mb-3"   >
@@ -19,7 +20,7 @@
                          <img src="{{ asset('storage/' . $community->image) }}" class="img-fluid  w-100  " style="height: 7rem; object-fit: cover;" alt="group-bg"  >
                                     @else
                                          
-                                        <img src="{{  asset('images/community/03.jpg') }}" class="img-fluid w-100" style="height: 7rem; object-fit: cover;" alt="group-bg">
+                                        <img src="{{  asset('images/community/100.jpg') }}" class="img-fluid w-100" style="height: 7rem; object-fit: cover;" alt="group-bg">
  
  
                                     @endif

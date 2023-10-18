@@ -20,10 +20,10 @@
                   </div>
                   
                </div>
-               <div class="card-body" style="padding-bottom: 3rem; ">
+               <div class="card-body" style="padding-bottom: 4rem; ">
  
                   @if (count($communities)==0)
-                  <div class=" d-flex  flex-column justify-content-center  align-items-center" style="height: 13.5rem; ">
+                  <div class=" d-flex  flex-column justify-content-center  align-items-center" style="height: 10.5rem; ">
                   <h3>You haven't joined any community yet!</h3>
                   <a href="/communities" class="btn btn-primary  mt-4 ">
                     Discover
@@ -34,13 +34,13 @@
                   <ul class="list-inline m-0 p-0 h-100">
                    @foreach ($communities as $community)  
 
-                     <li class="d-flex mb-3 align-items-center ">
+                     <li class="d-flex mb-4 align-items-center ">
                                     @if($community->image)
                                     <img class="img-fluid rounded-circle avatar-40" src="{{ asset('storage/' . $community->image) }}" alt="" loading="lazy">
 
                                        @else        
                                        
-                                       <img class="img-fluid rounded-circle avatar-40" src="{{ asset('images/community/03.jpg')}}" alt="" loading="lazy">
+                                       <img class="img-fluid rounded-circle avatar-40" src="{{ asset('images/community/100.jpg')}}" alt="" loading="lazy">
 
    
                                        @endif
@@ -68,14 +68,15 @@
                   </div>
                
                </div>
-               <div class="mx-3">
+               @if(count($communities) !==0)
+               <div class="mx-3 mt-3">
                      <a href="{{route('Community.create')}}" class="btn btn-primary  btn-sm w-100  mb-3 ">
                            Create community 
                            </a> 
                </div>
                
-               @if(count($communities) !==0)
-               <div class="card-body " style="overflow-y: auto; max-height: 25rem;">
+             
+               <div class="card-body " >
                                                    
    
                      @foreach ($communities as $community)  

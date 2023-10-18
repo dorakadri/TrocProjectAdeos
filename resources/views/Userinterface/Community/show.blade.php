@@ -22,7 +22,7 @@
 
     <div class="background-header position-relative">
  
-    <img src="{{ asset('images/community/03.jpg')}}" class="img-fluid  w-100  " style="height: 15rem; object-fit: cover;" alt="group-bg"  >
+    <img src="{{ asset('images/community/100.jpg')}}" class="img-fluid  w-100  " style="height: 15rem; object-fit: cover;" alt="group-bg"  >
          
     </div>
     @endif
@@ -67,9 +67,8 @@
    <nav class="tab-bottom-bordered mb-3" style="background-color: #fff0;">
                <div class="mb-0 nav nav-tabs rounded-top border-0  " id="nav-tab1" role="tablist" style="background-color: #fff0;">
                   <button class="nav-link active" id="nav-home-11-tab" data-bs-toggle="tab" data-bs-target="#nav-home-11" type="button" role="tab" aria-controls="nav-home-11" aria-selected="true">Events</button>
-                  <button class="nav-link" id="nav-profile-11-tab" data-bs-toggle="tab" data-bs-target="#nav-profile-11" type="button" role="tab" aria-controls="nav-profile-11" aria-selected="false" tabindex="-1">Profile</button>
-                  <button class="nav-link" id="nav-contact-11-tab" data-bs-toggle="tab" data-bs-target="#nav-contact-11" type="button" role="tab" aria-controls="nav-contact-11" aria-selected="false" tabindex="-1">Contact</button>
-               </div>
+                  <button class="nav-link" id="nav-profile-11-tab" data-bs-toggle="tab" data-bs-target="#nav-profile-11" type="button" role="tab" aria-controls="nav-profile-11" aria-selected="false" tabindex="-1">Posts</button>
+                </div>
             </nav>
       
       
