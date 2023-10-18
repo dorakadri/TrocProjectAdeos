@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReclamationController;
 use App\Http\Controllers\ReponseController;
+use App\Http\Controllers\PDFController;
 /*
 /*
 |--------------------------------------------------------------------------
@@ -40,5 +41,5 @@ Route::get('/reponse/create/{reclamation_id}', 'App\Http\Controllers\ReponseCont
 // New route for admin reclamations index
 Route::get('/admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index');
 
-
+Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 

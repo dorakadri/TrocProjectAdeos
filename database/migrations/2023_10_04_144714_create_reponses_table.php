@@ -16,7 +16,12 @@ return new class extends Migration
         Schema::create('reponses', function (Blueprint $table) {
             $table->id();
           $table->string('description'); 
-           $table->integer('reclamation_id');
+                 $table->unsignedBigInteger('reclamation_id'); // Use unsigned big integer
+        
+        $table->foreign('reclamation_id')
+            ->references('id')
+            ->on('reclamations')
+            ->onDelete('cascade');;
             $table->timestamps();
         });
     }

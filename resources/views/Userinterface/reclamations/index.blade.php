@@ -2,8 +2,6 @@
 @section('content')
 <style>
     .card-title {
-        font-size: 20px; /* Increase font size for Title */
-        font-weight: bold; /* Make Title bold */
     }
 
     .status {
@@ -11,9 +9,7 @@
         font-weight: bold; /* Customize font size for Status */
     }
 
-    .response {
-        color: #06BFF1; /* Change text color for Responses to blue */
-    }
+
 
     /* Add these two classes for red and green status */
     .status-not-treated {
@@ -67,7 +63,7 @@
 
                         <p class="card-text">{{ $reclamation->description }}</p>
                         @foreach($reclamation->reponses as $reponse)
-                        <p class="card-text response">Responses: {{ $reponse->description }}</p>
+                        <p class="card-text">Responses: {{ $reponse->description }}</p>
                         @endforeach
                     </div>
                     <div class="card-footer text-center">

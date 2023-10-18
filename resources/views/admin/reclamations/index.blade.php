@@ -19,7 +19,9 @@
                     </h3>
                     <div class="card-body">
                         <div id="table" class="table-editable">
-                     
+                     <!-- Add this button code inside your Blade view -->
+<a href="{{ url('generate-pdf') }}" class="btn btn-primary">Generate PDF</a>
+
                             <table class="table table-bordered table-responsive-md table-striped text-center">
                                 <thead>
                                     <tr>

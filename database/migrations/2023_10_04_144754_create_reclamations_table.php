@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
+      /**
      * Run the migrations.
      *
      * @return void
@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('reclamations', function (Blueprint $table) {
-             $table->id();
+            $table->id();
             $table->string('title');
             $table->text('description');
             $table->enum('status', ['treated', 'not_treated']); // Define enum values
