@@ -27,8 +27,9 @@ class ReponseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-public function create($reclamation_id)
-{
+public function createbyid($reclamation_id)
+{  
+  
     // Find the Reclamation by ID
     $reclamation = Reclamation::find($reclamation_id);
 
@@ -37,6 +38,11 @@ public function create($reclamation_id)
     }
 
     return view('admin.reponse.create', ['reclamation' => $reclamation]);
+}
+public function create()
+{  
+  
+
 }
 
 
@@ -57,7 +63,7 @@ public function create($reclamation_id)
     // Create a new Reponse record
     $reponse = Reponse::create($data);
 
-    return redirect(route('admin.reclamations.index'));
+    return redirect(route('admin.reclamations.index2'));
 }
 
     /**

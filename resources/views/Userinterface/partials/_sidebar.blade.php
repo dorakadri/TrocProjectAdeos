@@ -29,7 +29,7 @@
                         </a>
                         <ul class="sub-nav collapse" id="profile" data-bs-parent="#sidebar-menu">
                       <li class="nav-item">
-    <a class="nav-link" href="{{ route('reclamation.store') }}">
+    <a class="nav-link" href="{{ route('reclamation.index') }}">
         <i class="icon material-symbols-outlined filled">
             fiber_manual_record
         </i>
