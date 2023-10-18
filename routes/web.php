@@ -4,8 +4,10 @@ use App\Http\Controllers\AnnonceController;
 use App\Http\Controllers\AssociationController;
 use App\Http\Controllers\ChariteController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DonationController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\ExchangedemandsController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\PostController;
@@ -60,8 +62,10 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
     Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
 
-    //Asssociations 
-
+    //Communities 
+    Route::resource ('Community',CommunityController::class) ;
+    Route::get('/communities',[CommunityController::class,'CommunitiesList']);
+    Route::resource('Event', EventController::class)->parameters(['communities' => 'community']);
 });
 
 //Association only
