@@ -31,10 +31,10 @@
             <div class="col-sm-12 col-lg-12">
                 <div class="card-body">
                   
-                <form method="post" action="{{route('comment.update', ['comment' => $comment])}}" enctype="multipart/form-data" >
+                <form method="post" action="{{route('comment.update', ['comment' =>$comment->id])}}" enctype="multipart/form-data" >
          @csrf 
         @method('put')
-                    
+        
                        
                      
                    

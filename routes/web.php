@@ -35,3 +35,7 @@ Route::get('/posts', [PostController::class, 'index']);
 
 //Route::post('/post/{postId}/comment', 'CommentController@create')->name('comment.create');
 //Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
+Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
+
+
+Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');

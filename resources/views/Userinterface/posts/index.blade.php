@@ -60,7 +60,7 @@
                    </div>
                   <div class="form-group">
                     <label class="form-label" for="exampleInputPlaceholder">description</label>
-                    <textarea class="form-control" id="description" rows="3"></textarea>
+                    <textarea class="form-control" id="description" rows="3" name="description"></textarea>
                   </div>
 
                    <button type="submit" class="btn btn-primary d-block w-100 mt-3">Post</button>
@@ -189,7 +189,7 @@
                                  {{$comment->description}}
                                  </p>
                                  <div class="d-flex flex-wrap align-items-center comment-activity">
-                                 <a href="{{ route('comment.edit', ['comment' => $comment]) }}" >Edit </a>
+                                 <a href="{{ route('comment.edit', ['comment' => $comment->id]) }}">Edit</a>
                                     
 
                                  
@@ -207,11 +207,14 @@
                         @endforeach
 
                      </ul>
-                     <form class="comment-text d-flex align-items-center mt-3" method="POST" action="{{ route('comment.create', ['postId' => $post->id]) }}">
+                     <form  method="POST" action="{{ route('comment.store') }}" class="comment-text d-flex align-items-center mt-3">
     @csrf
-    <input type="text" class="form-control rounded" name="content" placeholder="Enter Your Comment">
+     @method('post')
+     <input type="hidden" name="post_id" value="{{$post->id}}">
+
+    <input type="text" class="form-control rounded" name="description" placeholder="Enter Your Comment">
     <div class="comment-attagement d-flex align-items-center">
-        <button type="submit" class="btn btn-primary d-block w-60 mt-0">Post Comment</button>
+        <button type="submit" class="btn btn-primary d-block w-60 mt-0">Paste</button>
     </div>
 </form>
 

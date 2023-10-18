@@ -52,23 +52,20 @@ class CommentController extends Controller
 
     return view('Userinterface.posts.index', ['post' => $post]);
 }*/
-public function create(Request $request)
+public function create(Request $request, Post $post)
 {
-    // Validate the request
     $request->validate([
-        'description' => 'required|max:255',
-        'post_id' => 'required|exists:posts,id',
+        'descriptioon' => 'required|max:255',
     ]);
 
-    // Create a new comment
     $comment = new Comment();
     $comment->description = $request->input('description');
-    $post = Post::find($request->get('post_id'));    // Assuming you have authentication, set user ID here
-   // $comment->user_id = auth()->user()->id;
-   $post->comments()->save($comment);
+    $comment->post_id = $post->id; // Associate the comment with the post
+    $comment->save();
 
-    // Return the created comment (or just a success message if you prefer)
-    return back();}
+    return redirect()->route('post.index', ['post' => $post->id])->with('success', 'Comment added successfully!');
+}    
+
 
 
 
@@ -81,15 +78,16 @@ public function create(Request $request)
      */
   public function store(Request $request)
 {
+  
     $data = $request->validate([
         'description' => 'required',
-        'post_id' => 'required|exists:post,id', // Ensure that post_id exists in theposts table
+        'post_id' => 'required', // Ensure that post_id exists in theposts table
     ]);
 
     // Create a new Comment record
     $comment= Comment::create($data);
 
-    return redirect(route('Userinterface.posts.index'));
+    return redirect(route('post.index'));
 }
 
     /**
@@ -109,9 +107,10 @@ public function create(Request $request)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
- public function edit(Commment $comment)
+ public function edit(String $comment)
 {
-    return view('Userinterface.posts.editComment', ['comment' => $comment]);
+    $comment2= Comment::find($comment);
+    return view('Userinterface.posts.editComment', ['comment' => $comment2]);
 }
     /**
      * Update the specified resource in storage.
@@ -120,16 +119,19 @@ public function create(Request $request)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
- public function update(Commment $comment,Request $request, )
+    
+ public function update(Request $request, String $comment )
 {
+   // dd($comment);
+   $comment2= Comment::find($comment);
     $data = $request->validate([
         'description' => 'required'
       
     ]);
 
-    $comment->update($data);
+    $comment2->update($data);
 
-    return view('Userinterface.posts.editComment', ['comment' => $comment]);
+    return redirect(route('post.index'))->with('success', 'post Updated Succesffully');
 }
     /**
      * Remove the specified resource from storage.
