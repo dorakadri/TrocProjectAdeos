@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\AnnonceController;
 use App\Http\Controllers\ChariteController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\ExchangedemandsController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReclamationController;
 use App\Http\Controllers\ReponseController;
 use App\Models\Exchangedemands;
@@ -52,7 +54,12 @@ Route::delete('/Charite/{charite}/delete', [ChariteController::class,'delete'])-
 
 Route::post('donations/{donation}/choose-charite', [DonationController::class, 'chooseCharite'])->name('donations.chooseCharite');
 Route::post('/charites/{charite}/show-donations', [ChariteController::class,'showDonations'])->name('charites.showDonations');
-
+// Forum //
+Route::resource('post',PostController::class);
+Route::resource('comment',CommentController::class);
+Route::get('/posts', [PostController::class, 'index']);
+Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
+Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
 });
 
 
