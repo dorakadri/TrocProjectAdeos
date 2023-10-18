@@ -38,7 +38,19 @@
                 </div>
             </div>
         </div>
+                    <form action="{{ route('filter-reclamations') }}" method="GET">
+            <div class="form-group">
+                <label for="filter">Filter by Status:</label>
+                <select name="filter" id="filter" class="form-control">
+                    <option value="all">All</option>
+                    <option value="treated">Treated</option>
+                    <option value="not_treated">Not Treated</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Apply Filter</button>
+        </form>
         <div class="row mt-3">
+       
             <div class="col-sm-12">
                 <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success ">+ Add Reclamation</a>
             </div>

@@ -105,4 +105,19 @@ public function index2()
         $reclamation->delete();
         return redirect(route('reclamation.index'))->with('success', 'reclamation deleted Succesffully');
     }
+
+    public function filterReclamations(Request $request)
+{
+    $filter = $request->input('filter');
+
+    if ($filter == 'all') {
+        $reclamations = Reclamation::all();
+    } elseif ($filter == 'treated') {
+        $reclamations = Reclamation::where('status', 'treated')->get();
+    } elseif ($filter == 'not_treated') {
+        $reclamations = Reclamation::where('status', 'not_treated')->get();
+    }
+
+    return view('Userinterface.reclamations.index', compact('reclamations'));
+}
 }

@@ -43,3 +43,4 @@ Route::get('/admin/reclamation', 'App\Http\Controllers\ReclamationController@ind
 
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
+Route::get('/filter-reclamations', 'App\Http\Controllers\ReclamationController@filterReclamations')->name('filter-reclamations');
