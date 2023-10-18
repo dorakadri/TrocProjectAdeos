@@ -1,8 +1,14 @@
-@extends('components.layout')
-@section('content')
+@extends('admin.components.layout')
+@section('contentadmin')
 
 <div class="container">
-    <h3 class="text-center mb-4">Association Details</h3>
+<div class="col-sm-12 px-5 py-5" >
+         <div class="card position-relative inner-page-bg bg-primary" style="height: 150px;">
+            <div class="inner-page-title">
+            <h3 class="text-white text-center mt-5"  >  Associations  Detail</h3>
+              
+            </div>
+         </div>
     <table class="table">
         <tr>
             <th>Name</th>

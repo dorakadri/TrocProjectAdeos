@@ -40,44 +40,42 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::resource('reponse', ReponseController::class);
     Route::get('/filter-reclamations', 'App\Http\Controllers\ReclamationController@filterReclamations')->name('filter-reclamations');
     // CHARITY EVENT + DONATION 
-    
-Route::get('/Donation', [DonationController::class,'index'])->name( 'donations.index'); 
-Route::get('/Donation/create', [DonationController::class,'create'])->name( 'donations.create');
-Route::post('/Donation/create', [DonationController::class,'add'])->name( 'donations.add');  
-Route::get('/Donation/{donation}/edit', [DonationController::class,'edit'])->name( 'donations.edit'); 
-Route::put('/Donation/{donation}/update', [DonationController::class,'update'])->name( 'donations.update');
-Route::delete('/Donation/{donation}/delete', [DonationController::class,'delete'])->name( 'donations.delete');  
 
-Route::get('/Charite', [ChariteController::class,'index'])->name( 'charites.index'); 
- 
-Route::post('/charites/{charite}/show-donations', [ChariteController::class,'showDonations'])->name('charites.showDonations');
-Route::post('donations/{donation}/choose-charite', [DonationController::class, 'chooseCharite'])->name('donations.chooseCharite');
+    Route::get('/Donation', [DonationController::class, 'index'])->name('donations.index');
+    Route::get('/Donation/create', [DonationController::class, 'create'])->name('donations.create');
+    Route::post('/Donation/create', [DonationController::class, 'add'])->name('donations.add');
+    Route::get('/Donation/{donation}/edit', [DonationController::class, 'edit'])->name('donations.edit');
+    Route::put('/Donation/{donation}/update', [DonationController::class, 'update'])->name('donations.update');
+    Route::delete('/Donation/{donation}/delete', [DonationController::class, 'delete'])->name('donations.delete');
 
-// Forum //
-Route::resource('post',PostController::class);
-Route::resource('comment',CommentController::class);
-Route::get('/posts', [PostController::class, 'index']);
-Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
-Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
+    Route::get('/Charite', [ChariteController::class, 'index'])->name('charites.index');
 
-//Asssociations 
-Route::get('/home/associations', [AssociationController::class, 'index2']);  
+    Route::post('/charites/{charite}/show-donations', [ChariteController::class, 'showDonations'])->name('charites.showDonations');
+    Route::post('donations/{donation}/choose-charite', [DonationController::class, 'chooseCharite'])->name('donations.chooseCharite');
+
+    // Forum //
+    Route::resource('post', PostController::class);
+    Route::resource('comment', CommentController::class);
+    Route::get('/posts', [PostController::class, 'index']);
+    Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
+    Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
+
+    //Asssociations 
+
 });
 
 //Association only
 Route::middleware(['auth', 'checkrole:2'])->group(function () {
-   //hne my charity event route jdida index2 
-    Route::get('/Charite/create', [ChariteController::class,'create'])->name( 'charites.create');
-    Route::post('/Charite/create', [ChariteController::class,'add'])->name( 'charites.add');
-    Route::get('/Charite/{charite}/edit', [ChariteController::class,'edit'])->name( 'charites.edit'); 
-    Route::put('/Charite/{charite}/update', [ChariteController::class,'update'])->name( 'charites.update');
-    Route::delete('/Charite/{charite}/delete', [ChariteController::class,'delete'])->name( 'charites.delete');  
+    //hne my charity event route jdida index2 
+    Route::get('/Charite/create', [ChariteController::class, 'create'])->name('charites.create');
+    Route::post('/Charite/create', [ChariteController::class, 'add'])->name('charites.add');
+    Route::get('/Charite/{charite}/edit', [ChariteController::class, 'edit'])->name('charites.edit');
+    Route::put('/Charite/{charite}/update', [ChariteController::class, 'update'])->name('charites.update');
+    Route::delete('/Charite/{charite}/delete', [ChariteController::class, 'delete'])->name('charites.delete');
+});
 
 
- });
-
-
- //Admin
+//Admin
 
 Route::middleware(['auth', 'checkrole:1'])->group(function () {
     Route::get('/Admin/dashboard', function () {
@@ -100,15 +98,19 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
 
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
     Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
+     
 
-       
-    Route::resource('associations',AssociationController::class);
-Route::resource('contacts', ContactController::class);
 });
 
 // all
 Route::middleware(['auth'])->group(function () {
-
-    Route::resource('reclamation', ReclamationController::class);
     
+    Route::resource('associations', AssociationController::class);
+    Route::get('/home/associations', 'App\Http\Controllers\AssociationController@index2')->name('Userinterface.associations.index2');
+    Route::resource('reclamation', ReclamationController::class);
+});
+
+
+Route::middleware(['auth', 'checkrole:1,2'])->group(function () {
+    Route::resource('contacts', ContactController::class);
 });

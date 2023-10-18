@@ -1,7 +1,5 @@
-
 @extends('components.layout')
 @section('content')
-
       <div>
     <div class="position-relative">
     </div>

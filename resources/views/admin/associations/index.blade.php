@@ -1,5 +1,5 @@
-@extends('components.layout')
-@section('content')
+@extends('admin.components.layout')
+@section('contentadmin')
  
     <div id="content-page" class="content-page">
 <div class="container">
@@ -7,7 +7,7 @@
       <div class="col-sm-12">
          <div class="card position-relative inner-page-bg bg-primary" style="height: 150px;">
             <div class="inner-page-title">
-               <h3 class="text-white"> Associations Area</h3>
+            <h3 class="text-white text-center mt-5"  >  Associations </h3>
               
             </div>
          </div>
@@ -15,9 +15,7 @@
       <div class="col-sm-12">
          <!-- Editable table -->
          <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-4">
-             List Associations
-            </h3>
+            
             <div class="card-body">
                <div id="table" class="table-editable">
                   <span class="table-add float-end mb-3 me-2">

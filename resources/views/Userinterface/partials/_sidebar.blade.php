@@ -129,8 +129,9 @@
                         <span class="item-name">forum</span>
                     </a>
                 </li>
+           
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('associations.index') }}">
+                    <a class="nav-link" href="/home/associations">
                         <i class="icon material-symbols-outlined filled">
                             fiber_manual_record
                         </i>
@@ -138,7 +139,6 @@
                         <span class="item-name"> Associations </span>
                     </a>
                 </li>
-          
 
             </ul>
 
