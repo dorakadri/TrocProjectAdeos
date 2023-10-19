@@ -121,8 +121,6 @@ Route::middleware(['auth','checkrole:0'])->group(function () {
 });
 
 
-Route::middleware(['auth', 'checkrole:1,2'])->group(function () {
-    Route::resource('contacts', ContactController::class);
-});
+
 });
 
