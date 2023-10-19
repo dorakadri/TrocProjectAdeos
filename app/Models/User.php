@@ -4,12 +4,13 @@ namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail as Verify;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-
+use App\Models\Exchangedemands ;
 
 class User extends Authenticatable implements Verify 
 {
@@ -63,4 +64,18 @@ class User extends Authenticatable implements Verify
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+
+    public function annonces()
+    {
+        return $this->hasMany(annonce::class);
+    }
+
+    public function exchangeDemands() :HasMany
+    {
+        return $this->hasMany(Exchangedemands::class,"user_id");
+    }  
+
+  
 }

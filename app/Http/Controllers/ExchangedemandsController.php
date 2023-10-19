@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\annonce;
 use App\Models\Exchangedemands;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ExchangedemandsController extends Controller
 {
@@ -17,7 +19,17 @@ class ExchangedemandsController extends Controller
     {
         return view('Userinterface.Exchangedemands.index');
     }
+    public function index2()
+    {   
+ 
+    $userId =  auth()->id();
 
+    $myexchange = Exchangedemands::where('user_id', $userId)->get();
+ 
+    return view('Userinterface.Exchangedemands.index2', [
+        'exchanges' => $myexchange,
+    ]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -40,10 +52,14 @@ class ExchangedemandsController extends Controller
         if ($action == 'decline') {
             Exchangedemands::where('id', $exchangeid)->update(['status' => 'declined']);
         } elseif ($action == 'confirm') {
-            // Traitement pour la confirmation
+  
             Exchangedemands::where('id', $exchangeid)->update(['status' => 'accepted']);
         }
         
+       $echange= Exchangedemands::find($exchangeid) ;
+
+      annonce::where('id', $echange->annonce_id)->update(['taken' => true]);
+
         return redirect()->route('Annonce.index')
         ->with('message','Exchange confirmation updated successfully') ;
     
@@ -70,6 +86,7 @@ class ExchangedemandsController extends Controller
             $formFields['picture']=$request->file('picture')->store('imageannonces','public');
         }
 
+        $formFields['user_id'] = auth()->id(); 
        $annonce->exchangesdemands()->create($formFields);
         return redirect()->route('Annonce.index')
         ->with('message','Demand commited succefuly ') ; 
@@ -82,11 +99,14 @@ class ExchangedemandsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
+    {
         $exchange = Exchangedemands::find($id);
-    
-        return view('Userinterface.Exchangedemands.show',compact('exchange'));
+        $exchanger =  User::select('id', 'username', 'profile_photo_path','phone')
+        ->find($exchange->user_id);
+
+        return view('Userinterface.Exchangedemands.show', compact('exchange', 'exchanger'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.

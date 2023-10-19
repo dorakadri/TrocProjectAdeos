@@ -15,7 +15,7 @@
                         @csrf
 
                         <input type="hidden" name="annonceid" value="{{ $annonce->id }}">
-
+                      <input type="hidden" name="user_id" value="{{Auth::user()->id }}">
                         <ul class="d-flex flex-wrap justify-content-between list-inline m-0 p-0">
 
                             <li class="col-md-12 mb-3">

@@ -18,10 +18,10 @@
                </div>
                <div class="user-detail text-center mb-3">
                   <div class="profile-img">
-                     <img  src="images/pdf.jpg" alt="profile-img" class="avatar-130 img-fluid" />
+                     <img  src="{{ Auth::user()->profile_photo_url }}"  alt="profile-img" class="avatar-130 img-fluid" />
                   </div>
                   <div class="profile-detail">
-                     <h3 class="">Kadri Dorra</h3>
+                     <h3 class="">{{ Auth::user()->username }}</h3>
                   </div>
                </div>
                <div class="profile-info p-3 d-flex align-items-center justify-content-between position-relative">

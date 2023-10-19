@@ -6,18 +6,18 @@
             <div class="user-post-data">
                 <div class="d-flex justify-content-between">
                     <div class="me-3">
-                        <img class="avatar-40 rounded-circle" src="images/pdf.jpg" alt="" loading="lazy">
+                        <img class="avatar-40 rounded-circle" src="{{ asset('storage/' . $annonce->user->profile_photo_path) }}" alt="" loading="lazy">
                     </div>
                     <div class="w-100">
                         <div class="d-flex  justify-content-between">
 
                             <div class="">
-                                <h5 class="mb-0 d-inline-block">Dorra Kadri</h5>
+                                <h5 class="mb-0 d-inline-block">{{$annonce->user->username}}</h5>
 
                                 <p class="mb-0 text-primary">{{ $annonce->created_at->diffForHumans() }}</p>
 
                             </div>
-
+                            @if (auth()->check() && $annonce->user->id == auth()->user()->id)
                             <div class="card-post-toolbar">
                                 <div class="dropdown">
                                     <span class="dropdown-toggle material-symbols-outlined" id="postdata-5"
@@ -26,6 +26,9 @@
                                         more_horiz
                                     </span>
                                     <div class="dropdown-menu m-0 p-0" aria-labelledby="postdata-5">
+                                        @unless ($annonce->taken)
+                                            
+                                      
                                         <a class="dropdown-item p-3" href="{{ route('Annonce.edit', $annonce->id) }}">
                                             <div class="d-flex align-items-top">
                                                 <span class="material-symbols-outlined">
@@ -48,6 +51,7 @@
                                                 </div>
                                             </div>
                                         </a>
+                                        @endunless
                                         <form action="{{ route('Annonce.destroy', $annonce->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -70,6 +74,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -137,9 +142,10 @@
                     @endif
    
                 </a>
+                @if (auth()->check() && $annonce->user->id !== auth()->user()->id)
                 <a type="button" href="/Exchange/createbyid/{{ $annonce->id }}"
                     class="btn btn-primary d-block mt-3 w-100">Exchange</a>
-
+                    @endif
                  
 
             </div>

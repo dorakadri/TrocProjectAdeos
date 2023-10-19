@@ -31,6 +31,7 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::resource('Annonce', AnnonceController::class);
     Route::resource('Exchanges', ExchangedemandsController::class);
     Route::get('/Exchange/createbyid/{id}', [ExchangedemandsController::class, 'createbyid']);
+    Route::get('/MyEchanges', [ExchangedemandsController::class, 'index2']);
     Route::get('/Exchange/confirmation/{action}/{id}', [ExchangedemandsController::class, 'confirmation']);
     Route::get('/profile', [AnnonceController::class, 'UserList']);
     // Reclamation //

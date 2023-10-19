@@ -16,13 +16,13 @@ return new class extends Migration
     {
         Schema::create('Exchangedemands', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id')->default('1');
+            $table->unsignedBigInteger('user_id');
             $table->foreignId('annonce_id')->constrained('annonces')->onUpdate('cascade')->onDelete('cascade');
             $table->enum('status', ['pending', 'accepted', 'declined'])->default('pending');
             $table->text('description')->nullable(); 
             $table->string('echangetype')->default(AnnonceEchangeTypeEnum::ObjectObject->value);
             $table->string('picture')->nullable(); 
-
+            $table->foreign('user_id')->references('id')->on('users');
             // Timestamps
             $table->timestamps();
         });

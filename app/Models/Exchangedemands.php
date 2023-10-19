@@ -6,6 +6,8 @@ use App\Enums\AnnonceEchangeTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\User;
+
 
 class Exchangedemands extends Model
 {    
@@ -37,4 +39,11 @@ class Exchangedemands extends Model
     public function annonce():BelongsTo {
         return $this->belongsTo(annonce::class);
     }
+
+    public function user():BelongsTo 
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }
