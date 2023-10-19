@@ -105,7 +105,7 @@
                                           <div class="d-flex align-items-top">
                                                <div class="data ms-2">
                                                 
-                                     <a href="{{ route('post.edit', ['post' => $post]) }}" >Edit Post</a>
+                                     <a href="{{ route('post.edit', ['post' =>$post->id]) }}" >Edit Post</a>
                                                
                                              </div>
                                           </div>

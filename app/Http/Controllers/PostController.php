@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
@@ -98,12 +99,30 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Post $post ,Request $request)
-    {  $data = $request->validate([
+    { 
+       // dd($request);
+         $data = $request->validate([
         'title' => 'required',
         'description' => 'required',
        
  
     ]);
+    
+    if ($request->hasFile('image')) {
+        $destination ='logos/'.$post->image;
+        if(File::exists($destination)){
+            File::delete($destination);
+
+
+        }
+        $image = $request->file('image');
+        $imageName = time().'.'.$image->getClientOriginalExtension();
+        $image->storeAs('logos', $imageName, 'public');
+        
+
+        $postData['image'] = $imageName;
+    }
+
 
     $post->update($data);
 

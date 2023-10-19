@@ -45,7 +45,11 @@
                             <label class="form-label" for="exampleInputPlaceholder">description</label>
                             <input type="text" class="form-control" name="description" placeholder="description" value="{{$post->description}}" >
                         </div>
-                      
+                        <div class="form-group">
+                            <label class="form-label" for="exampleInputPlaceholder">image</label>
+                            <input type="file" class="form-control" name="image"  value="{{$post->image}}" >
+                            <img src="{{ asset('logos/'.$post->image) }}"  alt="post-image" class="img-fluid rounded w-50" loading="lazy"></a>
+                        </div>
 
 
 
