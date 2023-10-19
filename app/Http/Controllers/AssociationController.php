@@ -13,13 +13,13 @@ class AssociationController extends Controller
    */
 
  
-   public function __construct()
+public function __construct()
    {
-
-       $this->middleware('checkrole:1')->only('index', 'edit', 'update','destroy','show');
-       $this->middleware('checkrole:0')->only('index2', 'create', 'store', 'show');
-       $this->middleware('checkrole:2')->only('index2','update', 'show'); 
-   }  
+    $this->middleware('checkrole:0')->only( 'create', 'store');
+    $this->middleware('checkrole:1')->only('index', 'edit', 'update', 'destroy', 'show');
+    $this->middleware('checkrole:2')->only('update');
+    $this->middleware('checkrole:0,2')->only('index2','show');
+   }
   public function index()
   {
     $associations = Association::all();
