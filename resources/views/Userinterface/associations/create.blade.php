@@ -44,10 +44,7 @@
 </div>
 
 
-                        <div class="form-group">
-                            <label class="form-label" for="logo">Responsable</label>
-                            <input type="text" class="form-control" name="responsable" placeholder="responsable">
-                        </div>
+                       
                             <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">description</label>
                             <input type="text" class="form-control" name="description" placeholder="description">

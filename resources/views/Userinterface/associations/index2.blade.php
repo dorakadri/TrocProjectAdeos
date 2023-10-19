@@ -11,7 +11,7 @@
                   <img src="{{ asset('logos/'.$association->logo) }}"  class="img-fluid rounded w-100" alt="blog-img" loading="lazy">  
                </div>
                <div class="blog-description mt-3">
-                  <h5 class="mb-3 pb-3 border-bottom">Responsable    {{$association->responsable}} </h5>
+                  <h5 class="mb-3 pb-3 border-bottom">Responsable    {{$association->id}} </h5>
                   <div class="blog-meta d-flex align-items-center mb-3 position-right-side flex-wrap">
                      <div class="date me-4 d-flex align-items-center"><i class="material-symbols-outlined pe-2 md-18 text-primary">calendar_month</i>2 Weeks ago</div>
                      <div class="like me-4 d-flex align-items-center"><i class="material-symbols-outlined pe-2 md-18 text-primary">

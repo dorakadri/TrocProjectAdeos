@@ -66,6 +66,10 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::resource ('Community',CommunityController::class) ;
     Route::get('/communities',[CommunityController::class,'CommunitiesList']);
     Route::resource('Event', EventController::class)->parameters(['communities' => 'community']);
+    
+    //association
+    Route::get('/home/associations', 'App\Http\Controllers\AssociationController@index2')->name('Userinterface.associations.index2');
+
 });
 
 //Association only
@@ -76,6 +80,10 @@ Route::middleware(['auth', 'checkrole:2'])->group(function () {
     Route::get('/Charite/{charite}/edit', [ChariteController::class, 'edit'])->name('charites.edit');
     Route::put('/Charite/{charite}/update', [ChariteController::class, 'update'])->name('charites.update');
     Route::delete('/Charite/{charite}/delete', [ChariteController::class, 'delete'])->name('charites.delete');
+    Route::resource('associations', AssociationController::class)->only(['create','store']);
+    Route::resource('contacts', ContactController::class)->only(['create','store']);
+ 
+    
 });
 
 
@@ -95,6 +103,9 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
     Route::get('/Admin/Profile', function () {
         return view('admin.components.Profile');
     });
+    //association
+    Route::resource('associations', AssociationController::class)->only(['index','edit','update','destroy','show']);
+
 
     // reclamation
     Route::get('/reponse/create/{reclamation_id}', 'App\Http\Controllers\ReponseController@createbyid')->name('reponse.createbyid');
@@ -102,19 +113,23 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
 
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
     Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
-     
+    Route::resource('contacts', ContactController::class)->only(['index','edit', 'update','destroy','show']);
+
+    
 
 });
 
 // all
-Route::middleware(['auth'])->group(function () {
-    
-    Route::resource('associations', AssociationController::class);
-    Route::get('/home/associations', 'App\Http\Controllers\AssociationController@index2')->name('Userinterface.associations.index2');
+
+Route::middleware(['auth','checkrole:0'])->group(function () {
     Route::resource('reclamation', ReclamationController::class);
 });
 
 
-Route::middleware(['auth', 'checkrole:1,2'])->group(function () {
-    Route::resource('contacts', ContactController::class);
-});
+
+
+
+
+
+
+

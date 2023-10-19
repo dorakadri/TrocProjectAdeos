@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Association;
+use Illuminate\Support\Facades\Auth;
+
 class AssociationController extends Controller
 {
      /**
@@ -15,10 +17,8 @@ class AssociationController extends Controller
  
    public function __construct()
    {
-
-       $this->middleware('checkrole:1')->only('index', 'edit', 'update','destroy','show');
-       $this->middleware('checkrole:0')->only('index2', 'create', 'store', 'show');
-       $this->middleware('checkrole:2')->only('index2','update', 'show'); 
+       $this->middleware('checkrole:1')->only('index','edit', 'update','destroy','show');
+       $this->middleware('checkrole:2')->only('create','store'); 
    }  
   public function index()
   {
@@ -40,17 +40,25 @@ class AssociationController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function store(Request $request)
-  {
+  {    $user = Auth::user();
+
+    if ($user->association) {
+      return redirect()->back()->with('error', 'You already have an association.');
+  }
+
     $request->validate([
-        'responsable' => 'required|max:25',
-        'description' => 'required|max:2000',
+      // Add this line to associate user_id
+      'description' => 'required|max:2000',
         'name' => 'required|max:2500|min:3',
         'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+
     ]);
 
     $associationData = [
-        'responsable' => $request->input('responsable'),
-        'description' => $request->input('description'),
+     // 'user_id' => session('SESSION_CONNECTION') ,
+
+     'user_id' => $user->id,
+     'description' => $request->input('description'),
         'name' => $request->input('name'),
     ];
 
@@ -65,7 +73,7 @@ class AssociationController extends Controller
 
     Association::create($associationData);
 
-    return redirect()->route('admin.associations.index')->with('success', 'Association created successfully.');
+    return redirect()->route('Userinterface.associations.index2')->with('success', 'Association created successfully.');
    
   }
 
@@ -73,15 +81,13 @@ class AssociationController extends Controller
   public function update(Request $request, $id)
   {
       $request->validate([
-      'responsable' => 'required|max:25',
         'description' => 'required|max:2000',
         'name' => 'required|max:25|min:3',
       ]);
   
       $association = Association::find($id);
-  
       $associationData = [
-          'responsable' => $request->input('responsable'),
+          
           'description' => $request->input('description'),
           'name' => $request->input('name'),
       ];
@@ -110,7 +116,7 @@ class AssociationController extends Controller
   {
     $association = Association::find($id);
     $association->delete();
-    return redirect()->route('admin.associations.index')
+    return redirect()->route('associations.index')
       ->with('success', 'Association deleted successfully');
   }
    // routes functions

@@ -29,6 +29,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function association()
+{
+    return $this->hasOne(Association::class);
+}
+
     /**
      * The attributes that should be hidden for serialization.
      *

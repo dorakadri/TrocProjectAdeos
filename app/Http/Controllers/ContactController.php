@@ -11,7 +11,8 @@ class ContactController extends Controller
     public function __construct()
    {
 
-       $this->middleware('checkrole:1')->only('show','update','index','edit','destroy');
+       $this->middleware('checkrole:2')->only('create','store');
+         $this->middleware('checkrole:1')->only('index','edit', 'update','destroy','show');
 
     
    }  
