@@ -52,11 +52,13 @@ class ReclamationController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'status' => 'nullable'
+    'title' => 'required|max:10', // Limit the title to 10 characters
+    'description' => 'required|min:3',
+    'status' => 'nullable', 
 
         ]);
+// Add the authenticated user's ID to the data array
+    $data['user_id'] = auth()->user()->id;
 
         $newReclamation = Reclamation::create($data);
 

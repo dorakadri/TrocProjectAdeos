@@ -22,47 +22,46 @@
                                 <!-- Add this button code inside your Blade view -->
                                 <a href="{{ url('generate-pdf') }}" class="btn btn-primary">Generate PDF</a>
 
-                                <table class="table table-bordered table-responsive-md table-striped text-center">
-                                    <thead>
-                                        <tr>
-
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Status</th>
-                                            <th>Responses</th>
-                                            <th>Edit</th>
-                                            <th>Answer</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($reclamations as $reclamation)
-                                            <tr>
-
-                                                <td>{{ $reclamation->title }}</td>
-                                                <td>{{ $reclamation->description }}</td>
-                                                <td>{{ $reclamation->status }}</td>
-                                                <td>
-                                                    @foreach ($reclamation->reponses as $reponse)
-                                                        {{ $reponse->description }}<br>
-                                                    @endforeach
-                                                </td>
-                                                <td>
-                                                    <a href="{{ route('reclamation.edit', ['reclamation' => $reclamation]) }}"
-                                                        class="btn btn-warning btn-rounded btn-sm my-0">Edit</a>
-                                                </td>
-
-                                                <td>
-                                                    <a href="{{ route('reponse.createbyid', ['reclamation_id' => $reclamation->id]) }}"
-                                                        class="btn btn-sm btn-success ">Add Response</a>
-                                                     
-                                                </td>
-
+                                      <table class="table table-bordered table-responsive-md table-striped text-center">
+                                <thead>
+                                    <tr>
+                                      
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Status</th>
+                                        <th>Responses</th>
+                                        <th>Date Création</th>
+                                        <th>Edit</th>
+                                        <th>Answer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($reclamations as $reclamation)
+                                    <tr>
+                                      
+                                        <td>{{ $reclamation->title }}</td>
+                                        <td>{{ $reclamation->description }}</td>
+                                        <td>{{ $reclamation->status }}</td>
+                                        <td>
+                                            @foreach($reclamation->reponses as $reponse)
+                                                {{ $reponse->description }}<br>
+                                            @endforeach
+                                        </td>
+                                                  <td>{{$reclamation->created_at }}</td>
+                                        <td>
+                                            <a href="{{ route('reclamation.edit', ['reclamation' => $reclamation]) }}" class="btn btn-warning btn-rounded btn-sm my-0">Edit</a>
+                                        </td>
+                                    
+<td>
+    <a href="{{ route('reponse.create', ['reclamation_id' => $reclamation->id]) }}" class="btn btn-sm btn-success ">Add Response</a>
+</td>
 
 
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                             </div>
                         </div>
                     </div>

@@ -30,7 +30,7 @@
                    <form method="post" action="{{route('reclamation.update', ['reclamation' => $reclamation])}}">
         @csrf 
         @method('put')
-                    
+                       <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                        <div class="form-group">
     <label class="form-label" for="title">Title</label>
     <input type="text" class="form-control" name="title" placeholder="Title" value="{{$reclamation->title}}" readonly>

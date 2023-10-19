@@ -18,6 +18,15 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->enum('status', ['treated', 'not_treated']); // Define enum values
+
+  $table->unsignedBigInteger('user_id'); // Add this line for user relationship
+  $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
+
+
             $table->timestamps();
         });
     }

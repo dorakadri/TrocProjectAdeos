@@ -27,22 +27,17 @@ class ReponseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-public function createbyid($reclamation_id)
-{  
-  
+
+public function create($reclamation_id)
+{
     // Find the Reclamation by ID
     $reclamation = Reclamation::find($reclamation_id);
-
+ $data['user_id'] = auth()->user()->id;
     if (!$reclamation) {
         return redirect()->route('reclamation.index')->with('error', 'Reclamation not found');
     }
 
     return view('admin.reponse.create', ['reclamation' => $reclamation]);
-}
-public function create()
-{  
-  
-
 }
 
 
@@ -59,7 +54,8 @@ public function create()
         'description' => 'required',
         'reclamation_id' => 'required|exists:reclamations,id', // Ensure that reclamation_id exists in the reclamations table
     ]);
-
+// Add the authenticated user's ID to the data array
+    $data['user_id'] = auth()->user()->id;
     // Create a new Reponse record
     $reponse = Reponse::create($data);
 

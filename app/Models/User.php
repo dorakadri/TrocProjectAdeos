@@ -9,7 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-
+use App\Models\Reclamation;
+use App\Models\Reponse;
 
 class User extends Authenticatable implements Verify 
 {
@@ -63,4 +64,14 @@ class User extends Authenticatable implements Verify
     protected $appends = [
         'profile_photo_url',
     ];
+
+     public function reclamations()
+    {
+        return $this->hasMany(Reclamation::class);
+    }
+
+    public function responses()
+    {
+        return $this->hasMany(Reponse::class);
+    }
 }

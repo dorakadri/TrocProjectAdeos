@@ -1,32 +1,6 @@
 @extends('components.layout')
 @section('content')
-<style>
-    .card-title {
-    }
 
-    .status {
-        font-size: 20px;
-        font-weight: bold; /* Customize font size for Status */
-    }
-
-
-
-    /* Add these two classes for red and green status */
-    .status-not-treated {
-        color: red;
-    }
-
-    .status-treated {
-        color: green;
-    }
-
-    /* Add a border to the card */
- .card {
-    border: 1px solid #06BFF1; /* Set the border color to #06BFF1 */
-    border-radius: 5px; /* Optional: Add rounded corners */
-}
-
-</style>
 <div id="content-page" class="content-page">
     <div class="container">
         <div class="row">
@@ -55,41 +29,49 @@
                 <a href="{{ route('reclamation.create') }}" class="btn btn-sm btn-success ">+ Add Reclamation</a>
             </div>
         </div>
-        <div class="row mt-3">
-            @foreach($reclamations as $reclamation)
-            <div class="col-sm-4 mb-3">
-                <div class="card">
-                    <div class="card-body" style="min-height: 150px;"> <!-- Set a minimum height -->
-                        <h3 class="card-title"> 
-                            <span class="status 
-                                @if($reclamation->status == 'not_treated') 
-                                    status-not-treated
-                                @else
-                                    status-treated
-                                @endif
-                            ">
-                                {{ $reclamation->status }}
-                            </span>
-                        </h3>
-                        <h4 class="card-status"> {{ $reclamation->title }}</h4>
-
-                        <p class="card-text">{{ $reclamation->description }}</p>
-                        @foreach($reclamation->reponses as $reponse)
-                        <p class="card-text">Responses: {{ $reponse->description }}</p>
-                        @endforeach
-                    </div>
-                    <div class="card-footer text-center">
-                        <form method="post" action="{{ route('reclamation.destroy', ['reclamation' => $reclamation]) }}">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                        </form>
-                    </div>
-                </div>
+      <div class="row mt-3">
+    @foreach($reclamations as $reclamation)
+    <div class="col-sm-4 mb-3">
+        <div class="card">
+            <div class="card-body" style="min-height: 150px;">
+                    <h4 class="card-status"> Date Création :</h4>
+                  <p class="card-text">{{ $reclamation->created_at }}</p>
+                <h3 class="card-title">
+                    @if($reclamation->status == 'not_treated')
+                        <span class="badge bg-danger ms-0 ms-md-3 my-1 my-md-0"> Status :{{ $reclamation->status }}</span>
+                    @else
+                        <span class="badge bg-success ms-0 ms-md-3 my-1 my-md-0">Status :{{ $reclamation->status }}</span>
+                    @endif
+                </h3>
+                <h4 class="card-status"> Title:</h4>
+                <p>{{ $reclamation->title }}</p>
+                <h4 class="card-status"> Description:</h4>
+                <p class="card-text">{{ $reclamation->description }}</p>
+          
+                <h4 class="card-status"> Responses:</h4>
+                 <div class="response-container">
+                @foreach($reclamation->reponses as $reponse)
+                    <p class="card-text">{{ $reponse->description }}</p>
+                @endforeach
+                 </div>
             </div>
-            @endforeach
+            <div class="card-footer text-center">
+                <form method="post" action="{{ route('reclamation.destroy', ['reclamation' => $reclamation]) }}">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
         </div>
     </div>
 </div>
-
+<style>
+    .response-container {
+        min-height: 100px; /* Adjust the minimum height as needed */
+    }
+</style>
 @endsection
