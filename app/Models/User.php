@@ -25,9 +25,12 @@ class User extends Authenticatable implements Verify
      * @var array<int, string>
      */
     protected $fillable = [
+         'role',
         'name',
         'email',
         'password',
+     'username',
+        'phone',
     ];
 
     /**
@@ -40,7 +43,7 @@ class User extends Authenticatable implements Verify
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
-        'role'
+    
     ];
 
     /**
