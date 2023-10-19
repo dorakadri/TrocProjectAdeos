@@ -15,7 +15,7 @@ class AssociationController extends Controller
    */
 
  
-   public function __construct()
+public function __construct()
    {
        $this->middleware('checkrole:1')->only('index','edit', 'update','destroy','show');
        $this->middleware('checkrole:2')->only('create','store'); 

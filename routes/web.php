@@ -25,11 +25,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
-
 //Association and simple users
 
 Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
@@ -126,10 +121,8 @@ Route::middleware(['auth','checkrole:0'])->group(function () {
 });
 
 
-
-
-
-
-
-
+Route::middleware(['auth', 'checkrole:1,2'])->group(function () {
+    Route::resource('contacts', ContactController::class);
+});
+});
 
