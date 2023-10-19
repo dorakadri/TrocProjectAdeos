@@ -30,7 +30,7 @@
             </div>
         </div>
       <div class="row mt-3">
-    @foreach($reclamations as $reclamation)
+     @foreach(auth()->user()->reclamations as $reclamation)
     <div class="col-sm-4 mb-3">
         <div class="card">
             <div class="card-body" style="min-height: 150px;">
