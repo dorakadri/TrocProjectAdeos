@@ -25,9 +25,10 @@ class ExchangedemandsController extends Controller
     $userId =  auth()->id();
 
     $myexchange = Exchangedemands::where('user_id', $userId)->get();
- 
+  
     return view('Userinterface.Exchangedemands.index2', [
         'exchanges' => $myexchange,
+
     ]);
     }
     /**
@@ -43,11 +44,21 @@ class ExchangedemandsController extends Controller
     public function createbyid($annonceid)
     {   
         $annonce= annonce::find($annonceid);
-        return view('Userinterface.Exchangedemands.create', [
+        return view('Userinterface.Exchangedemands.details', [
             'annonce' => $annonce ,
         ]);
     } 
 
+   
+
+    public function  getannonceexchange($annonceid)
+    {    
+        $annonce= annonce::find($annonceid);
+        $owner= User::select('id', 'username', 'profile_photo_path','phone')
+        ->find($annonce->user_id);
+
+        return view('Userinterface.Exchangedemands.details',compact('annonce', 'owner'));
+    } 
     public function confirmation($action, $exchangeid){
         if ($action == 'decline') {
             Exchangedemands::where('id', $exchangeid)->update(['status' => 'declined']);
@@ -139,6 +150,13 @@ class ExchangedemandsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Exchangedemands = Exchangedemands::find($id) ;
+   
+        if($Exchangedemands){
+            $Exchangedemands->delete() ;
+        }
+      
+        return redirect()->back()
+            ->with('message','your demand is declined') ;
     }
 }
