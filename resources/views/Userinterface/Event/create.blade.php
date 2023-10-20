@@ -63,8 +63,8 @@
                         <input type="file" class="form-control" name="image" accept="image/*">
                         </div>
                         <input type="hidden" name="community_id" value="{{ $communityId }}">
-                           
-                          
+ 
+                        
                     
                         <button type="submit" class="btn btn-primary">Create</button>
                        

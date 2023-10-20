@@ -41,13 +41,16 @@
     <div id="content-page" class="content-page">
     @endif
 
+    <x-flash-message />
+
 
     <div class="position-relative">
 
     </div>
     <div id="content-page" class="content-page">
+   
         <div class="container">
-            <x-flash-message />
+          
             @yield('content')
         </div>
 

@@ -44,12 +44,15 @@
 
    
                                        @endif
-                        <div class="ms-3 flex-grow-1">
+                        <div class="ms-3 flex-grow-1"  style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
                         <h4 class="d-flex align-items-center frd-name"> <a  href="{{route('Community.show',$community->id )}}">{{$community->name}}  </a></h4>
 
-                           <small>{{$community->description}}</small>
+                           <small >{{$community->description}}  </small>
                         </div>
-                        <a href="#" class="btn bg-soft-primary smallbutton">Leave</a>
+                        @if ($community->user_id !== Auth()->id())
+                         
+                           <a href="{{ route('leave', ['communityId' => $community->id]) }}" class="btn bg-soft-primary smallbutton">Leave</a>
+                        @endif                     
                      </li>
                      
                      @endforeach     
@@ -70,7 +73,7 @@
                </div>
                @if(count($communities) !==0)
                <div class="mx-3 mt-3">
-                     <a href="{{route('Community.create')}}" class="btn btn-primary  btn-sm w-100  mb-3 ">
+                     <a href="{{route('Community.create')}}" class="btn btn-primary   w-100  mb-3 ">
                            Create community 
                            </a> 
                </div>
@@ -79,12 +82,12 @@
                <div class="card-body " >
                                                    
    
-                     @foreach ($communities as $community)  
+                     @foreach ($cretedCommunities  as $key => $community  )  
 
                   <div class="d-flex  pb-2  pt-2 border-bottom align-items-center">
                      <div class=" flex-grow-1">
                         <h6><strong>{{$community->name}}</strong></h6>
-                        <p class="mb-0">61k Tweets</p>
+                        <p class="mb-0">{{ $userCount[$key] }} followers</p>
                      </div>
                      <div class="dropdown">
                         <span class="material-symbols-outlined" id="dropdownMenuButton99" data-bs-toggle="dropdown" aria-expanded="false" role="button">
@@ -95,7 +98,8 @@
                                                    <a class="dropdown-item d-flex align-items-center" href="{{route('Community.edit',$community->id )}}"> 
                                                    
                                                    <button type="submit" class="btn  py-0 my-0"> Edit </button>  
-                                                      </a>                        <form method="post" action="{{ route('Community.destroy', $community->id) }}">
+                                                      </a>                        
+                                                      <form method="post" action="{{ route('Community.destroy', $community->id) }}">
                                                          @csrf 
                                                          @method('DELETE')
                                                          <a class="dropdown-item d-flex align-items-center"  > 

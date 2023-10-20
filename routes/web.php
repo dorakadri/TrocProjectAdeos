@@ -59,8 +59,13 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
 
     //Communities 
     Route::resource ('Community',CommunityController::class) ;
-    Route::get('/communities',[CommunityController::class,'CommunitiesList']);
+    Route::get('/communities',[CommunityController::class,'CommunitiesList'])->name('communities');
     Route::resource('Event', EventController::class)->parameters(['communities' => 'community']);
+    Route::get('join-community/{communityId}', [CommunityController::class,'JoinCommunity'])->name('join-community');
+    Route::get('leave-community/{communityId}', [CommunityController::class,'LeaveCommunity'])->name('leave-community');
+    Route::get('leave/{communityId}', [CommunityController::class,'Leave'])->name('leave');
+
+
 });
 
 //Association only

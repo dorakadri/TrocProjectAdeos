@@ -9,6 +9,10 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Community;
+
+
 
 
 class User extends Authenticatable implements Verify 
@@ -63,4 +67,18 @@ class User extends Authenticatable implements Verify
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+
+    /** community relations */
+    public function coummunities()
+    {
+        return $this->hasMany(Community::class);
+    }
+    
+    public function joinedCommunities()
+    {
+        return $this->belongsToMany(Community::class);
+    }
+    /** */
 }

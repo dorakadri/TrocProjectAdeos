@@ -15,8 +15,7 @@
          <div class="background-header position-relative  bg-gradient bg-transparent border ">
          
                 <img src="{{ asset('storage/'. $community->image) }}" class="img-fluid  w-100  " style="height: 15rem; object-fit: cover;" alt="group-bg"  >
-               <p>{{ asset('storage/'. $community->image) }}</p>
-         </div>
+          </div>
     @else
     
 
@@ -164,7 +163,9 @@
                         <div class="d-flex align-items-center w-100 iq-userlist-data">
                             <div class="d-flex flex-grow-1 flex-column">
                                 <div class="d-flex align-items-center gap-1">
-                                    <p class="mb-0 text-ellipsis short-1 flex-grow-1 iq-userlist-name">{{$createdEvent->start_time}}</p>
+                                    <p class="mb-0 text-ellipsis short-1 flex-grow-1 iq-userlist-name">
+                                    {{ date('M d H:i', strtotime($createdEvent->start_time)) }} - {{ date('M d H:i', strtotime($createdEvent->end_time)) }}
+                                     </p>
                                  </div>
                                 <div class="d-flex align-items-center gap-2">
                                     <small class="text-ellipsis short-1 flex-grow-1">{{$createdEvent->title}}</small>

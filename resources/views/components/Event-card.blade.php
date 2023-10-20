@@ -19,8 +19,12 @@
                <!-- <div class="blog-description p-3" style="bottom: 0; margin: 0; background: #ffffffe0;border-radius: 0rem;"> -->
 
                <div class="blog-description p-3" >
-               <div class="date"><strong> {{$event->start_time}}  </strong></div>
-               <h5 class="mb-2">{{$event->description}}</h5>
+               <div class="date"><strong> {{ date('M d H:i', strtotime($event->start_time)) }} - {{ date('M d H:i', strtotime($event->end_time)) }}
+                                 </strong>
+               </div>
+               <h5 class="mb-2"   style="text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;">{{$event->description}}</h5>
                   <div class="d-flex align-items-center justify-content-between position-right-side">
                      <div class="like d-flex align-items-center"><i class="material-symbols-outlined pe-2 md-18">thumb_up</i>20 like</div>
                      <div class="comment d-flex align-items-center"><i class="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>351 comments</div>

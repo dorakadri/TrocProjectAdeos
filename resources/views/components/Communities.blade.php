@@ -11,9 +11,20 @@
 
                 </div>
                 @endif
-   @foreach ($communities as $community)            
+   @foreach ($communities as $key => $community )            
 
         <div class="   col-md-4 col-sm-6 mb-3"   >
+        <ul class="header-nav list-inline d-flex flex-wrap justify-end p-0 mx-5 mb-0" style="right:0; top:21rem;">
+                        <li>
+                        <button type="button" class="btn btn-dark ms-2 btn-sm d-flex align-items-center"
+                         onclick="window.location.href='{{ route('Community.create') }}'">
+
+                        <span class="material-symbols-outlined  md-16">
+                              add
+                              </span> Create community   </button>
+                        </li>
+                        
+                     </ul>
              <div class="card mb-0 ">
                          <div class="top-bg-image"  >
                          @if($community->image)
@@ -42,7 +53,7 @@
                             </li>
                             <li class="pe-3 ps-3">
                             <p class="mb-0">Member</p>
-                            <h6>210</h6>
+                            <h6> {{ $userCount[$key] }}</h6>
                             </li>
                             <li class="pe-3 ps-3">
                             <p class="mb-0">Visit</p>
@@ -50,8 +61,16 @@
                             </li>
                         </ul>
                     </div>
-                     
-                    <button type="submit" class="btn btn-primary d-block w-100">Join</button>
+ 
+                        @if($isJoined[$key])
+                        <button type="submit" class="btn btn-primary d-block w-100"
+                        onclick="window.location.href='{{ route('leave-community', ['communityId' => $community->id]) }}'" >Joined</button>
+                        @else
+                        <button type="submit" class="btn btn-primary d-block w-100"
+                        onclick="window.location.href='{{ route('join-community', ['communityId' => $community->id]) }}'" >Join</button>
+                        @endif
+                    
+
                 </div>
                 
                

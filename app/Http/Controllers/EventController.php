@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Community;
 use App\Models\Event;
+use Illuminate\Support\Facades\Auth;
+
 class EventController extends Controller
 {
     /**
@@ -35,6 +37,8 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+
+        $userId = Auth::id();
         $formFields = $request->validate(
             [
  
@@ -59,8 +63,8 @@ class EventController extends Controller
         $event->start_time = $request->input('start_time');
         $event->end_time = $request->input('end_time');
         $event->image = $request->input('image');
-        $event->user_id = 1;  
-        $event->community_id = $request->input('community_id');
+        $event->user_id =  $userId;
+         $event->community_id = $request->input('community_id');
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('image', 'public');
             $event->image = $imagePath;

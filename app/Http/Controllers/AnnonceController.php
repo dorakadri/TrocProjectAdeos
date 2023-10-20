@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\annonce;
+use App\Models\Community;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class AnnonceController extends Controller
@@ -11,11 +13,16 @@ class AnnonceController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
+    {   // suggested events and communities
+        $events = Event::latest()->take(4)->get();
+        $communities = Community::latest()->take(4)->get();
+
+
+
         $annonces = Annonce::latest()->where('taken', false)->filter(request(['tag' , 'search']))->get(); 
     
         return view('Userinterface.Annonce.index', [
-            'annonces' => $annonces ,
+            'annonces' => $annonces , 'events' => $events, 'communities' => $communities
         ]);
     }
 
