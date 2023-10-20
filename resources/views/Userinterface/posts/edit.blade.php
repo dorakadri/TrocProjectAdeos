@@ -38,12 +38,20 @@
                         <div class="form-group">
                             <label class="form-label" for="title">Title</label>
                             <input type="text" class="form-control" name="title" placeholder="title" value="{{$post->title}}" >
+                            @error('title')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
                         </div>
                      
                    
                             <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">description</label>
                             <input type="text" class="form-control" name="description" placeholder="description" value="{{$post->description}}" >
+                            @error('description')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
                         </div>
                       
 

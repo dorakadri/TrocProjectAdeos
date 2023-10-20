@@ -30,8 +30,20 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->integer('post_id');
+           
 
+            $table->unsignedBigInteger('post_id'); // Use unsigned big integer
+            $table->foreign('post_id')
+                ->references('id')
+                ->on('posts')
+                ->onDelete('cascade');;
+    
+                
+      $table->unsignedBigInteger('user_id'); // Add this line for user relationship
+      $table->foreign('user_id')
+                    ->references('id')
+                    ->on('users')
+                    ->onDelete('cascade');
             $table->timestamps();
         });
     }

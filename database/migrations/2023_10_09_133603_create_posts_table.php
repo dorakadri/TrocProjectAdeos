@@ -19,6 +19,12 @@ return new class extends Migration
             $table->string('description', 255);
             
             $table->string('image')->nullable();
+
+            $table->unsignedBigInteger('user_id'); // Add this line for user relationship
+            $table->foreign('user_id')
+                          ->references('id')
+                          ->on('users')
+                          ->onDelete('cascade');
             $table->timestamps();
         });
     }

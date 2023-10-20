@@ -13,6 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
+        $user = auth()->user(); // Get the logged-in user
         $posts = Post::all();
         return view ('Userinterface.posts.index', compact('posts')) ;
     }
@@ -34,37 +35,31 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function store(Request $request)
-    {
-        //dd($request);
-        $request->validate([
-            
-            'description' => 'required|max:255',
-            'title' => 'required|max:255',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif'
-        ]);
-
-  
-      $postData = [
-          
-          'description' => $request->input('description'),
-          'title' => $request->input('title'),
-      ];
-  
-      if ($request->hasFile('image')) {
-          $image = $request->file('image');
-          $imageName = time().'.'.$image->getClientOriginalExtension();
-          $image->storeAs('logos', $imageName, 'public');
-          
-  
-          $postData['image'] = $imageName;
-      }
-  
-      Post::create($postData);
-  
-      return redirect()->route('post.index')->with('success', 'Post created successfully.');
+     public function store(Request $request)
+     {
+         $request->validate([
+             'description' => 'required|max:255',
+             'title' => 'required|max:255',
+             'image' => 'required|image|mimes:jpeg,png,jpg,gif'
+         ]);
      
-    }
+         $postData = [
+             'user_id' => auth()->user()->id, // Set the user_id to the authenticated user's ID
+             'description' => $request->input('description'),
+             'title' => $request->input('title'),
+         ];
+     
+         if ($request->hasFile('image')) {
+             $image = $request->file('image');
+             $imageName = time().'.'.$image->getClientOriginalExtension();
+             $image->storeAs('logos', $imageName, 'public');
+             $postData['image'] = $imageName;
+         }
+     
+         Post::create($postData);
+     
+         return redirect()->route('post.index')->with('success', 'Post created successfully.');
+     }
   
     
 
@@ -116,9 +111,17 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(string $id)
     {
-        $post->delete();
-        return redirect(route('post.index'))->with('success', 'post deleted Succesffully');
+        
+        $post = Post::find($id) ;
+        if($post){
+            $post->delete() ;
+        }
+      
+        return redirect()->back()
+            ->with('message','Post deleted successfully') ;
+        
+       
     }
 }

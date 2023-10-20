@@ -41,6 +41,10 @@
                             <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">description</label>
                             <input type="text" class="form-control" name="description" placeholder="description" value="{{$comment->description}}" >
+                            @error('description')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
                         </div>
                         
                     

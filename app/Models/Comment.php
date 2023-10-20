@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Post;
+use App\Models\User;
+
 class Comment extends Model
 {
     use HasFactory;
@@ -13,6 +15,7 @@ class Comment extends Model
         
         'description' ,
         'post_id',
+        'user_id',
     ];
 
     public function post():BelongsTo 
@@ -20,9 +23,10 @@ class Comment extends Model
         return $this->belongsTo(Post::class);
     }
     
-
- /*   public function user(){
+    public function user():BelongsTo 
+    {
         return $this->belongsTo(User::class);
-    }*/
+    }
+
     
 }

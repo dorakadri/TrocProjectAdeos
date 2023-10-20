@@ -9,7 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-
+use App\Models\Post;
+use App\Models\Comment;
 
 class User extends Authenticatable implements Verify 
 {
@@ -63,4 +64,13 @@ class User extends Authenticatable implements Verify
     protected $appends = [
         'profile_photo_url',
     ];
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

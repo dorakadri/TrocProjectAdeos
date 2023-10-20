@@ -83,6 +83,8 @@ public function create(Request $request, Post $post)
         'description' => 'required',
         'post_id' => 'required', // Ensure that post_id exists in theposts table
     ]);
+    // Add the authenticated user's ID to the data array
+    $data['user_id'] = auth()->user()->id;
 
     // Create a new Comment record
     $comment= Comment::create($data);
@@ -139,19 +141,18 @@ public function create(Request $request, Post $post)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
- public function destroy($id)
-{
-    // Find the Comment model by its ID
-    $comment = Comment::find($id);
 
-    if (!$comment) {
-        return redirect()->route('comment.index')->with('error', 'comment not found');
-    }
-
-    // Delete the comment
-    $comment->delete();
-
-    return redirect()->route('post.index')->with('success', 'comment deleted successfully');
-}
+    public function destroy(string $id)
+    {
+        
+        $comment = Comment::find($id) ;
+        if($comment){
+            $comment->delete() ;
+        }
+      
+        return redirect()->back()
+            ->with('message','comment deleted successfully') ;
+        
+    }    
 
 }

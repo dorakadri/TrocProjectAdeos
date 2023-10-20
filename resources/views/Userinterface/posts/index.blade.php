@@ -41,6 +41,8 @@
                       <form method="post" action="{{route('post.store')}}" enctype="multipart/form-data">
                        @csrf 
                        @method('post')
+
+                       <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
         
      
                   <div class="mb-6">
@@ -50,17 +52,25 @@
                     <input type="file" class="border border-gray-200 rounded p-2 w-full" name="image" />
 
                       @error('image')
-                      <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                      <p class="text-danger">{{$message}}</p>
                        @enderror
                   </div>
       
                    <div class="form-group">
                       <label class="form-label" for="title">title</label>
                         <input type="text" class="form-control" name="title" placeholder="title">
+                        @error('title')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
                    </div>
                   <div class="form-group">
                     <label class="form-label" for="exampleInputPlaceholder">description</label>
                     <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                    @error('description')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
                   </div>
 
                    <button type="submit" class="btn btn-primary d-block w-100 mt-3">Post</button>
@@ -80,7 +90,7 @@
          <div class="col-sm-12">
          
             <div class="col-sm-12">
-            @foreach($posts as $post )
+            @foreach($posts as $post ) 
             <div class="card card-block card-stretch card-height">
                <div class="card-body">
                
@@ -104,8 +114,10 @@
                                     
                                           <div class="d-flex align-items-top">
                                                <div class="data ms-2">
-                                                
-                                     <a href="{{ route('post.edit', ['post' => $post]) }}" >Edit Post</a>
+                                               <a class="dropdown-item d-flex align-items-center"
+                     href="{{ route('post.edit', ['post' => $post]) }}" 
+                     ><span class="material-symbols-outlined me-2 md-18">Edit Post </span  >Edit Post</a >
+                                    
                                                
                                              </div>
                                           </div>
@@ -117,8 +129,9 @@
                                              <form method="post" action="{{ route('post.destroy', ['post' => $post]) }}">
                               @csrf 
                               @method('delete')
-                               <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
+                               <button type="submit" class="material-symbols-outlined me-2 md-18">Delete</button>delete
                             </form>
+                      
 
                                                
                                              </div>
@@ -213,7 +226,11 @@
      <input type="hidden" name="post_id" value="{{$post->id}}">
 
     <input type="text" class="form-control rounded" name="description" placeholder="Enter Your Comment">
-    <div class="comment-attagement d-flex align-items-center">
+    @error('description')
+                <p class="text-danger">{{$message}}</p>
+                    
+                @enderror
+    <div class="">
         <button type="submit" class="btn btn-primary d-block w-60 mt-0">Paste</button>
     </div>
 </form>
