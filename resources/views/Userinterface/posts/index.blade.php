@@ -96,15 +96,16 @@
                
                   <div class="user-post-data">
                      <div class="d-flex justify-content-between">
-                        <div class="me-3">
-                           <img class="rounded-circle img-fluid" src="../assets/images/user/03.jpg" alt="" loading="lazy">
-                        </div>
+                    <!-- <h6 class="text-danger">{{$post->user->name}}</h6>-->
                         <div class="w-100">
                            <div class="d-flex  justify-content-between">
                               <div class="">
                                  <h5 class="mb-0 d-inline-block">{{$post->title}}</h5>
                                 
                               </div>
+                              <div class="me-3">
+                           <img class="rounded-circle img-fluid" src="{{ asset('storage/logos/' . $post->image) }}"  alt="post-image" class="img-fluid rounded w-50" alt="" loading="lazy">
+                        </div>
                               
                               <div class="card-post-toolbar">
                             
@@ -154,10 +155,7 @@
                   <div class="mt-3">
                      <p>{{$post->description}}</p>
                   </div>
-                  <div class="user-post">
-                     <a href="javascript:void(0);">
-                        <img src="{{ asset('logos/'.$post->image) }}"  alt="post-image" class="img-fluid rounded w-50" loading="lazy"></a>
-                  </div>
+                
                   <div class="comment-area mt-3">
                      <div class="d-flex justify-content-between align-items-center flex-wrap">
                         <div class="like-block position-relative d-flex align-items-center">
@@ -170,19 +168,23 @@
                                  
                                  </div>
                               </div>
-                              <div class="total-like-block ms-2 me-3">
-                                 <div class="dropdown">
-                                    <span class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                    140 Likes
-                                    </span>
-                               
-                                 </div>
-                              </div>
+                            <!-- Like Button -->
+<form method="post" action="{{ route('posts.like', $post->id) }}">
+    @csrf
+    <button type="submit">Like</button>
+</form>
+
+<!-- Dislike Button -->
+<form method="post" action="{{ route('posts.dislike', $post->id) }}">
+    @csrf
+    <button type="submit">Dislike</button>
+</form>
                            </div>
                            <div class="total-comment-block">
                               <div class="dropdown">
                                  <span class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                 20 Comment
+                                 
+                                
                                  </span>
                                
                               </div>

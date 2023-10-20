@@ -11,6 +11,7 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Models\Like;
 
 class User extends Authenticatable implements Verify 
 {
@@ -73,4 +74,8 @@ class User extends Authenticatable implements Verify
     {
         return $this->hasMany(Comment::class);
     }
+    public function likes()
+{
+    return $this->hasMany(Like::class);
+}
 }

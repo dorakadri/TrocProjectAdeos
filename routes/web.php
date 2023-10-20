@@ -57,6 +57,11 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::post('/comments', [CommentController::class, 'create'])->name('comments.create');
     Route::get('/comments/{comment}/edit', [CommentController::class, 'edit'])->name('comments.edit');
 
+    // like dislike
+    
+Route::post('/posts/{postId}/like', [PostController::class, 'likePost'])->name('posts.like');
+Route::post('/posts/{postId}/dislike', [PostController::class, 'dislikePost'])->name('posts.dislike');
+
     //Communities 
     Route::resource ('Community',CommunityController::class) ;
     Route::get('/communities',[CommunityController::class,'CommunitiesList']);

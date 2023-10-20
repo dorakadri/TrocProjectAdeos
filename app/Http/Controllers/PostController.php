@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Models\Like;
 
 class PostController extends Controller
 {
@@ -14,6 +15,8 @@ class PostController extends Controller
     public function index()
     {
         $user = auth()->user(); // Get the logged-in user
+        
+
         $posts = Post::all();
         return view ('Userinterface.posts.index', compact('posts')) ;
     }
@@ -69,10 +72,15 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+   
+        public function show($postId)
+{
+    $post = Post::find($postId);
+    $likesCount = $post->likes->count();
+    $dislikesCount = $post->dislikes->count();
+    return view('posts.show', compact('post', 'likesCount', 'dislikesCount'));
+}
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -124,4 +132,28 @@ class PostController extends Controller
         
        
     }
+
+    public function likePost($postId)
+{
+    Like::create([
+        'user_id' => auth()->user()->id,
+        'post_id' => $postId,
+        'type' => 'like',
+    ]);
+
+    return redirect()->back();
+}
+
+public function dislikePost($postId)
+{
+    Like::create([
+        'user_id' => auth()->user()->id,
+        'post_id' => $postId,
+        'type' => 'dislike',
+    ]);
+
+    return redirect()->back();
+}
+
+
 }
