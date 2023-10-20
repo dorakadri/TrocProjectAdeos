@@ -105,11 +105,15 @@
                                  <h5 class="mb-0 d-inline-block">{{$post->title}}</h5>
                                 
                               </div>
+                              
                               <div class="card-post-toolbar">
+                            
+
                                  <div class="dropdown">
                                     <span class="dropdown-toggle material-symbols-outlined" id="postdata-5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                                           more_horiz
                                     </span>
+                                    @if(auth()->check() && auth()->user()->id == $post->user_id)
                                     <div class="dropdown-menu m-0 p-0" aria-labelledby="postdata-5">
                                     
                                           <div class="d-flex align-items-top">
@@ -136,6 +140,7 @@
                                                
                                              </div>
                                           </div>
+                                          @endif
                                        </a>
                                
                                   
@@ -197,21 +202,23 @@
                                  <img src="../assets/images/user/02.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid" loading="lazy">
                               </div>-->
                               <div class="comment-data-block ms-3">
-                                 <!--<h6>user</h6>-->
+                              <h6 class="text-danger">{{$comment->user->name}}</h6>
                                  <p class="mb-0">
                                  {{$comment->description}}
                                  </p>
                                  <div class="d-flex flex-wrap align-items-center comment-activity">
+                                 @if(auth()->check() && auth()->user()->id == $comment->user_id)
                                  <a href="{{ route('comment.edit', ['comment' => $comment->id]) }}">Edit</a>
-                                    
+                                 @endif
 
                                  
-                             
+                                 @if(auth()->check() && auth()->user()->id == $comment->user_id)
                                     <form method="post" action="{{ route('comment.destroy', ['comment' => $comment]) }}">
                               @csrf 
                               @method('delete')
                                <button type="submit" class="btn btn-danger btn-rounded btn-sm my-0">Delete</button>
                             </form>
+                            @endif
 
                                  </div>
                               </div>
@@ -220,6 +227,7 @@
                         @endforeach
 
                      </ul>
+
                      <form  method="POST" action="{{ route('comment.store') }}" class="comment-text d-flex align-items-center mt-3">
     @csrf
      @method('post')
