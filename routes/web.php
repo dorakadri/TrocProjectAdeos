@@ -75,8 +75,11 @@ Route::middleware(['auth', 'checkrole:2'])->group(function () {
     Route::get('/Charite/{charite}/edit', [ChariteController::class, 'edit'])->name('charites.edit');
     Route::put('/Charite/{charite}/update', [ChariteController::class, 'update'])->name('charites.update');
     Route::delete('/Charite/{charite}/delete', [ChariteController::class, 'delete'])->name('charites.delete');
-    Route::resource('associations', AssociationController::class)->only(['create','store']);
-    Route::resource('contacts', ContactController::class)->only(['create','store']);
+    Route::resource('associations', AssociationController::class)->only(['create','store','edit1','update1']);
+    Route::get('/associations/edit1/{id}', 'App\Http\Controllers\AssociationController@edit1')->name('associations.edit1');
+    Route::put('/associations/update1/{id}', 'App\Http\Controllers\AssociationController@update1')->name('associations.update1');
+    Route::get('/home/associations/myassociation', 'App\Http\Controllers\AssociationController@index1')->name('Userinterface.associations.index1');
+    Route::resource('contacts', ContactController::class)->only(['create','store','edit','update','destroy']);
  
     
 });
@@ -108,9 +111,7 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
 
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
     Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
-    Route::resource('contacts', ContactController::class)->only(['index','edit', 'update','destroy','show']);
-
-    
+    Route::resource('contacts', ContactController::class)->only(['index','show']);
 
 });
 
@@ -119,6 +120,8 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
 Route::middleware(['auth','checkrole:0'])->group(function () {
     Route::resource('reclamation', ReclamationController::class);
 });
+
+
 
 
 

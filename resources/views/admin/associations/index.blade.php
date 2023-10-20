@@ -36,7 +36,7 @@
                         @foreach($associations as $association )
                 <tr>
                     <td>{{$association->name}}</td>
-                    <td>{{$association->responsable}}</td>
+                    <td>{{$association->user->name}}</td>
                     <td>  
                         <img src="{{ asset('logos/'.$association->logo) }}" alt="Association Logo" style="max-width: 100px;">
                     </td>

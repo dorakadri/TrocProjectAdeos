@@ -17,8 +17,9 @@ class AssociationController extends Controller
  
 public function __construct()
    {
+    
        $this->middleware('checkrole:1')->only('index','edit', 'update','destroy','show');
-       $this->middleware('checkrole:2')->only('create','store'); 
+       $this->middleware('checkrole:2')->only('create','store','edit1','update1');
    }  
   public function index()
   {
@@ -32,6 +33,18 @@ public function __construct()
     $associations = Association::all();
     return view('Userinterface.associations.index2', compact('associations'));
   }
+
+  public function index1()
+  {
+      // Assuming you're using Laravel's built-in authentication
+      $user = Auth::user();
+      $association = $user->association; // Note the use of 'association' instead of 'associations'
+      
+
+      return view('Userinterface.associations.index1', compact('association'));
+  }
+  
+  
 
     /**
    * Store a newly created resource in storage.
@@ -73,7 +86,7 @@ public function __construct()
 
     Association::create($associationData);
 
-    return redirect()->route('Userinterface.associations.index2')->with('success', 'Association created successfully.');
+    return redirect()->route('contacts.create')->with('success', 'Association created successfully.');
    
   }
 
@@ -86,6 +99,7 @@ public function __construct()
       ]);
   
       $association = Association::find($id);
+      
       $associationData = [
           
           'description' => $request->input('description'),
@@ -105,6 +119,42 @@ public function __construct()
       return redirect()->route('associations.index')
           ->with('success', 'Association updated successfully.');
   }
+  
+  
+  public function update1(Request $request, $id)
+{
+    $request->validate([
+        'description' => 'required|max:2000',
+        'name' => 'required|max:25|min:3',
+        'logo' => 'image|mimes:jpeg,png,jpg,gif|max:2048' // Added logo validation
+    ]);
+
+    $association = Association::find($id);
+
+    if (!$association) {
+        return redirect()->route('Userinterface.associations.index1')->with('error', 'Association not found');
+    }
+
+    $associationData = [
+        'description' => $request->input('description'),
+        'name' => $request->input('name'),
+    ];
+
+    // Check if a new logo file was uploaded
+    if ($request->hasFile('logo')) {
+        $logo = $request->file('logo');
+        $logoName = time().'.'.$logo->getClientOriginalExtension();
+        $logo->storeAs('logos', $logoName, 'public'); // Store the logo in the 'public/logos' directory
+        $associationData['logo'] = $logoName;
+    }
+
+    $association->update($associationData);
+
+    return redirect()->route('Userinterface.associations.index1')->with('success', 'Association updated successfully');
+}
+
+  
+  
   
    /**
    * Remove the specified resource from storage.
@@ -154,4 +204,10 @@ public function show($id)
     $association = Association::find($id);
     return view('admin.associations.edit', compact('association'));
   }
+  public function edit1($id)
+{
+    $association = Association::find($id);
+    return view('Userinterface.associations.edit1', compact('association'));
+}
+
 }
