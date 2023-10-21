@@ -59,7 +59,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link "
-                                href="https://templates.iqonic.design/socialv/bs5/html/dist/app/profile-images.html">
+                                href="{{ route('Event.index') }}">
                                 <i class="icon material-symbols-outlined filled">
                                     fiber_manual_record
                                 </i>

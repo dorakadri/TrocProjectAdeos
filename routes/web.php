@@ -107,6 +107,9 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
     Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
      
+    // events
+    Route::get('/Admin/Events', 'App\Http\Controllers\EventController@indexAdmin')->name('admin.events.indexAdmin');
+
 
 });
 

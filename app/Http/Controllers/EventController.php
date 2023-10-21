@@ -33,6 +33,25 @@ class EventController extends Controller
 
         ]);
     }
+    public function indexAdmin()
+    { 
+         $user = auth()->user(); 
+ 
+        $events = Event::all();
+         $isGoing = [];
+        $participants = [];
+
+ 
+        foreach ($events as $event) {
+            $isGoing[] = $user->goingEvents()->where('event_id', $event->id)->exists();
+            $participants[] = $event->participants()->count();
+ 
+        }
+        return view('admin.events.index', [
+            'events' => $events ,  'isGoing' => $isGoing ,  'participants' => $participants 
+
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -71,8 +90,7 @@ class EventController extends Controller
        
     
         $event = new Event;
-
-         $event->title = $request->input('title');
+        $event->title = $request->input('title');
         $event->description = $request->input('description');
         $event->location = $request->input('location');
         $event->start_time = $request->input('start_time');
@@ -85,6 +103,8 @@ class EventController extends Controller
             $event->image = $imagePath;
         }
         $event->save();
+       
+        $event->participants()->attach($userId);
 
         return redirect()->route('Community.show',$request->input('community_id')) ->with('message','Event added successfully') ;
     }
@@ -147,7 +167,7 @@ class EventController extends Controller
         
         $event->update($formFields);
 
-        return redirect()->route('Community.show',$request->input('community_id')) ->with('message','Event added successfully') ;
+        return redirect()->route('Community.show',$request->input('community_id')) ->with('message','Your changes has been saved') ;
     
     }
 

@@ -32,13 +32,13 @@
            </div>
            <div class="card-body">
            <ul class="suggestions-lists m-0 p-0">
-                                    <li class="d-flex mb-4 align-items-center">
+                                    <!-- <li class="d-flex mb-4 align-items-center">
                                           <div class="add-new-project ">
                                               <a href="{{route('Event.create')}}" class="d-flex align-items-center nrw-project"><i class="material-symbols-outlined me-2">
                                               add
                                               </i>Add event</a>
                                             </div>
-                                    </li>
+                                    </li> -->
                                     @foreach ($events as $event )
 
                                           <li class="d-flex   p-2 align-items-center justify-content-between onhover " 
@@ -89,13 +89,13 @@
             
 
                          <ul class="suggestions-lists m-0 p-0">
-                                    <li class="d-flex mb-4 align-items-center">
+                                    <!-- <li class="d-flex mb-4 align-items-center">
                                       <div class="add-new-project ">
                                         <a href="{{route('Community.create')}}" class="d-flex align-items-center nrw-project"><i class="material-symbols-outlined me-2">
                                         add
                                         </i>Add community</a>
                                       </div>
-                                    </li>
+                                    </li> -->
                                     @foreach ($communities as $community )
 
                                     <li class="d-flex  p-2 align-items-center justify-content-between onhover"

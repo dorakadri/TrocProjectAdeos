@@ -41,14 +41,14 @@
                 <div class="card-body text-center"  style="cursor: pointer;"
                 onclick="window.location.href='{{route('Community.show',$community->id )}}'" >
                      
-                    <div class="group-info mt-0">
+                    <div class="group-info mt-0  mb-0">
                         
                         <h4><a href="{{route('Community.show',$community->id )}}">  {{$community->name}}</a></h4>
                         <p  style="text-overflow: ellipsis;
                             overflow: hidden;
                             white-space: nowrap;">{{$community->description}}</p>
                     </div>
-                    <div class="group-details d-inline-block pb-3">
+                    <div class="group-details d-inline-block pb-0">
                         <ul class="d-flex align-items-center justify-content-between list-inline m-0 p-0">
                             <li class="pe-3 ps-3">
                             <p class="mb-0">Events</p>
@@ -65,15 +65,13 @@
                     
 
                 </div>
-                <div class="card-footer"> @if($isJoined[$key])
+                <div class="card-footer pt-0  mt-0"> @if($isJoined[$key])
                         <button type="submit" class="btn btn-primary d-block w-100"
                         onclick="window.location.href='{{ route('leave-community', ['communityId' => $community->id]) }}'" >Joined</button>
                         @else
                         <button type="submit" class="btn btn-primary d-block w-100"
                         onclick="window.location.href='{{ route('join-community', ['communityId' => $community->id]) }}'" >Join</button>
-                        @endif</div>
- 
-                       
+                        @endif</div>                      
                 
                
             </div>

@@ -7,8 +7,7 @@
  
 
 
-    
-<div class="container">
+ 
 <div class="header-for-bg mb-3">
 @if($community->image)
 
@@ -41,10 +40,21 @@
                            <span>{{$userCount}} followers</span>       
                         </div>
                         <div  >
-                                
-                              <button type="button" class="btn btn-primary   btn-sm d-flex align-items-center"><span class="material-symbols-outlined  md-16">
+                        @if($isJoined)
+                        <button type="submit" class="btn btn-primary   btn-sm d-flex align-items-center"
+                        onclick="window.location.href='{{ route('leave-community', ['communityId' => $community->id]) }}'"><span class=" ms-1 d-flex align-items-center">
+                           <i class="material-symbols-outlined me-2 text-white md-16">
+                           check_circle
+                           </i>Joined
+                           </span></button>
+                         @else
+                         <button type="submit" class="btn btn-primary   btn-sm d-flex align-items-center"
+                        onclick="window.location.href='{{ route('join-community', ['communityId' => $community->id]) }}'"><span class="material-symbols-outlined  md-16">
                               add
                               </span>Join community</button>
+                         @endif    
+                                
+                              
                            
                         </div>
                      </div>
@@ -63,33 +73,55 @@
    </div>
    <div class="row ">
 
-   <nav class="tab-bottom-bordered mb-3" style="background-color: #fff0;">
+             <nav class="tab-bottom-bordered mb-3" style="background-color: #fff0;">
                <div class="mb-0 nav nav-tabs rounded-top border-0  " id="nav-tab1" role="tablist" style="background-color: #fff0;">
                   <button class="nav-link active" id="nav-home-11-tab" data-bs-toggle="tab" data-bs-target="#nav-home-11" type="button" role="tab" aria-controls="nav-home-11" aria-selected="true">Events</button>
                   <button class="nav-link" id="nav-profile-11-tab" data-bs-toggle="tab" data-bs-target="#nav-profile-11" type="button" role="tab" aria-controls="nav-profile-11" aria-selected="false" tabindex="-1">Members</button>
                 </div>
             </nav>
-      
-      
-            @if (count($events)==0)
-                 <div class=" d-flex  flex-column justify-content-center  align-items-center" style="height: 15rem; ">
-                     <h3>It looks like there are no events here yet! </h3>
-                      
+            <div class="tab-content iq-tab-fade-up card-body" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home-11" role="tabpanel" aria-labelledby="nav-home-11-tab">
+               
+                        @if (count($events)==0)
+                           <div class=" d-flex  flex-column justify-content-center  align-items-center" style="height: 15rem; ">
+                                 <h3>It looks like there are no events here yet! </h3>
+                                 
 
+                              </div>
+                        @endif         
+                        <div class=" col-lg-12 col-md-12 row">
+                        @foreach($events as $key => $event)
+
+                                                
+                                 <div class="col-lg-6" >
+
+                                 <x-Event-card  :event="$event" :isGoing="$isGoing" :key="$key" :participants="$participants" />
+
+                                 </div>
+                                 @endforeach
+                        </div>     
+                  </div> 
+
+                  <div class="tab-pane fade" id="nav-profile-11" role="tabpanel" aria-labelledby="nav-profile-11-tab ">
+
+                           <div class=" col-lg-12 col-md-12 row">
+
+                                 @foreach($members as $key => $member)                                               
+                                 <div class="col-lg-3">
+
+                                          <x-community-members  :member="$member"  />
+
+                                          </div>
+                                          @endforeach
+                              
+                           </div>
                   </div>
-    @endif              
-   @foreach($events as $key => $event)
-
+                     
+            </div>
       
-      <div class="col-lg-6" >
       
-      <x-Event-card  :event="$event" :isGoing="$isGoing" :key="$key" :participants="$participants" />
-
     
-        @endforeach
-        
-    
-   </div>
+ 
 </div>
 
  
@@ -291,5 +323,5 @@
         <div class="sidebar-footer"></div>
     </aside>
 
-
+    
     @endsection

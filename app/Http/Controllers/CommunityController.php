@@ -104,6 +104,9 @@ class CommunityController extends Controller
         $userCreatedEvents = Event::where('user_id',$user->id)->where('community_id', $community->id)->latest()->get();
         $goingEvents = $user->goingEvents()->where('community_id', $community->id)->latest()->get();
         $userCount = $community->members()->count();  
+        $members = $community->members()->get();
+        $isJoined= $user->joinedCommunities()->where('community_id', $community->id)->exists();
+
 
          
         $isGoing = [];
@@ -116,7 +119,7 @@ class CommunityController extends Controller
  
         }
 
-        return view('Userinterface.Community.show', compact('community','goingEvents', 'events', 'userCreatedEvents','userCount','isGoing','participants'));
+        return view('Userinterface.Community.show', compact('community','isJoined','members','goingEvents', 'events', 'userCreatedEvents','userCount','isGoing','participants'));
  
 
      }
@@ -162,7 +165,7 @@ class CommunityController extends Controller
         
         $community->update($formFields);
         
-        return redirect()->route('Community.index') ->with('message','Community updated successfully') ;
+        return redirect()->route('Community.index') ->with('message','Your changes has been saved') ;
  
     }
 
@@ -176,7 +179,7 @@ class CommunityController extends Controller
     {
         $community = Community::find($id);
         $community->delete();
-        return redirect()->route('Community.index') ->with('message','Community deleted successfully') ;
+        return redirect()->back()->with('message','Community deleted successfully') ;
     }
 
 
@@ -225,7 +228,7 @@ class CommunityController extends Controller
 
         }
 
-        return redirect()->route('communities', [
+        return redirect()->back()->with([
             'communities' => $communities,            'userCount' => $userCount
 
           
@@ -250,7 +253,7 @@ class CommunityController extends Controller
 
         }
 
-        return redirect()->route('communities', [
+        return redirect()->back()->with([
             'communities' => $communities, 'userCount' => $userCount   
         ])->with('infoMessage','You have left community') ;
 
@@ -266,7 +269,7 @@ class CommunityController extends Controller
         $user->joinedCommunities()->detach($community->id);
         $joinedCommunities = $user->joinedCommunities;
 
-        return redirect()->route('Community.index', [
+        return redirect()->back()->with([
             'communities' => $joinedCommunities ,
             ])->with('infoMessage','You have left ' .$community->name .' community') ;
         
@@ -281,7 +284,7 @@ class CommunityController extends Controller
         $community = Community::find( $event->community_id) ;
        
 
-        return redirect()->route('Community.show',[ 'Community' => $community] );
+        return redirect()->back()->with([ 'Community' => $community] );
     }
     public function NotParticipate($eventId)
     {   
@@ -292,7 +295,7 @@ class CommunityController extends Controller
         $community = Community::find( $event->community_id) ;
        
 
-        return redirect()->route('Community.show',[ 'Community' => $community] );
+        return redirect()->back()->with([ 'Community' => $community] );
     }
 
     

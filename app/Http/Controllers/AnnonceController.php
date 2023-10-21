@@ -6,6 +6,7 @@ use App\Models\annonce;
 use App\Models\Community;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AnnonceController extends Controller
 {
@@ -13,11 +14,16 @@ class AnnonceController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   // suggested events and communities
-        $events = Event::latest()->take(3)->get();
-        $communities = Community::latest()->take(3)->get();
-
-
+    {   
+        // suggested events and communities
+        $userId = Auth::id();    
+        $events = Event::whereDoesntHave('participants', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })->take(3)->get();   
+        $communities = Community::whereDoesntHave('members', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })->take(3)->get();   
+        ////////     
 
         $annonces = Annonce::latest()->where('taken', false)->filter(request(['tag' , 'search']))->get(); 
     
