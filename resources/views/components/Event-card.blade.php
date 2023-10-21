@@ -1,8 +1,7 @@
-@props(['event'])
+@props(['event', 'isGoing', 'key' , 'participants'])
 
 
-
-          <div class="card card-transparent card-block card-stretch card-height blog-grid blog-single"
+<div class="card card-transparent card-block card-stretch card-height blog-grid blog-single"
           style="height: 20rem;background:#edf7ff">
             <div class="card-body p-0 position-relative">
                <div class="image-block">
@@ -21,18 +20,24 @@
                <div class="blog-description p-3" >
                <div class="date"><strong> {{ date('M d H:i', strtotime($event->start_time)) }} - {{ date('M d H:i', strtotime($event->end_time)) }}
                                  </strong>
+                                 
                </div>
-               <h5 class="mb-2"   style="text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;">{{$event->description}}</h5>
+               <h5 class="mb-2"   style="text-overflow: ellipsis;  overflow: hidden;    white-space: nowrap;">{{$event->description}}</h5>
                   <div class="d-flex align-items-center justify-content-between position-right-side">
-                     <div class="like d-flex align-items-center"><i class="material-symbols-outlined pe-2 md-18">thumb_up</i>20 like</div>
-                     <div class="comment d-flex align-items-center"><i class="material-symbols-outlined me-2 md-18">chat_bubble_outline</i>351 comments</div>
-                     <div class="share d-flex align-items-center"><span class="material-symbols-outlined pe-2 md-18">share</span>share</div>
+                  @if($isGoing[$key])
+                  <a href="{{ route('notParticipate', ['eventId' => $event->id]) }}"
+                            class="btn smallbutton bg-soft-success"  style="width: 7rem"
+                            onmouseover="this.innerHTML = 'Can\'t Go'; this.classList.add('bg-soft-warning'); this.classList.remove('bg-soft-success');"
+                            onmouseout="this.innerHTML = 'Going'; this.classList.remove('bg-soft-warning'); this.classList.add('bg-soft-success');">
+                            Going
+                            </a>    
+                        @else
+                         <a href="{{ route('participateInEvent', ['eventId' => $event->id] ) }}" class="btn bg-soft-dark smallbutton" style="width: 7rem" >  Partticipate</a>
+                         @endif
+                      <div class="comment d-flex align-items-center"> {{$participants[$key] }} goings</div>
                   </div>
                </div>
             </div>
          </div>
-    
 
- 
+      </div>

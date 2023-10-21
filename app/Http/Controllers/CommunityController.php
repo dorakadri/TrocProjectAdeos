@@ -24,7 +24,7 @@ class CommunityController extends Controller
        
         $user = User::with('joinedCommunities')->find(auth()->id());
         $joinedCommunities = $user->joinedCommunities;
-        $cretedCommunities = Community::where('user_id',auth()->id())->get();
+        $cretedCommunities = Community::where('user_id',auth()->id())->latest()->get();
 
         $userCount = [];
 
@@ -97,15 +97,29 @@ class CommunityController extends Controller
      */
     public function show($id)
     {
-        $userId = Auth::id();
+        $user = auth()->user(); 
 
         $community = Community::find($id) ;
         $events = Event::where('community_id', $id)->latest()->get();
-        $userCreatedEvents = Event::where('user_id',$userId)->where('community_id', $community->id)->latest()->get();
+        $userCreatedEvents = Event::where('user_id',$user->id)->where('community_id', $community->id)->latest()->get();
+        $goingEvents = $user->goingEvents()->where('community_id', $community->id)->latest()->get();
+        $userCount = $community->members()->count();  
 
+         
+        $isGoing = [];
+        $participants = [];
 
-        return view('Userinterface.Community.show', compact('community', 'events', 'userCreatedEvents'));
-    }
+ 
+        foreach ($events as $event) {
+            $isGoing[] = $user->goingEvents()->where('event_id', $event->id)->exists();
+            $participants[] = $event->participants()->count();
+ 
+        }
+
+        return view('Userinterface.Community.show', compact('community','goingEvents', 'events', 'userCreatedEvents','userCount','isGoing','participants'));
+ 
+
+     }
 
     /**
      * Show the form for editing the specified resource.
@@ -172,18 +186,24 @@ class CommunityController extends Controller
         $communities = Community::latest()->get(); 
         $isJoined = [];
         $userCount = [];
+        $eventCount = [];
+
 
 
         foreach ($communities as $community) {
             $isJoined[] = $user->joinedCommunities()->where('community_id', $community->id)->exists();
            
             $userCount[] = $community->members()->count();
+            $eventCount[] = $community->events()->count();
+
         }
 
         return view('components.Communities', [
             'communities' => $communities,
             'isJoined' => $isJoined,
-            'userCount' => $userCount
+            'userCount' => $userCount,
+            'eventCount' => $eventCount
+
         ]);
     
          
@@ -209,7 +229,7 @@ class CommunityController extends Controller
             'communities' => $communities,            'userCount' => $userCount
 
           
-        ])->with('message','You have successfully joined ' .$community->name .' community') ;
+        ])->with('message','You have successfully joined community') ;
     }
 
     public function LeaveCommunity($communityId)
@@ -222,6 +242,8 @@ class CommunityController extends Controller
         $isJoined = [];
         $userCount = [];
 
+        
+
         foreach ($communities as $community) {
             $isJoined[] = $user->joinedCommunities()->where('community_id', $community->id)->exists();
             $userCount[] = $community->members()->count();
@@ -229,10 +251,10 @@ class CommunityController extends Controller
         }
 
         return redirect()->route('communities', [
-            'communities' => $communities,            'userCount' => $userCount
+            'communities' => $communities, 'userCount' => $userCount   
+        ])->with('infoMessage','You have left community') ;
 
        
-        ])->with('infoMessage','You have left ' .$community->name .' community') ;
     }
 
     public function Leave($communityId)
@@ -250,8 +272,31 @@ class CommunityController extends Controller
         
     }
 
-    
+    public function ParticipateInEvent($eventId)
+    {   
+        $user = auth()->user(); 
 
+        $event = Event::find($eventId);
+        $event->participants()->attach($user->id);
+        $community = Community::find( $event->community_id) ;
+       
+
+        return redirect()->route('Community.show',[ 'Community' => $community] );
+    }
+    public function NotParticipate($eventId)
+    {   
+        $user = auth()->user(); 
+
+        $event = Event::find($eventId);
+        $event->participants()->detach($user->id);
+        $community = Community::find( $event->community_id) ;
+       
+
+        return redirect()->route('Community.show',[ 'Community' => $community] );
+    }
+
+    
+    
 
     
 }

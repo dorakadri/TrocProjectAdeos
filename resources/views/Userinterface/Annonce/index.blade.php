@@ -41,7 +41,7 @@
                                     </li>
                                     @foreach ($events as $event )
 
-                                          <li class="d-flex mb-2 p-2 align-items-center justify-content-between onhover " 
+                                          <li class="d-flex   p-2 align-items-center justify-content-between onhover " 
                                            >
                                           <a  href="#" class="d-flex align-items-center">
                                             <div class="user-img img-fluid">
@@ -58,9 +58,9 @@
                                               <div class="w-100">
                                                 <div class="d-flex justify-content-between">
                                                   <div class="ms-3">
-                                                  <p class="mb-0 text-danger "> <strong>
+                                                  <p class="mb-0 text-danger "> 
                                                   {{ date('M d H:i', strtotime($event->start_time)) }} - {{ date('M d H:i', strtotime($event->end_time)) }}
-                                                  </strong> </p>
+                                                    </p>
 
                                                       <h6>{{$event->title}}</h6>
                                                   </div>
@@ -74,7 +74,7 @@
                                      
                                     
                                  </ul>
-             <a href="#" class="btn btn-primary d-block mt-3">See More</a>
+             <a href="{{ route('Event.index') }}" class="btn btn-primary d-block mt-3">See More</a>
            </div>
          </div>
         
@@ -98,7 +98,7 @@
                                     </li>
                                     @foreach ($communities as $community )
 
-                                    <li class="d-flex mb-2 p-2 align-items-center justify-content-between onhover"
+                                    <li class="d-flex  p-2 align-items-center justify-content-between onhover"
                                     onclick="window.location.href='{{ route('Community.show',$community->id) }}'">
                                       <a  href="#" class="d-flex align-items-center">
                                         <div class="user-img img-fluid">
@@ -115,9 +115,9 @@
                                         <div class="w-100">
                                           <div class="d-flex justify-content-between">
                                               <div class="ms-3">
-                                                <h6><strong>{{$community->name}}</strong></h6>
+                                                <h5> {{$community->name}} </h5>
                                                 
-                                                <h6>followers</h6>
+                                             
                                               </div>                                              
                                           </div>
                                         </div>

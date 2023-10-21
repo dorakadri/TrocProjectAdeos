@@ -161,8 +161,9 @@ body {
 }
 
 .onhover:hover {
-    background-color: var(--bs-primary-tint-80);
+    background-color: #dcf0ff ;
     cursor: pointer;
+    border-radius: 0.313rem;
 }
 
 hr {

@@ -15,8 +15,23 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    { 
+         $user = auth()->user(); 
+ 
+        $events = Event::all();
+         $isGoing = [];
+        $participants = [];
+
+ 
+        foreach ($events as $event) {
+            $isGoing[] = $user->goingEvents()->where('event_id', $event->id)->exists();
+            $participants[] = $event->participants()->count();
+ 
+        }
+        return view('Userinterface.Event.index', [
+            'events' => $events ,  'isGoing' => $isGoing ,  'participants' => $participants 
+
+        ]);
     }
 
     /**
@@ -64,7 +79,7 @@ class EventController extends Controller
         $event->end_time = $request->input('end_time');
         $event->image = $request->input('image');
         $event->user_id =  $userId;
-         $event->community_id = $request->input('community_id');
+        $event->community_id = $request->input('community_id');
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('image', 'public');
             $event->image = $imagePath;

@@ -91,8 +91,9 @@
                      </div>
                      <div class="dropdown">
                         <span class="material-symbols-outlined" id="dropdownMenuButton99" data-bs-toggle="dropdown" aria-expanded="false" role="button">
-                           expand_more
-
+                        <span class="material-symbols-outlined">
+                                                   more_vert
+                                                </span>
                         </span>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton9">
                                                    <a class="dropdown-item d-flex align-items-center" href="{{route('Community.edit',$community->id )}}"> 

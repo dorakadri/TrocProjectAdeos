@@ -64,6 +64,10 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::get('join-community/{communityId}', [CommunityController::class,'JoinCommunity'])->name('join-community');
     Route::get('leave-community/{communityId}', [CommunityController::class,'LeaveCommunity'])->name('leave-community');
     Route::get('leave/{communityId}', [CommunityController::class,'Leave'])->name('leave');
+    Route::get('participateInEvent/{eventId}', [CommunityController::class,'ParticipateInEvent'])->name('participateInEvent');
+    Route::get('notParticipate/{eventId}', [CommunityController::class,'NotParticipate'])->name('notParticipate');
+
+    
 
 
 });

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->dateTime('end_time');
             $table->string('image')->nullable();
             $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('community_id')->constrained('community')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('community_id')->constrained('community')->onUpdate('cascade')->onDelete('cascade')->nullable();
             $table->timestamps();
         });
     }

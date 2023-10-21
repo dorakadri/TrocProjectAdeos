@@ -38,7 +38,7 @@
                      <div class="d-flex justify-content-between">
                         <div class="item2 ">
                            <h4 class="">{{$community->name}} </h4>
-                           <span>60 630 followers</span>       
+                           <span>{{$userCount}} followers</span>       
                         </div>
                         <div  >
                                 
@@ -66,7 +66,7 @@
    <nav class="tab-bottom-bordered mb-3" style="background-color: #fff0;">
                <div class="mb-0 nav nav-tabs rounded-top border-0  " id="nav-tab1" role="tablist" style="background-color: #fff0;">
                   <button class="nav-link active" id="nav-home-11-tab" data-bs-toggle="tab" data-bs-target="#nav-home-11" type="button" role="tab" aria-controls="nav-home-11" aria-selected="true">Events</button>
-                  <button class="nav-link" id="nav-profile-11-tab" data-bs-toggle="tab" data-bs-target="#nav-profile-11" type="button" role="tab" aria-controls="nav-profile-11" aria-selected="false" tabindex="-1">Posts</button>
+                  <button class="nav-link" id="nav-profile-11-tab" data-bs-toggle="tab" data-bs-target="#nav-profile-11" type="button" role="tab" aria-controls="nav-profile-11" aria-selected="false" tabindex="-1">Members</button>
                 </div>
             </nav>
       
@@ -78,13 +78,13 @@
 
                   </div>
     @endif              
-   @foreach($events as $event)
+   @foreach($events as $key => $event)
 
       
       <div class="col-lg-6" >
-      <x-Event-card  :event="$event" />
+      
+      <x-Event-card  :event="$event" :isGoing="$isGoing" :key="$key" :participants="$participants" />
 
-      </div>
     
         @endforeach
         
@@ -220,6 +220,68 @@
                         <h5 class="default-icon">Going events</h5>
                     </a>
                 </li>
+                @if($goingEvents)
+                @foreach($goingEvents as $goingEvent)
+
+                
+                <li class="nav-item iq-chat-list mb-3" role="presentation">
+                        
+                        
+                        <div class="d-flex align-items-center">
+                            <div class="position-relative   me-3">
+                            @if($goingEvent->image)
+                            <img src="{{ asset('storage/' . $goingEvent->image) }}" alt="status-101" class="avatar-50 rounded" loading="lazy">
+
+                              @else
+                              <img src="{{ asset('images/community/36.jpg') }}" alt="status-101" class="avatar-50 rounded" loading="lazy">
+
+                               @endif
+                              
+                         </div>
+                        <div class="d-flex align-items-center w-100 iq-userlist-data">
+                            <div class="d-flex flex-grow-1 flex-column">
+                                <div class="d-flex align-items-center gap-1">
+                                    <p class="mb-0 text-ellipsis short-1 flex-grow-1 iq-userlist-name">
+                                    {{ date('M d H:i', strtotime($goingEvent->start_time)) }} - {{ date('M d H:i', strtotime($goingEvent->end_time)) }}
+                                     </p>
+                                 </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <small class="text-ellipsis short-1 flex-grow-1">{{$goingEvent->title}}</small>
+                                 </div>
+                                 
+                            </div>
+                                   <div class="card-header-toolbar d-flex align-items-center">
+                                        <div class="dropdown">
+                                             <div class="dropdown-toggle" id="dropdownMenuButton"
+                                                data-bs-toggle="dropdown" aria-expanded="false" role="button">
+                                                <span class="material-symbols-outlined">
+                                                   more_vert
+                                                </span>
+                                             </div>
+                                             <div class="dropdown-menu dropdown-menu-right"
+                                                aria-labelledby="dropdownMenuButton" style="">
+                                             
+                                                   <a class="dropdown-item d-flex align-items-center" href="{{ route('notParticipate', ['eventId' => $goingEvent->id]) }}"> 
+                                                 
+                                                   <button type="submit" class="btn  py-0 my-0"> Not Going </button>  
+                                                      </a>
+                                   
+                                               
+                                                    
+                                                   </div>
+                                          </div>
+                                          
+                                             </div>
+                                          </div>
+                            
+                        </div>
+                 
+                </li>    
+
+                
+                      
+                @endforeach
+                @endif
               
                  
             </ul>

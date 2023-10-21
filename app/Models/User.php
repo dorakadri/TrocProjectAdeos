@@ -11,6 +11,7 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Community;
+use App\Models\Event;
 
 
 
@@ -79,6 +80,10 @@ class User extends Authenticatable implements Verify
     public function joinedCommunities()
     {
         return $this->belongsToMany(Community::class);
+    }
+    public function goingEvents()
+    {
+        return $this->belongsToMany(Event::class);
     }
     /** */
 }

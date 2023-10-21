@@ -14,8 +14,8 @@ class AnnonceController extends Controller
      */
     public function index()
     {   // suggested events and communities
-        $events = Event::latest()->take(4)->get();
-        $communities = Community::latest()->take(4)->get();
+        $events = Event::latest()->take(3)->get();
+        $communities = Community::latest()->take(3)->get();
 
 
 
