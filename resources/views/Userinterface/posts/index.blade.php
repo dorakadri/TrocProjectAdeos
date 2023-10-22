@@ -117,9 +117,9 @@
                                           <div class="d-flex align-items-top">
                                                <div class="data ms-2">
                                                
-                                                <span class="dropdown-item d-flex align-items-center"
+                            <a class="dropdown-item d-flex align-items-center"
                      href="{{ route('post.edit', ['post' => $post]) }}" 
-                     >Edit Post</span >
+                     ><span class="material-symbols-outlined me-2 md-18">Edit Post </span  >Edit Post</a >
                                               
                                                
                                     
@@ -178,11 +178,7 @@
     <button type="submit" class="btn btn-soft-primary mb-3 me-1">{{$likes[$key]}} Like</button>
  </form>
 
-<!-- Dislike Button -->
-<form method="post" action="{{ route('posts.dislike', $post->id) }}">
-    @csrf
-    <button type="submit" class="btn btn-soft-warning mb-3 me-1">Dislike</button>
-</form>
+
                            </div>
                            <div class="total-comment-block">
                               <div class="dropdown">

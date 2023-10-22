@@ -153,16 +153,7 @@ class PostController extends Controller
     return redirect()->back();
 }
 
-public function dislikePost($postId)
-{
-    Like::create([
-        'user_id' => auth()->user()->id,
-        'post_id' => $postId,
-        'type' => 'dislike',
-    ]);
 
-    return redirect()->back();
-}
 
 
 }

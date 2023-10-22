@@ -15,7 +15,7 @@ use App\Models\Reponse;
 use App\Models\Post;
 use App\Models\Comment;
 use App\Models\Like;
-
+use App\Models\Annonce;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Community;
 use App\Models\Event;
@@ -112,6 +112,10 @@ public function reclamations()
     {
         return $this->belongsToMany(Event::class);
     }
+public function annonces()
+{
+    return $this->hasMany(Annonce::class);
+}
 
 
 }
