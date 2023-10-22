@@ -14,6 +14,14 @@
 
 
 <link rel="icon" href="images/favicon.ico" />
+ 
+
+
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+
 
 
 </head>
@@ -25,29 +33,23 @@
     @include('Userinterface.partials._navbar')
 
 
-    @if(request()->is('communities'))
-        <div class="position-relative">
-        <!-- Page Content  -->
-        <div class="header-for-bg">
-            <div class="background-header position-relative" style="background-color: #b9e1ff; height: 20rem; margin-bottom: -5rem;">
-                 <div class="title-on-header">
-                    <div class="data-block">
-                        <h2>Communities</h2>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!-- Page Content  -->    </div>
-    <div id="content-page" class="content-page">
-    @endif
+    <x-pageheader />
+  
+    <x-notification />
+
+    <x-flash-message />
+
+   
+
 
 
     <div class="position-relative">
 
     </div>
     <div id="content-page" class="content-page">
+   
         <div class="container">
-            <x-flash-message />
+          
             @yield('content')
         </div>
 
@@ -98,6 +100,43 @@
             });
         });
     </script>
+
+
+
+
+
+
+
+
+ <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+  <script>
+
+     Pusher.logToConsole = true;
+
+    var pusher = new Pusher('8550eafddff1aa1fe7b6', {
+      cluster: 'ap2'
+    });
+
+    var channel = pusher.subscribe('popup-channel');
+    channel.bind('addedEvent', function(data) {
+      
+            var alertElement = document.createElement('div');
+            alertElement.classList.add('alert' , 'alert-dismissible', 'fade', 'show');
+ 
+            alertElement.innerHTML = `             
+                <div class="alert alert-solid alert-primary d-flex align-items-center gap-2 alert-dismissible fade show mb-3" role="alert">
+                           <span class="d-flex"><i class="material-symbols-outlined">notifications</i></span>
+                           <h5 class="text-white"> New event added! '${data.event}' ${data.date}. </h5>
+                           <u>  <a href="/Event/${data.eventId}"  class="text-white underline">See details</a> </u>
+                         </div> `;
+             document.getElementById('alert-container').appendChild(alertElement);
+
+             setTimeout(function() {
+                alertElement.remove();
+            }, 20000);
+            });
+  </script>
+ 
 </body>
 
 

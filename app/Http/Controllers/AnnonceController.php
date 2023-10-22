@@ -7,6 +7,10 @@ use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Community;
+use App\Models\Event;
+
+
 
 class AnnonceController extends Controller
 {
@@ -15,12 +19,19 @@ class AnnonceController extends Controller
      */
     public function index()
     {
+        $userId = Auth::id();    
+        $events = Event::whereDoesntHave('participants', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })->take(3)->get();   
+        $communities = Community::whereDoesntHave('members', function ($query) use ($userId) {
+            $query->where('user_id', $userId);
+        })->take(3)->get(); 
         $annonces = Annonce::latest()->where('taken', false)->filter(request(['tag' , 'search']))->with(['user' => function ($query) {
             $query->select('id', 'username','phone', 'profile_photo_path');
         }])->get(); 
 
         return view('Userinterface.Annonce.index', [
-            'annonces' => $annonces ,
+            'annonces' => $annonces , 'events' => $events, 'communities' => $communities
         ]);
     }
 

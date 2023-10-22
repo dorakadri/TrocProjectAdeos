@@ -23,4 +23,8 @@ class Event extends Model
     {
         return $this->belongsTo(Community::class);
     }
+    public function participants()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

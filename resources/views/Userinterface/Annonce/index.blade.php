@@ -31,49 +31,50 @@
              </div>
            </div>
            <div class="card-body">
-             <ul class="media-story list-inline m-0 p-0">
-               <li class="d-flex mb-3 align-items-center">
-                 <i class="material-symbols-outlined"> add </i>
-                 <div class="stories-data ms-3">
-                   <h5>Creat Your Story</h5>
-                   <p class="mb-0">time to story</p>
-                 </div>
-               </li>
-               <li class="d-flex mb-3 align-items-center active">
-                 <img
-                   src="../assets/images/page-img/s2.jpg"
-                   alt="story-img"
-                   class="rounded-circle img-fluid"
-                 />
-                 <div class="stories-data ms-3">
-                   <h5>Anna Mull</h5>
-                   <p class="mb-0">1 hour ago</p>
-                 </div>
-               </li>
-               <li class="d-flex mb-3 align-items-center">
-                 <img
-                   src="../assets/images/page-img/s3.jpg"
-                   alt="story-img"
-                   class="rounded-circle img-fluid"
-                 />
-                 <div class="stories-data ms-3">
-                   <h5>Ira Membrit</h5>
-                   <p class="mb-0">4 hour ago</p>
-                 </div>
-               </li>
-               <li class="d-flex align-items-center">
-                 <img
-                   src="../assets/images/page-img/s1.jpg"
-                   alt="story-img"
-                   class="rounded-circle img-fluid"
-                 />
-                 <div class="stories-data ms-3">
-                   <h5>Bob Frapples</h5>
-                   <p class="mb-0">9 hour ago</p>
-                 </div>
-               </li>
-             </ul>
-             <a href="#" class="btn btn-primary d-block mt-3">See All</a>
+           <ul class="suggestions-lists m-0 p-0">
+                                    <!-- <li class="d-flex mb-4 align-items-center">
+                                          <div class="add-new-project ">
+                                              <a href="{{route('Event.create')}}" class="d-flex align-items-center nrw-project"><i class="material-symbols-outlined me-2">
+                                              add
+                                              </i>Add event</a>
+                                            </div>
+                                    </li> -->
+                                    @foreach ($events as $event )
+
+                                          <li class="d-flex   p-2 align-items-center justify-content-between onhover " 
+                                           >
+                                          <a  href="#" class="d-flex align-items-center">
+                                            <div class="user-img img-fluid">
+                                              
+                                            @if($event->image)
+                                              <img src="{{asset('storage/' . $event->image)}}" alt="story-img" class="rounded-circle avatar-40"></div>
+      
+                                                @else
+                                                <img src="{{asset('images/community/100.jpg')}}" alt="story-img" class="rounded-circle avatar-40"></div>
+
+                                                
+                                                @endif
+
+                                              <div class="w-100">
+                                                <div class="d-flex justify-content-between">
+                                                  <div class="ms-3">
+                                                  <p class="mb-0 text-danger "> 
+                                                  {{ date('M d H:i', strtotime($event->start_time)) }} - {{ date('M d H:i', strtotime($event->end_time)) }}
+                                                    </p>
+
+                                                      <h6>{{$event->title}}</h6>
+                                                  </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            </a>
+                                          </li>
+                                   
+                                    @endforeach
+                                     
+                                    
+                                 </ul>
+             <a href="{{ route('Event.index') }}" class="btn btn-primary d-block mt-3">See More</a>
            </div>
          </div>
         
@@ -82,125 +83,54 @@
              <div class="header-title">
                <h4 class="card-title">Suggested Communities</h4>
              </div>
-             <div class="card-header-toolbar d-flex align-items-center">
-               <div class="dropdown">
-                 <div
-                   class="dropdown-toggle"
-                   id="dropdownMenuButton01"
-                   data-bs-toggle="dropdown"
-                   aria-expanded="false"
-                   role="button"
-                 >
-                   <span class="material-symbols-outlined">
-                     more_horiz
-                   </span>
-                 </div>
-                 <div
-                   class="dropdown-menu dropdown-menu-right"
-                   aria-labelledby="dropdownMenuButton01"
-                 >
-                   <a
-                     class="dropdown-item d-flex align-items-center"
-                     href="#"
-                     ><span class="material-symbols-outlined me-2 md-18">
-                       visibility </span
-                     >View</a
-                   >
-                   <a
-                     class="dropdown-item d-flex align-items-center"
-                     href="#"
-                     ><span class="material-symbols-outlined me-2 md-18">
-                       delete </span
-                     >Delete</a
-                   >
-                   <a
-                     class="dropdown-item d-flex align-items-center"
-                     href="#"
-                     ><span class="material-symbols-outlined me-2 md-18">
-                       edit </span
-                     >Edit</a
-                   >
-                   <a
-                     class="dropdown-item d-flex align-items-center"
-                     href="#"
-                     ><span class="material-symbols-outlined me-2 md-18">
-                       print </span
-                     >Print</a
-                   >
-                   <a
-                     class="dropdown-item d-flex align-items-center"
-                     href="#"
-                     ><span class="material-symbols-outlined me-2 md-18">
-                       file_download </span
-                     >Download</a
-                   >
-                 </div>
-               </div>
-             </div>
+              
            </div>
            <div class="card-body">
-             <ul class="suggested-page-story m-0 p-0 list-inline">
-               <li class="mb-3">
-                 <div class="d-flex align-items-center mb-3">
-                   <img
-                     src="../assets/images/page-img/42.png"
-                     alt="story-img"
-                     class="rounded-circle img-fluid avatar-50"
-                     loading="lazy"
-                   />
-                   <div class="stories-data ms-3">
-                     <h5>Iqonic Studio</h5>
-                     <p class="mb-0">Lorem Ipsum</p>
-                   </div>
-                 </div>
-                 <img
-                   src="../assets/images/small/img-1.jpg"
-                   class="img-fluid rounded"
-                   alt="Responsive image"
-                   loading="lazy"
-                 />
-                 <div class="mt-3">
-                   <a
-                     href="#"
-                     class="d-flex align-items-center justify-content-center"
-                     ><span class="material-symbols-outlined me-2 md-18">
-                       thumb_up
-                     </span>
-                     Like Page</a
-                   >
-                 </div>
-               </li>
-               <li class="">
-                 <div class="d-flex align-items-center mb-3">
-                   <img
-                     src="../assets/images/page-img/42.png"
-                     alt="story-img"
-                     class="rounded-circle img-fluid avatar-50"
-                     loading="lazy"
-                   />
-                   <div class="stories-data ms-3">
-                     <h5>Cakes & Bakes</h5>
-                     <p class="mb-0">Lorem Ipsum</p>
-                   </div>
-                 </div>
-                 <img
-                   src="../assets/images/small/img-2.jpg"
-                   class="img-fluid rounded"
-                   alt="Responsive image"
-                 />
-                 <div class="mt-3">
-                   <a
-                     href="#"
-                     class="d-flex align-items-center justify-content-center"
-                     ><span class="material-symbols-outlined me-2 md-18">
-                       thumb_up
-                     </span>
-                     Like Page</a
-                   >
-                 </div>
-               </li>
-             </ul>
-           </div>
+            
+
+                         <ul class="suggestions-lists m-0 p-0">
+                                    <!-- <li class="d-flex mb-4 align-items-center">
+                                      <div class="add-new-project ">
+                                        <a href="{{route('Community.create')}}" class="d-flex align-items-center nrw-project"><i class="material-symbols-outlined me-2">
+                                        add
+                                        </i>Add community</a>
+                                      </div>
+                                    </li> -->
+                                    @foreach ($communities as $community )
+
+                                    <li class="d-flex  p-2 align-items-center justify-content-between onhover"
+                                    onclick="window.location.href='{{ route('Community.show',$community->id) }}'">
+                                      <a  href="#" class="d-flex align-items-center">
+                                        <div class="user-img img-fluid">
+                                          
+                                          @if($community->image)
+                                          <img src="{{asset('storage/' . $community->image)}}" alt="story-img" class="rounded-circle avatar-40"></div>
+
+                                          @else
+                                          <img src="{{asset('images/community/100.jpg')}}" alt="story-img" class="rounded-circle avatar-40"></div>
+
+                                            
+                                          @endif
+
+                                        <div class="w-100">
+                                          <div class="d-flex justify-content-between">
+                                              <div class="ms-3">
+                                                <h5> {{$community->name}} </h5>
+                                                
+                                             
+                                              </div>                                              
+                                          </div>
+                                        </div>
+                                      </a>
+                                     
+                                    </li>
+                                    @endforeach
+                                     
+                                    
+                                 </ul>
+              <a href="/communities" class="btn btn-primary d-block mt-3">See More</a>
+
+            </div>
          </div>
        </div>
    

@@ -2,23 +2,7 @@
 @extends('components.layout')
 @section('content')
 
-      <div>
-    <div class="position-relative">
-    </div>
-    <div id="content-page" class="content-page">
-          <div>
-        @if($errors->any())
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </ul>
-
-
-        @endif
-    </div>
-    <div class="container">
-
+     
   <div class="row">
             <div class="col-sm-12">
                 <div class="card position-relative inner-page-bg bg-primary" style="height: 150px;">
@@ -36,19 +20,24 @@
         @method('PUT')
         @csrf
                     
-                        <div class="form-group">
+                       <div class="form-group">
                             <label class="form-label" for="name">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="name" 
-                            value="{{$community->name}}">
+                            <input type="text" class="form-control"value="{{$community->name}}" name="name"  >
+                            @error('name')
+                            <p class="text-danger">{{$message}}</p>
+                                    
+                                @enderror  
                         </div>
                         <div class="form-group">
 
                         <div class="form-group">
                             <label class="form-label" for="description">description</label>
-                            <input type="text" class="form-control" name="description" placeholder="description"
-                            value="{{$community->description}}">
+                            <textarea type="text" name="description" value="{{$community->description}}"  class="form-control rounded " rows="5" >{{$community->description}}</textarea>
+                            @error('description')
+                                <p class="text-danger">{{$message}}</p>
+                                    
+                                @enderror                      
                         </div >
-
                                  @if($community->image)
                                   
                                  <div class="col-sm-12 d-flex   justify-content-center">

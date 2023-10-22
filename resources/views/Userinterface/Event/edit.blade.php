@@ -2,21 +2,7 @@
 @extends('components.layout')
 @section('content')
 
-      <div>
-    <div class="position-relative">
-    </div>
-    <div id="content-page" class="content-page">
-          <div>
-        @if($errors->any())
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </ul>
-
-
-        @endif
-    </div>
+  
  
   <div class="row">
             <div class="col-sm-12">
@@ -40,27 +26,47 @@
                             <label class="form-label" for="title">Title</label>
                             <input type="text" class="form-control" name="title" placeholder="title"
                             value="{{$event->title}}">
+                            @error('title')
+                            <p class="text-danger">{{$message}}</p>
+                                
+                            @enderror
                         </div>
  
                         <div class="form-group">
                             <label class="form-label" for="description">description</label>
-                            <input type="text" class="form-control" name="description" placeholder="description"
-                            value="{{$event->description}}">
+                            <textarea type="text" class="form-control" rows='5' name="description" placeholder="description"
+                            value="{{$event->description}}">{{ $event->description}}</textarea>
+                            @error('description')
+                            <p class="text-danger">{{$message}}</p>
+                                
+                            @enderror
                         </div >
                         <div class="form-group">
                             <label class="form-label" for="location">location</label>
                             <input type="text" class="form-control" name="location" placeholder="location"
                             value="{{$event->location}}">
+                            @error('location')
+                            <p class="text-danger">{{$message}}</p>
+                                
+                            @enderror
                         </div >
                         <div class="form-group">
                             <label class="form-label" for="start_time">start time</label>
                             <input type="datetime-local" class="form-control" name="start_time"
                             value="{{$event->start_time}}">
+                            @error('start_time')
+                            <p class="text-danger">{{$message}}</p>
+                                
+                            @enderror
                         </div >
                         <div class="form-group">
                             <label class="form-label" for="end_time">end time</label>
                             <input type="datetime-local" class="form-control" name="end_time" 
                             value="{{$event->end_time}}">
+                            @error('end_time')
+                            <p class="text-danger">{{$message}}</p>
+                                
+                            @enderror
                         </div >            
 
                                 

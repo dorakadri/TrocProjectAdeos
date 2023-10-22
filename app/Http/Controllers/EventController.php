@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Community;
 use App\Models\Event;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+use App\Events\ParticipationEvent;
+ 
 class EventController extends Controller
 {
     /**
@@ -13,8 +17,45 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    { 
+         $user = auth()->user(); 
+         $userCreatedEvents = Event::where('user_id',$user->id)->latest()->get();
+         $goingEvents = $user->goingEvents()->latest()->get();
+         $events = Event::latest()->get();
+         $isGoing = []; 
+        $participants = [];
+        $community = [];
+
+ 
+        foreach ($events as $event) {
+            $isGoing[] = $user->goingEvents()->where('event_id', $event->id)->exists();
+            $participants[] = $event->participants()->count();
+            $community[] = Community::where('id', $event->community_id)->first(); 
+        }
+        return view('Userinterface.Event.index', [
+            'events' => $events ,  'isGoing' => $isGoing ,  'participants' => $participants ,
+             'userCreatedEvents' => $userCreatedEvents ,'goingEvents' => $goingEvents ,  'community' => $community
+
+        ]);
+    }
+    public function indexAdmin()
+    { 
+         $user = auth()->user(); 
+ 
+        $events = Event::all();
+         $isGoing = [];
+        $participants = [];
+
+ 
+        foreach ($events as $event) {
+            $isGoing[] = $user->goingEvents()->where('event_id', $event->id)->exists();
+            $participants[] = $event->participants()->count();
+ 
+        }
+        return view('admin.events.index', [
+            'events' => $events ,  'isGoing' => $isGoing ,  'participants' => $participants 
+
+        ]);
     }
 
     /**
@@ -35,37 +76,45 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+
+        $user = auth()->user(); 
         $formFields = $request->validate(
             [
  
-                'description' => 'required',
-                'title' => 'required',
-                'location' => 'required',
+                'description' => 'required|',
+                'title' => 'required|string|max:255|regex:/^(?![0-9]*$)[A-Za-z0-9_ ]+$/',
+                'location' => 'required|string',
                 'start_time' => 'required',
-                'end_time' => 'required',
+                'end_date' => 'required|date|after_or_equal:start_time',
                 'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', 
 
-            ]
+            ]);
 
-        ); 
+ 
      
        
     
         $event = new Event;
-
-         $event->title = $request->input('title');
+        $event->title = $request->input('title');
         $event->description = $request->input('description');
         $event->location = $request->input('location');
         $event->start_time = $request->input('start_time');
-        $event->end_time = $request->input('end_time');
+        $event->end_time = $request->input('end_date');
         $event->image = $request->input('image');
-        $event->user_id = 1;  
+        $event->user_id =  $user->id;
         $event->community_id = $request->input('community_id');
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('image', 'public');
             $event->image = $imagePath;
         }
         $event->save();
+       
+        $start_time = Carbon::parse($event->start_time);
+
+        $formatted_date = $start_time->format('M l \a\t h:i A');
+ 
+        event(new ParticipationEvent($event->title,$formatted_date, $event->id));
+
 
         return redirect()->route('Community.show',$request->input('community_id')) ->with('message','Event added successfully') ;
     }
@@ -78,7 +127,17 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = auth()->user(); 
+        $event = Event::find($id) ;
+        
+        $isGoing = $user->goingEvents()->where('event_id', $event->id)->exists();
+        $participants = $event->participants()->count();
+
+
+  
+
+        return view('Userinterface.Event.show', compact('event','isGoing','participants'));
+ 
     }
 
     /**
@@ -111,13 +170,12 @@ class EventController extends Controller
         $formFields = $request->validate(
             [
  
-                'description' => 'required',
-                'title' => 'required',
-                'location' => 'required',
+                'description' => 'required|',
+                'title' => 'required|string|max:255|regex:/^(?![0-9]*$)[A-Za-z0-9_ ]+$/',
+                'location' => 'required|string',
                 'start_time' => 'required',
-                'end_time' => 'required',
+                'end_time' => 'required|date|after_or_equal:start_time',
                 'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', 
-                'community_id'=> 'required',
 
             ]
 
@@ -128,7 +186,7 @@ class EventController extends Controller
         
         $event->update($formFields);
 
-        return redirect()->route('Community.show',$request->input('community_id')) ->with('message','Event added successfully') ;
+        return redirect()->route('Community.show',$request->input('community_id')) ->with('message','Your changes has been saved') ;
     
     }
 
@@ -148,7 +206,7 @@ class EventController extends Controller
         $events = Event::where('community_id', $id)->get();
         $userCreatedEvents = Event::where('user_id', 1)->where('community_id', $community->id)->get();
 
-        return redirect()->route('Community.show',$community) ->with('message','Event deleted successfully') ;
+        return redirect()->back()->with('message','Event deleted successfully') ;
 
       }
 

@@ -159,6 +159,13 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
 }
+
+.onhover:hover {
+    background-color: #dcf0ff ;
+    cursor: pointer;
+    border-radius: 0.313rem;
+}
+
 hr {
     margin: 1rem 0;
     color: inherit;

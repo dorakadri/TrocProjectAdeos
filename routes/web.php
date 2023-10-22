@@ -73,8 +73,17 @@ Route::post('/posts/{postId}/dislike', [PostController::class, 'dislikePost'])->
 
     //Communities 
     Route::resource ('Community',CommunityController::class) ;
-    Route::get('/communities',[CommunityController::class,'CommunitiesList']);
+    Route::get('/communities',[CommunityController::class,'CommunitiesList'])->name('communities');
     Route::resource('Event', EventController::class)->parameters(['communities' => 'community']);
+    Route::get('join-community/{communityId}', [CommunityController::class,'JoinCommunity'])->name('join-community');
+    Route::get('leave-community/{communityId}', [CommunityController::class,'LeaveCommunity'])->name('leave-community');
+    Route::get('leave/{communityId}', [CommunityController::class,'Leave'])->name('leave');
+    Route::get('participateInEvent/{eventId}', [CommunityController::class,'ParticipateInEvent'])->name('participateInEvent');
+    Route::get('notParticipate/{eventId}', [CommunityController::class,'NotParticipate'])->name('notParticipate');
+
+    
+
+
 });
 
 //Association only
@@ -116,6 +125,9 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
     Route::get('/Admin/Charite', [ChariteController::class, 'indexAdmin'])->name('admin.donations.indexcharity');
    
      
+    // events
+    Route::get('/Admin/Events', 'App\Http\Controllers\EventController@indexAdmin')->name('admin.events.indexAdmin');
+
 
 });
 

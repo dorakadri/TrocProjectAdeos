@@ -16,6 +16,10 @@ use App\Models\Post;
 use App\Models\Comment;
 use App\Models\Like;
 
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Community;
+use App\Models\Event;
+
 class User extends Authenticatable implements Verify 
 {
     use HasApiTokens;
@@ -90,4 +94,19 @@ public function reclamations()
     {
         return $this->hasMany(Reponse::class);
     }
+    public function coummunities()
+    {
+        return $this->hasMany(Community::class);
+    }
+    
+    public function joinedCommunities()
+    {
+        return $this->belongsToMany(Community::class);
+    }
+    public function goingEvents()
+    {
+        return $this->belongsToMany(Event::class);
+    }
+
+
 }
