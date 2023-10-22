@@ -131,10 +131,11 @@ class ChariteController extends Controller
 
 
      public function showDonations(Charite $charite)
-     {
+     { 
+        $user = Auth::user();
     $donations = Donation::where('charite_id', $charite->id)->get();
 
-    return view('charites.showDonations', ['charite' => $charite, 'donations' => $donations]);
+    return view('charites.showDonations', ['charite' => $charite, 'donations' => $donations,'user_id' => $user->id]);
      }
 
 

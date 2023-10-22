@@ -72,7 +72,7 @@
     @endif
 </div>
 
-                <!-- Boutons d'édition et de suppression -->
+@if ($donation->user_id == $user_id)
                 <div class="d-flex justify-content-between align-items-center">
                     <a href="{{ route('donations.edit', ['donation'=>$donation]) }}" class="btn btn-primary">Éditer</a>
                 
@@ -82,6 +82,7 @@
     <button type="submit" class="btn btn-danger">Désaffecter</button>
 </form>
                 </div>
+@endif
             </div>
         </div>
     </div>
