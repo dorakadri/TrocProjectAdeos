@@ -12,7 +12,7 @@
        
             <div class="card-body">
                <div class="image-block">
-                  <img src="{{ asset('logos/'.$association->logo) }}"  class="img-fluid rounded w-100" alt="blog-img" loading="lazy">  
+                  <img src="{{ asset('storage/'.$association->logo) }}"  class="img-fluid rounded w-100" alt="blog-img" loading="lazy">  
                </div>
                <a href="{{ route('associations.edit1', $association->id) }}" class="btn btn-warning btn-rounded btn-sm my-0">Edit  My Association</a>
      <a href="{{ route('contacts.create') }}" class="btn btn-success btn-rounded btn-sm my-3">Create New Contact</a>

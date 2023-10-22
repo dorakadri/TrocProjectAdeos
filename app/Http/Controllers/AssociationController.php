@@ -75,14 +75,9 @@ public function __construct()
         'name' => $request->input('name'),
     ];
 
-    if ($request->hasFile('logo')) {
-        $logo = $request->file('logo');
-        $logoName = time().'.'.$logo->getClientOriginalExtension();
-        $logo->storeAs('logos', $logoName, 'public');
-        // Store the logo in the 'public/logos' directory
-
-        $associationData['logo'] = $logoName;
-    }
+   if($request->Hasfile('logo')){
+            $associationData['logo']=$request->file('logo')->store('logo','public');
+        }
 
     Association::create($associationData);
 

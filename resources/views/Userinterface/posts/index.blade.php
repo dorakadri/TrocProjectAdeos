@@ -104,7 +104,7 @@
                                 
                               </div>
                               <div class="me-3">
-                           <img class="rounded-circle img-fluid" src="{{ asset('storage/logos/' . $post->image) }}"  alt="post-image" class="img-fluid rounded w-50" alt="" loading="lazy">
+                           <img class=" img-fluid" src="{{ asset('storage/logos/' . $post->image) }}"  alt="post-image" class="img-fluid rounded w-100" alt="blog-img" loading="lazy">
                         </div>
                               
                               <div class="card-post-toolbar">

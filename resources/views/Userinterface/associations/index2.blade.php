@@ -5,10 +5,12 @@
 <div class="row">
       <div class="col-lg-8">
          <div class="card card-block card-stretch card-height blog blog-detail">
-       
+         <div class="col-sm-12">
+                <a href="{{ route('associations.create') }}" class="btn btn-sm btn-success ">+ Add association</a>
+            </div>
             <div class="card-body">
                <div class="image-block">
-                  <img src="{{ asset('logos/'.$association->logo) }}"  class="img-fluid rounded w-100" alt="blog-img" loading="lazy">  
+                   <img src="{{ asset('storage/'.$association->logo) }}"  class="img-fluid rounded w-100" alt="blog-img" loading="lazy">  
                </div>
                <div class="blog-description mt-3">
                   <h2 class="mb-3 pb-3 border-bottom">Responsable:  {{$association->user->name}} </h2>
@@ -62,7 +64,7 @@
                      <div class="row align-items-top pb-3 border-bottom">
                         <div class="col-md-5">
                            <div class="image-block">
-                              <img src="{{ asset('logos/'.$association->logo) }}" class="img-fluid rounded w-100" alt="blog-img" loading="lazy">
+                               <img src="{{ asset('storage/'.$association->logo) }}"  class="img-fluid rounded w-100" alt="blog-img" loading="lazy">  
                            </div>
                         </div>
                         <div class="col-md-7">
