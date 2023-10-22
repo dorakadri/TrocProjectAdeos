@@ -44,7 +44,7 @@ class ExchangedemandsController extends Controller
     public function createbyid($annonceid)
     {   
         $annonce= annonce::find($annonceid);
-        return view('Userinterface.Exchangedemands.details', [
+        return view('Userinterface.Exchangedemands.create', [
             'annonce' => $annonce ,
         ]);
     } 
