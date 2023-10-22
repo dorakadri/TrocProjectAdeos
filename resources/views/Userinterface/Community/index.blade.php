@@ -34,25 +34,30 @@
                   <ul class="list-inline m-0 p-0 h-100">
                    @foreach ($communities as $community)  
 
-                     <li class="d-flex mb-4 align-items-center ">
-                                    @if($community->image)
-                                    <img class="img-fluid rounded-circle avatar-40" src="{{ asset('storage/' . $community->image) }}" alt="" loading="lazy">
+                     <li class="d-flex mb-4 align-items-center justify-content-between">
+                        <div class="col-10 d-flex align-items-center">
+                              @if($community->image)
+                                          <img class="img-fluid rounded-circle avatar-40" src="{{ asset('storage/' . $community->image) }}" alt="" loading="lazy">
 
-                                       @else        
-                                       
-                                       <img class="img-fluid rounded-circle avatar-40" src="{{ asset('images/community/100.jpg')}}" alt="" loading="lazy">
+                                             @else        
+                                             
+                                             <img class="img-fluid rounded-circle avatar-40" src="{{ asset('images/community/100.jpg')}}" alt="" loading="lazy">
 
-   
-                                       @endif
-                        <div class="ms-3 flex-grow-1"  style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
-                        <h4 class="d-flex align-items-center frd-name"> <a  href="{{route('Community.show',$community->id )}}">{{$community->name}}  </a></h4>
+         
+                                             @endif
+                              <div class="   ms-3 flex-grow-1"  style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">
+                                 <h4 class="d-flex align-items-center frd-name"> <a  href="{{route('Community.show',$community->id )}}">{{$community->name}}  </a></h4>
 
-                           <small >{{$community->description}}  </small>
+                                    <small >{{$community->description}}  </small>
+                              </div>
                         </div>
+                        <div  >
+     
                         @if ($community->user_id !== Auth()->id())
                          
                            <a href="{{ route('leave', ['communityId' => $community->id]) }}" class="btn bg-soft-primary smallbutton">Leave</a>
-                        @endif                     
+                        @endif  
+                        </div>                   
                      </li>
                      
                      @endforeach     

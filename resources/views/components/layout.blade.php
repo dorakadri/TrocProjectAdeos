@@ -14,6 +14,14 @@
 
 
 <link rel="icon" href="images/favicon.ico" />
+ 
+
+
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+
 
 
 </head>
@@ -26,9 +34,13 @@
 
 
     <x-pageheader />
-
+  
+    <x-notification />
 
     <x-flash-message />
+
+   
+
 
 
     <div class="position-relative">
@@ -88,6 +100,42 @@
             });
         });
     </script>
+
+
+
+
+
+
+
+
+ <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+  <script>
+
+     Pusher.logToConsole = true;
+
+    var pusher = new Pusher('8550eafddff1aa1fe7b6', {
+      cluster: 'ap2'
+    });
+
+    var channel = pusher.subscribe('popup-channel');
+    channel.bind('addedEvent', function(data) {
+      
+            var alertElement = document.createElement('div');
+            alertElement.classList.add('alert' , 'alert-dismissible', 'fade', 'show');
+ 
+            alertElement.innerHTML = `             
+                <div class="alert alert-solid alert-primary d-flex align-items-center gap-2 alert-dismissible fade show mb-3" role="alert">
+                           <span class="d-flex"><i class="material-symbols-outlined">notifications</i></span>
+                           <h4 class="text-white"> New event added! '${data.event}' ${data.date}. </h4>
+                         </div> `;
+             document.getElementById('alert-container').appendChild(alertElement);
+
+             setTimeout(function() {
+                alertElement.remove();
+            }, 20000);
+            });
+  </script>
+ 
 </body>
 
 

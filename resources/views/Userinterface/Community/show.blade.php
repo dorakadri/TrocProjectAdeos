@@ -72,7 +72,7 @@
       </div>
    </div>
    <div class="row ">
-
+      <div class="col-lg-12">
              <nav class="tab-bottom-bordered mb-3" style="background-color: #fff0;">
                <div class="mb-0 nav nav-tabs rounded-top border-0  " id="nav-tab1" role="tablist" style="background-color: #fff0;">
                   <button class="nav-link active" id="nav-home-11-tab" data-bs-toggle="tab" data-bs-target="#nav-home-11" type="button" role="tab" aria-controls="nav-home-11" aria-selected="true">Events</button>
@@ -89,12 +89,12 @@
 
                               </div>
                         @endif         
-                        <div class=" col-lg-12 col-md-12 row">
+                        <div class=" col-lg-12 col-md-12  row ">
                         @foreach($events as $key => $event)
 
                                                 
                                  <div class="col-lg-6" >
-
+                                    
                                  <x-Event-card  :event="$event" :isGoing="$isGoing" :key="$key" :participants="$participants" />
 
                                  </div>
@@ -118,7 +118,7 @@
                   </div>
                      
             </div>
-      
+          </div>
       
     
  
@@ -126,7 +126,7 @@
 
  
  <aside class="sidebar sidebar-chat sidebar-base border-end shadow-none   " data-sidebar="responsive" 
- style="right:0;   margin-top: 5.7rem;">
+   style="right:0;   margin-top: 5.7rem;">
        <div class="chat-search pt-3 ">
        
              <!-- <div class="sidebar-toggle d-block d-xl-none" data-toggle="sidebar2" data-active="true">
@@ -144,16 +144,7 @@
                     </a>
                 </li>
             </ul>
-            
-            <div class="chat-searchbar mt-4 mb-2 mx-2">
-                <div class="form-group chat-search-data m-0  ">
-                    <input type="text" class="form-control round" id="chat-search" placeholder="Search">
-                    <i class="material-symbols-outlined">
-                    search
-                    </i>
-                </div>
-
-            </div>
+             
             <div  class="  mx-2">
             <a href="{{ route('Event.create', ['community' => $community->id]) }}" class="btn btn-primary d-block w-100 confirm-btn">
                Create new event
@@ -164,7 +155,7 @@
 
 
         </div>
-        <div class="sidebar-body pt-0 data-scrollbar mb-5 pb-5" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none;"><div class="scroll-content" style="transform: translate3d(0px, 0px, 0px);">
+        <div class="sidebar-body pt-0 data-scrollbar mb-5 pb-5" data-scrollbar="true" tabindex="-1" style="overflow-y: auto; outline: none;"><div class="scroll-content" style="transform: translate3d(0px, 0px, 0px);">
             <!-- Sidebar Menu Start -->
 
            
@@ -322,6 +313,9 @@
         </div><div class="scrollbar-track scrollbar-track-x" style="display: block;"><div class="scrollbar-thumb scrollbar-thumb-x" style="width: 187.102px; transform: translate3d(0px, 0px, 0px);"></div></div><div class="scrollbar-track scrollbar-track-y" style="display: block;"><div class="scrollbar-thumb scrollbar-thumb-y" style="height: 456.232px; transform: translate3d(0px, 0px, 0px);"></div></div></div>
         <div class="sidebar-footer"></div>
     </aside>
+
+
+    
 
     
     @endsection

@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Community;
 use App\Models\Event;
 use App\Models\User;
-
 use Illuminate\Support\Facades\Auth;
-
 
 class CommunityController extends Controller
 {
@@ -67,7 +65,7 @@ class CommunityController extends Controller
         $user = auth()->user(); 
         $formFields = $request->validate(
             [
-                'name' => 'required',
+                'name' => 'required|max:255|unique:community',
                 'description' => 'required',
                 'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', 
 
@@ -152,8 +150,9 @@ class CommunityController extends Controller
         $community = Community::find($id) ;
         $formFields = $request->validate(
             [
-                 'name' => 'required',
-                'description' => 'required' ,
+                'name' => 'required|max:255|unique:community,name,' . $community->id,
+                'description' => 'required',
+                'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', 
                
 
             ]

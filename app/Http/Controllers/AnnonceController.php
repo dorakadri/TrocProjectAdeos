@@ -15,7 +15,7 @@ class AnnonceController extends Controller
      */
     public function index()
     {   
-        // suggested events and communities
+        ///// suggested events and communities
         $userId = Auth::id();    
         $events = Event::whereDoesntHave('participants', function ($query) use ($userId) {
             $query->where('user_id', $userId);
@@ -23,7 +23,7 @@ class AnnonceController extends Controller
         $communities = Community::whereDoesntHave('members', function ($query) use ($userId) {
             $query->where('user_id', $userId);
         })->take(3)->get();   
-        ////////     
+        ///////    
 
         $annonces = Annonce::latest()->where('taken', false)->filter(request(['tag' , 'search']))->get(); 
     

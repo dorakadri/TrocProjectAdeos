@@ -57,16 +57,7 @@
                                 <span class="item-name"> My Communities</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link "
-                                href="{{ route('Event.index') }}">
-                                <i class="icon material-symbols-outlined filled">
-                                    fiber_manual_record
-                                </i>
-                                <i class="sidenav-mini-icon"> PI </i>
-                                <span class="item-name">Events</span>
-                            </a>
-                        </li>
+                       
                         @if (auth()->user()->role === '2')
                         <li class="nav-item">
                             <a class="nav-link " href="{{ route('charites.index') }}">
@@ -108,6 +99,13 @@
                         <span class="item-name">Communities</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                            <a class="nav-link "
+                                href="{{ route('Event.index') }}">
+                                <i class="material-symbols-outlined me-1">event</i>
+                                 <span class="item-name">Events</span>
+                            </a>
+                        </li>
                 <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="{{ route('charites.index') }}">
 
