@@ -28,6 +28,7 @@ Route::middleware([
 //Association and simple users
 
 Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
+    
     Route::resource('Annonce', AnnonceController::class);
     Route::resource('Exchanges', ExchangedemandsController::class);
     Route::get('/Exchange/createbyid/{id}', [ExchangedemandsController::class, 'createbyid']);
@@ -38,17 +39,21 @@ Route::middleware(['auth', 'checkrole:0,2'])->group(function () {
     Route::get('/filter-reclamations', 'App\Http\Controllers\ReclamationController@filterReclamations')->name('filter-reclamations');
     // CHARITY EVENT + DONATION 
 
-    Route::get('/Donation', [DonationController::class, 'index'])->name('donations.index');
+    Route::get('/DonationM', [DonationController::class, 'index'])->name('donations.index');
+        Route::get('/Donation', [DonationController::class, 'index2'])->name('donations.index2');
     Route::get('/Donation/create', [DonationController::class, 'create'])->name('donations.create');
     Route::post('/Donation/create', [DonationController::class, 'add'])->name('donations.add');
     Route::get('/Donation/{donation}/edit', [DonationController::class, 'edit'])->name('donations.edit');
     Route::put('/Donation/{donation}/update', [DonationController::class, 'update'])->name('donations.update');
     Route::delete('/Donation/{donation}/delete', [DonationController::class, 'delete'])->name('donations.delete');
 
-    Route::get('/Charite', [ChariteController::class, 'index'])->name('charites.index');
+    Route::get('/Charite', [ChariteController::class, 'index2'])->name('charites.index2');
+    Route::get('/ChariteM', [ChariteController::class, 'index'])->name('charites.index');
 
     Route::post('/charites/{charite}/show-donations', [ChariteController::class, 'showDonations'])->name('charites.showDonations');
     Route::post('donations/{donation}/choose-charite', [DonationController::class, 'chooseCharite'])->name('donations.chooseCharite');
+    Route::put('donations/deaffect/{donation}', [DonationController::class,'deaffectCharite'])->name('donations.deaffectCharite');
+
 
     // Forum //
     Route::resource('post', PostController::class);
@@ -77,6 +82,7 @@ Route::middleware(['auth', 'checkrole:2'])->group(function () {
 //Admin
 
 Route::middleware(['auth', 'checkrole:1'])->group(function () {
+    
     Route::get('/Admin/dashboard', function () {
         return view('admin.components.Dashboard');
     });
@@ -97,6 +103,10 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
 
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
     Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
+    //donation
+    Route::get('/Admin/Donation', [DonationController::class, 'index3'])->name('admin.donations.index3');
+    Route::get('/Admin/Charite', [ChariteController::class, 'indexAdmin'])->name('admin.donations.indexcharity');
+   
      
 
 });

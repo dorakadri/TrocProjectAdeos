@@ -79,17 +79,17 @@
                         </li>
   @endif
 
-  @if (auth()->user()->role === '0')
                         <li class="nav-item">
                             <a class="nav-link " href="{{ route('donations.index') }}">
                                 <i class="icon material-symbols-outlined filled">
                                     fiber_manual_record
                                 </i>
                                 <i class="sidenav-mini-icon"> PI </i>
-                                <span class="item-name">My donations</span>
+                                <span class="item-name"> MY donations</span>
                             </a>
                         </li>
-                        @endif
+ 
+
                     </ul>
                 </li>
                 <li class="nav-item static-item">
@@ -109,13 +109,23 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="{{ route('charites.index') }}">
+                    <a class="nav-link " aria-current="page" href="{{ route('charites.index2') }}">
 
 
                         <i class=" icon material-symbols-outlined">
                             grade
                         </i>
                         <span class="item-name">Charity Events</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="{{ route('donations.index2') }}">
+
+
+                        <i class=" icon material-symbols-outlined">
+                            grade
+                        </i>
+                        <span class="item-name">Donations</span>
                     </a>
                 </li>
                 <li class="nav-item">

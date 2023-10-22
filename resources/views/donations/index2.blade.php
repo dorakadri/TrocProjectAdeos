@@ -53,10 +53,41 @@
 
                         <p class="card-text"><strong>Quantité disponible:</strong> {{ $donation->quantite }}</p>
 
-                        
+                        <div class="card-body">
+
+
+                            @if ($donation->charite_id === null)
+                                <form action="{{ route('donations.chooseCharite', ['donation' => $donation]) }}"
+                                    method="post">
+                                    @csrf
+                                    <div class="form-group row">
+                                        <div class="col-md-10">
+                                            <select name="charite_id" id="charite_id" class="form-control">
+                                                <option value="">Affecter à une œuvre de charité</option>
+                                                @foreach ($charites as $charite)
+                                                    <option value="{{ $charite->id }}">{{ $charite->nom }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="submit" class="btn btn-primary">Affecter</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            @endif
+                        </div>
 
                         <!-- Boutons d'édition et de suppression -->
-                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="{{ route('donations.edit', ['donation' => $donation]) }}"
+                                class="btn btn-primary">Éditer</a>
+
+                            <form action="{{ route('donations.delete', ['donation' => $donation]) }}" method="post">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger">Supprimer</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

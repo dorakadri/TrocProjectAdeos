@@ -24,7 +24,7 @@
     
         <div class="card mb-4">
        
-        <img src="{{ asset('donations/'.$donation->photo) }}" class="card-img-top" alt="{{ $donation->photo }}" loading="lazy" style="width : auto ;height : 400px;">
+        <img src="{{ asset('storage/donations/'.$donation->photo) }}" class="card-img-top" alt="{{ $donation->photo }}" loading="lazy" style="width : auto ;height : 400px;">
             <div class="card-body">
                 <h4 class="card-title">{{ $donation->titre }}</h4>
                 <p class="card-text"><strong>Catégorie:</strong> {{ $donation->categorie }}</p>
@@ -33,7 +33,7 @@
                 <!-- Disponibilité -->
                 <p class="card-text">
                     <strong>Disponibilité:</strong>
-                    <span class="badge badge-{{ $donation->disponibilite === 'disponible' ? 'success' : ($donation->disponibilite === 'reserve' ? 'warning' : 'danger') }}">
+                    <span class="badge {{ $donation->disponibilite === 'disponible' ? 'bg-success' : ($donation->disponibilite === 'reserve' ? 'bg-warning' : 'bg-danger') }}">
                         {{ ucfirst($donation->disponibilite) }}
                     </span>
                 </p>
@@ -41,7 +41,7 @@
                 <!-- État -->
                 <p class="card-text">
                     <strong>État:</strong>
-                    <span class="badge badge-{{ $donation->etat === 'neuf' ? 'success' : ($donation->etat === 'usage' ? 'warning' : 'danger') }}">
+                    <span class="badge {{ $donation->etat === 'neuf' ? 'bg-success' : ($donation->etat === 'usage' ? 'bg-warning' : 'bg-danger') }}">
                         {{ ucfirst($donation->etat) }}
                     </span>
                 </p>
@@ -76,25 +76,17 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <a href="{{ route('donations.edit', ['donation'=>$donation]) }}" class="btn btn-primary">Éditer</a>
                 
-                    <form action="{{ route('donations.delete', ['donation'=>$donation]) }}" method="post">
-                        @csrf
-                        @method('delete')
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
-                    </form>
+                    <form action="{{ route('donations.deaffectCharite', ['donation' => $donation]) }}" method="POST">
+    @csrf
+    @method('PUT')
+    <button type="submit" class="btn btn-danger">Désaffecter</button>
+</form>
                 </div>
             </div>
         </div>
     </div>
     @endforeach
 </div>
-
-
-
-
-
-
-
-
 
 
 </div>

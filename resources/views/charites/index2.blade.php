@@ -18,7 +18,9 @@
             </div>
         </div>
     </div>
-
+    <div class="col-md-12 mb-4 d-flex justify-content-end">
+        <a href="{{ route('charites.create') }}" class="btn btn-success">Ajouter une œuvre de charité</a>
+    </div>
     @foreach($charites as $charite)
         <div class="col-md-6">
             <div class="card mb-4">
@@ -47,7 +49,7 @@
 
                     <!-- Bouton pour éditer l'œuvre de charité -->
                     <div class="d-flex justify-content-between align-items-center">
-                        
+                        <a href="{{ route('charites.edit', ['charite'=>$charite]) }}" class="btn btn-primary">Éditer</a>
                         
                         <!-- Formulaire pour afficher les donations liées à l'œuvre de charité -->
                         <form action="{{ route('charites.showDonations', ['charite' => $charite]) }}" method="post" class="mb-0">
@@ -56,7 +58,11 @@
                         </form>
 
                         <!-- Formulaire pour supprimer l'œuvre de charité -->
-                        
+                        <form action="{{ route('charites.delete', ['charite'=>$charite]) }}" method="post" class="mb-0">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -6,26 +6,50 @@ use Illuminate\Http\Request;
 use App\Models\Charite;
 use App\Models\Donation;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 class ChariteController extends Controller
 {
+
+
+//0 uer
+//1 admin
+//2
     public function organisateur()
 {
     return $this->belongsTo(User::class, 'organisateur');
 }
 
+//$user = Auth::user();
+//      $association = $user->association;
+//'user_id' => $user->id,
 
-    public function index() {
-        
+    public function index2() {
+        $user = Auth::user();
         $charites = Charite::with('organisateur')->get();
     return view('charites.index', ['charites' => $charites]);
     }
 
+    public function index() {
+        $user = Auth::user();
+        $charites = Charite::where('organisateur', $user->id)->get();
+     
+    return view('charites.index2', ['charites' => $charites]);
+    }
+ 
+    public function indexAdmin() {
+        $user = Auth::user();
+        $users = User::all();
+        $charites = Charite::with('organisateur')->get();
+    return view('admin.donations.index2', ['charites' => $charites,'users' => $users]);
+    }
+    
     public function create() {
         return view('charites.create');
+        
     }
     
     public function add(Request $request){
-       
+        
        $data= $request->validate([
             'nom' => 'required',
             'date' => 'required',
@@ -35,7 +59,23 @@ class ChariteController extends Controller
             'budget' => 'required'
         ]);
 
-        Charite::create($data);
+
+        $user = Auth::user();
+
+
+
+       $chariteData = [
+        'nom' => $data['nom'],
+        'date' => $data['date'],
+        'lieu' => $data['lieu'],
+        'description' => $data['description'],
+        'beneficiaire' => $data['beneficiaire'],
+        'budget' => $data['budget'],
+        'organisateur' => $user->id
+    ];
+
+    // Créer un nouvel enregistrement Charite avec les données
+    Charite::create($chariteData);
         return redirect(route('charites.index'));
         
     }
@@ -56,7 +96,6 @@ class ChariteController extends Controller
             'date' => 'required',
             'lieu' => 'required',
             'description' => 'required',
-
             'beneficiaire' => 'required',
             'budget' => 'required'
          ]);
