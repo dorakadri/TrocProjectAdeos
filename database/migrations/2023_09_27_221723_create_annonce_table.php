@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('location')->nullable();
             $table->boolean('taken')->nullable()->default(false);
             $table->string('image')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->longText('description');
             $table->string('echangetype')->default(AnnonceEchangeTypeEnum::ObjectObject->value);
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

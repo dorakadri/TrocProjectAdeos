@@ -6,6 +6,7 @@ use App\Enums\AnnonceEchangeTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\User;
 
 class annonce extends Model
 {
@@ -13,7 +14,7 @@ class annonce extends Model
 
     protected $fillable = [
 
-        'tags', 'title', 'location', 'taken', 'image', 'description', 'echangetype'
+        'tags', 'title', 'location', 'taken', 'image', 'description', 'echangetype','user_id'
     ];
 
 
@@ -41,4 +42,10 @@ public function exchangesdemands() :HasMany{
     return  $this->hasMany(Exchangedemands::class,"annonce_id");
 
 }
+
+public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
 }

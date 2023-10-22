@@ -37,9 +37,9 @@
                                 <span class="item-name">my claims</span>
                             </a>
                         </li>
-
+                        
                         <li class="nav-item">
-                            <a class="nav-link " href="profile1.html">
+                            <a class="nav-link " href="/MyEchanges">
                                 <i class="icon material-symbols-outlined filled">
                                     fiber_manual_record
                                 </i>
