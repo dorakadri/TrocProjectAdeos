@@ -106,7 +106,7 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
     Route::get('/reponse/create/{reclamation_id}', 'App\Http\Controllers\ReponseController@create')->name('reponse.create');
     Route::resource('reponse', ReponseController::class);
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
-    Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
+    Route::get('/admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
     //donation
     Route::get('/Admin/Donation', [DonationController::class, 'index3'])->name('admin.donations.index3');
     Route::get('/Admin/Charite', [ChariteController::class, 'indexAdmin'])->name('admin.donations.indexcharity');
