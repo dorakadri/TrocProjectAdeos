@@ -10,7 +10,8 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Reclamation;
-use App\Models\Reponse;use App\Models\Post;
+use App\Models\Reponse;
+use App\Models\Post;
 use App\Models\Comment;
 use App\Models\Like;
 
@@ -79,4 +80,13 @@ class User extends Authenticatable implements Verify
 {
     return $this->hasMany(Like::class);
 }
+public function reclamations()
+    {
+        return $this->hasMany(Reclamation::class);
+    }
+
+    public function responses()
+    {
+        return $this->hasMany(Reponse::class);
+    }
 }
