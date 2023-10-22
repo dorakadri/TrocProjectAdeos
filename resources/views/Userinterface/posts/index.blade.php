@@ -99,14 +99,11 @@
                     <!-- <h6 class="text-danger">{{$post->user->name}}</h6>-->
                         <div class="w-100">
                            <div class="d-flex  justify-content-between">
-                              
+                               
                               <div class="me-3">
                            <img class=" img-fluid" src="{{ asset('storage/logos/' . $post->image) }}"  alt="post-image" class="img-fluid rounded w-100" alt="blog-img" loading="lazy">
                         </div>
-                              <div class="">
-                                 <h5 class="mb-0 d-inline-block">{{$post->title}}</h5>
-                                
-                              </div>
+                         
                               <div class="card-post-toolbar">
                             
 
@@ -119,9 +116,9 @@
                                     
                                           <div class="d-flex align-items-top">
                                                <div class="data ms-2">
-                                               <a class="dropdown-item d-flex align-items-center"
+                                               <span class="dropdown-item d-flex align-items-center"
                      href="{{ route('post.edit', ['post' => $post]) }}" 
-                     ><span class="material-symbols-outlined me-2 md-18">Edit Post </span  >Edit Post</a >
+                     >Edit Post</span >
                                     
                                                
                                              </div>
@@ -152,6 +149,10 @@
                         </div>
                      </div>
                   </div>
+                      <div class="">
+                                 <h5 class="mb-0 d-inline-block">{{$post->title}}</h5>
+                                
+                              </div>
                   <div class="mt-3">
                      <p>{{$post->description}}</p>
                   </div>
