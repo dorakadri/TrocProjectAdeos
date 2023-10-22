@@ -13,9 +13,11 @@ use Illuminate\Queue\SerializesModels;
 class ParticipationEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
+ 
     public $date;
     public $event;
+    public $eventId;
+
 
 
     /**
@@ -23,10 +25,15 @@ class ParticipationEvent implements ShouldBroadcast
      *
      * @return void
      */
-    public function __construct($event, $date)
+    public function __construct($event, $date,$eventId)
     {
+        $this->eventId = $eventId;
+
         $this->event = $event;
         $this->date = $date;
+        
+
+
 
     }
 

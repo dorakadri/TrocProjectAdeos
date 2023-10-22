@@ -126,7 +126,8 @@
             alertElement.innerHTML = `             
                 <div class="alert alert-solid alert-primary d-flex align-items-center gap-2 alert-dismissible fade show mb-3" role="alert">
                            <span class="d-flex"><i class="material-symbols-outlined">notifications</i></span>
-                           <h4 class="text-white"> New event added! '${data.event}' ${data.date}. </h4>
+                           <h5 class="text-white"> New event added! '${data.event}' ${data.date}. </h5>
+                           <u>  <a href="/Event/${data.eventId}"  class="text-white underline">See details</a> </u>
                          </div> `;
              document.getElementById('alert-container').appendChild(alertElement);
 

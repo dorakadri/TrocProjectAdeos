@@ -8,7 +8,7 @@ use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Events\ParticipationEvent;
-
+ 
 class EventController extends Controller
 {
     /**
@@ -112,8 +112,8 @@ class EventController extends Controller
         $start_time = Carbon::parse($event->start_time);
 
         $formatted_date = $start_time->format('M l \a\t h:i A');
-
-        event(new ParticipationEvent($event->title,$formatted_date));
+ 
+        event(new ParticipationEvent($event->title,$formatted_date, $event->id));
 
 
         return redirect()->route('Community.show',$request->input('community_id')) ->with('message','Event added successfully') ;
@@ -127,7 +127,17 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = auth()->user(); 
+        $event = Event::find($id) ;
+        
+        $isGoing = $user->goingEvents()->where('event_id', $event->id)->exists();
+        $participants = $event->participants()->count();
+
+
+  
+
+        return view('Userinterface.Event.show', compact('event','isGoing','participants'));
+ 
     }
 
     /**
