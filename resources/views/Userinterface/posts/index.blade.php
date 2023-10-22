@@ -90,7 +90,7 @@
          <div class="col-sm-12">
          
             <div class="col-sm-12">
-            @foreach($posts as $post ) 
+            @foreach($posts as $key => $post ) 
             <div class="card card-block card-stretch card-height">
                <div class="card-body">
                
@@ -116,9 +116,12 @@
                                     
                                           <div class="d-flex align-items-top">
                                                <div class="data ms-2">
-                                               <span class="dropdown-item d-flex align-items-center"
+                                               
+                                                <span class="dropdown-item d-flex align-items-center"
                      href="{{ route('post.edit', ['post' => $post]) }}" 
                      >Edit Post</span >
+                                              
+                                               
                                     
                                                
                                              </div>
@@ -172,13 +175,13 @@
                             <!-- Like Button -->
 <form method="post" action="{{ route('posts.like', $post->id) }}">
     @csrf
-    <button type="submit">Like</button>
-</form>
+    <button type="submit" class="btn btn-soft-primary mb-3 me-1">{{$likes[$key]}} Like</button>
+ </form>
 
 <!-- Dislike Button -->
 <form method="post" action="{{ route('posts.dislike', $post->id) }}">
     @csrf
-    <button type="submit">Dislike</button>
+    <button type="submit" class="btn btn-soft-warning mb-3 me-1">Dislike</button>
 </form>
                            </div>
                            <div class="total-comment-block">

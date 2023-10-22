@@ -2,7 +2,21 @@
 
 @extends('components.layout')
 @section('content')
-                       <div class="modal-dialog modal-dialog-centered" role="document">
+
+<div class="row ">
+      <div class="col-lg-12"  style="width: 70%;   ">
+            <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                     <h4 class="card-title">Event details</h4>
+                  </div>
+                  
+               </div>
+               <div class="card-body">
+
+               <div class="modal-dialog modal-dialog-centered" role="document"  >
+
+                       
                            <div class="modal-content">
                                
                               <div class="modal-body mt-5">
@@ -10,7 +24,7 @@
                                        <div class="image-block">
                                        @if($event->image)
                                        <img src="{{asset('storage/' . $event->image)}}" class="img-fluid rounded w-100" alt="blog-img" loading="lazy"
-                                          style="height: 11rem; object-fit: cover;"> 
+                                          style="height: 15rem; object-fit: cover;"> 
                                                  @else
 
                                                 <img src="{{asset('images/community/36.jpg')}}" class="img-fluid rounded w-100" alt="blog-img" loading="lazy"
@@ -61,6 +75,11 @@
                               
                            </div>
                         </div>
+               </div>
+            </div>
+      </div>
+</div>
+
                 
 
 @endsection

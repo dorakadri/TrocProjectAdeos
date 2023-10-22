@@ -18,7 +18,16 @@ class PostController extends Controller
         
 
         $posts = Post::all();
-        return view ('Userinterface.posts.index', compact('posts')) ;
+        $likes = [];
+ 
+ 
+        foreach ($posts as $post) {
+            $likes[] = Like::where('post_id',$post->id)->where('type', 'like')->count();
+         }
+
+       
+        return view ('Userinterface.posts.index', compact('posts','likes')) ;
+
     }
 
     /**

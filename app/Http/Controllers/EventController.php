@@ -108,6 +108,8 @@ class EventController extends Controller
             $event->image = $imagePath;
         }
         $event->save();
+
+        $event->participants()->attach($user->id);
        
         $start_time = Carbon::parse($event->start_time);
 

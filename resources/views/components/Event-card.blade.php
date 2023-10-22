@@ -17,9 +17,16 @@
                </div>
  
                <div class="blog-description p-3" >
-                  <div class="date">
+               
+                  <div class="date d-flex align-items-center justify-content-between ">
                      <strong> {{ date('M d H:i', strtotime($event->start_time)) }} - {{ date('M d H:i', strtotime($event->end_time)) }}
                                     </strong>
+
+                                    <div >
+                                    <a href="{{route('Event.show',$event->id )}}" class=" d-flex align-items-center   ">View details<i class="right-icon material-symbols-outlined">chevron_right</i></a>
+                                    
+                                   
+                                    </div>
                                     
                   </div>
                   <h5 class="mb-2"   style="text-overflow: ellipsis;  overflow: hidden;    white-space: nowrap;">{{$event->title}}</h5>
@@ -35,7 +42,7 @@
                                  @else
                                  <a href="{{ route('participateInEvent', ['eventId' => $event->id] ) }}" class="btn bg-soft-dark smallbutton" style="width: 7rem" >  Partticipate</a>
                                  @endif
-                      <div class="comment d-flex align-items-center"> {{$participants[$key] }} goings</div>
+                      <div class="comment d-flex align-items-center px-2"> {{$participants[$key] }} goings</div>
                   </div>
                </div>
             </div>
