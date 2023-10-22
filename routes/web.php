@@ -97,11 +97,10 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
     });
 
     // reclamation
-    Route::get('/reponse/create/{reclamation_id}', 'App\Http\Controllers\ReponseController@createbyid')->name('reponse.createbyid');
+    Route::get('/reponse/create/{reclamation_id}', 'App\Http\Controllers\ReponseController@create')->name('reponse.create');
     Route::resource('reponse', ReponseController::class);
-
     Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
-    Route::get('/Admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
+    Route::get('/admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
      
 
 });

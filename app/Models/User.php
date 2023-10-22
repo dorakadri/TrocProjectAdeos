@@ -9,7 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Post;
+use App\Models\Reclamation;
+use App\Models\Reponse;use App\Models\Post;
 use App\Models\Comment;
 use App\Models\Like;
 

@@ -1,21 +1,27 @@
 @extends('components.layout')
 @section('content')
+<style>
+    .error-message {
+        color: red;
+        font-weight: bold;
+    }
+</style>
 
       <div>
-    <div class="position-relative">
-    </div>
-    <div id="content-page" class="content-page">
-          <div>
+ <div class="position-relative">
+    <div>
         @if($errors->any())
         <ul>
             @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
+                <li class="error-message">{{$error}}</li>
             @endforeach
         </ul>
-
-
         @endif
     </div>
+</div>
+
+    <div id="content-page" class="content-page">
+   
     <div class="container">
 
   <div class="row">
@@ -34,7 +40,7 @@
                     <form method="post" action="{{route('reclamation.store')}}">
          @csrf 
         @method('post')
-                    
+                      <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                         <div class="form-group">
                             <label class="form-label" for="title">title</label>
                             <input type="text" class="form-control" name="title" placeholder="title">

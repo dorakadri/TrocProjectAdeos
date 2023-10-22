@@ -22,7 +22,8 @@ class ReclamationController extends Controller
 
     public function index()
     {
-        $reclamations = Reclamation::all();
+         $user = auth()->user(); // Get the logged-in user
+    $reclamations = $user->reclamations; // Load all reclamations for the logged-in user
         return view('Userinterface.reclamations.index', compact('reclamations'));
     }
 
@@ -52,11 +53,13 @@ class ReclamationController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'status' => 'nullable'
+    'title' => 'required|max:10', // Limit the title to 10 characters
+    'description' => 'required|min:3',
+    'status' => 'nullable', 
 
         ]);
+// Add the authenticated user's ID to the data array
+    $data['user_id'] = auth()->user()->id;
 
         $newReclamation = Reclamation::create($data);
 
@@ -118,18 +121,24 @@ class ReclamationController extends Controller
         return redirect(route('reclamation.index'))->with('success', 'reclamation deleted Succesffully');
     }
 
-    public function filterReclamations(Request $request)
-    {
-        $filter = $request->input('filter');
+public function filterReclamations(Request $request)
+{
+    $user = auth()->user();
+    $status = $request->input('filter');
 
-        if ($filter == 'all') {
-            $reclamations = Reclamation::all();
-        } elseif ($filter == 'treated') {
-            $reclamations = Reclamation::where('status', 'treated')->get();
-        } elseif ($filter == 'not_treated') {
-            $reclamations = Reclamation::where('status', 'not_treated')->get();
-        }
+    // Get the logged-in user's reclamations
+    $reclamations = $user->reclamations();
 
-        return view('Userinterface.reclamations.index', compact('reclamations'));
+    if ($status !== 'all') {
+        // Filter by status if a specific status is selected
+        $reclamations = $reclamations->where('status', $status);
     }
+
+    $reclamations = $reclamations->get();
+
+    return view('Userinterface.reclamations.index', compact('reclamations'));
+}
+
+
+
 }

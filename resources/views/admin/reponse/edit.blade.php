@@ -17,7 +17,7 @@
 <form method="post" action="{{ route('reponse.update', ['reponse' => $reponse]) }}">
     @csrf
     @method('PUT') <!-- Add this line to specify the HTTP method -->
-    
+       <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
     <div class="form-group">
         <label class="form-label" for="description">Description</label>
         <input type="text" class="form-control" name="description" placeholder="Description" value="{{ $reponse->description }}">
