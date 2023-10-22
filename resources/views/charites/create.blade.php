@@ -57,6 +57,7 @@
                             <label class="form-label" for="exampleInputPlaceholder">Bénéficiaire</label>
                             <input type="text" name="beneficiaire" class="form-control"  placeholder="beneficiaire">
                         </div>
+
                         <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">Budget </label>
                             <input type="number" name="budget" class="form-control"  placeholder="budget ">

@@ -43,17 +43,7 @@
                             <label class="form-label" for="exampleInputPlaceholder">Description</label>
                             <input type="text" name="description" class="form-control"  placeholder="description" value="{{ old('charite', $charite->description) }}">
                         </div>
-                        <div class="card-body">
-
-                        <div class="form-group">
-                            <label class="form-label" for="exampleFormControlSelect1">Organisateur </label>
-                            <select class="form-select" name="organisateur" placeholder="description" value="{{ old('charite', $charite->organisateur) }}">
-                            <option selected="" disabled="">organisateur</option>
-                            <option value='1'> test</option>
-
-                            </select>
-                        </div>
-                        </div>
+                        
                         <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">Bénéficiaire</label>
                             <input type="text" name="beneficiaire" class="form-control"  placeholder="beneficiaire" value="{{ old('charite', $charite->beneficiaire) }}">
