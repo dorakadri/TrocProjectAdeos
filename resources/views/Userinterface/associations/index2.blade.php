@@ -1,12 +1,24 @@
 @extends('components.layout')
 @section('content')
+
+
+ <div class="card-body">
+      <a href="{{ route('associations.create') }}" class="btn btn-sm btn-success ">+ Add association</a>  
+      
+      </div>
+ 
 @foreach($associations as $association )
 
+
+    
 <div class="row">
+ 
+    
       <div class="col-lg-8">
+          
          <div class="card card-block card-stretch card-height blog blog-detail">
          <div class="col-sm-12">
-                <a href="{{ route('associations.create') }}" class="btn btn-sm btn-success ">+ Add association</a>
+             
             </div>
             <div class="card-body">
                <div class="image-block">
@@ -91,6 +103,7 @@
       </div>
    
    </div>
+    
    @endforeach
 
 @endsection

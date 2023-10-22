@@ -123,7 +123,7 @@ Route::middleware(['auth', 'checkrole:1'])->group(function () {
     Route::get('/Admin/Profile', function () {
         return view('admin.components.Profile');
     });
-     Route::get('/admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
+    Route::get('/admin/reclamation', 'App\Http\Controllers\ReclamationController@index2')->name('admin.reclamations.index2');
     //association
     Route::resource('associations', AssociationController::class)->only(['index','edit','update','destroy','show']);
     Route::resource('contacts', ContactController::class)->only(['index','show']);
