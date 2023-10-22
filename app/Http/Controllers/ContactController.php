@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Association;
+use Illuminate\Support\Facades\Auth;
 
 
 class ContactController extends Controller
@@ -11,7 +12,10 @@ class ContactController extends Controller
     public function __construct()
    {
 
-       $this->middleware('checkrole:1')->only('show','update','index','edit','destroy');
+       $this->middleware('checkrole:2')->only('create','store','edit','update','destroy');
+       $this->middleware('checkrole:1')->only('index','show');
+
+      
 
     
    }  
@@ -25,15 +29,17 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
+        $user = Auth::user();
+        $association = $user->association; // Note the use of 'association' instead of 'associations'
         $validatedData = $request->validate([
             'number' => 'required|string|max:255',
             'address' => 'required|string|max:255',
-            'association_id' => 'required|exists:associations,id',
         ]);
-    
+        $validatedData['association_id'] = $association->id;
+
         $contact = Contact::create($validatedData);
     
-        return redirect()->route('contacts.show', ['contact' => $contact])->with('success', 'Contact created successfully.');
+        return redirect()->route('Userinterface.associations.index1', ['contact' => $contact])->with('success', 'Contact created successfully.');
     }
     
     
@@ -48,17 +54,19 @@ class ContactController extends Controller
 
 public function update(Request $request, $id)
 {
+    $user = Auth::user();
+    $association = $user->association; 
     $validatedData = $request->validate([
         'number' => 'required|string|max:255',
         'address' => 'required|string|max:255',
-        'association_id' => 'required|exists:associations,id',
     ]);
+    $validatedData['association_id'] = $association->id;
 
     $contact = Contact::findOrFail($id);
 
     $contact->update($validatedData);
 
-    return redirect()->route('contacts.show', ['contact' => $contact])->with('success', 'Contact updated successfully.');
+    return redirect()->route('Userinterface.associations.index1', ['contact' => $contact])->with('success', 'Contact updated successfully.');
 }
 
 
@@ -81,7 +89,7 @@ public function destroy($id)
     $contact = Contact::findOrFail($id);
     $contact->delete();
 
-    return redirect()->route('contacts.index')->with('success', 'Contact deleted successfully.');
+    return redirect()->route('Userinterface.associations.index1')->with('success', 'Contact deleted successfully.');
 }
 
 

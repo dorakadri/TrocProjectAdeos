@@ -60,6 +60,17 @@
                        
                         @if (auth()->user()->role === '2')
                         <li class="nav-item">
+                            <a class="nav-link " href="{{ url('/home/associations/myassociation') }}">
+                                <i class="icon material-symbols-outlined filled">
+                                    fiber_manual_record
+                                </i>
+                                <i class="sidenav-mini-icon"> PI </i>
+                                <span class="item-name"> MY Association</span>
+                            </a>
+                        </li>
+  @endif
+                        @if (auth()->user()->role === '2')
+                        <li class="nav-item">
                             <a class="nav-link " href="{{ route('charites.index') }}">
                                 <i class="icon material-symbols-outlined filled">
                                     fiber_manual_record

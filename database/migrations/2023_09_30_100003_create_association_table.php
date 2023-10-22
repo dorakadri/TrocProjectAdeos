@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('name'); 
             $table->string('logo'); 
             $table->string('description'); 
-            $table->string('responsable');
+            $table->unsignedBigInteger('user_id')->unique();
+            $table->foreign('user_id')->references('id')->on('users')
+            ->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

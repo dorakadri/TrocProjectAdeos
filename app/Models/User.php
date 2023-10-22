@@ -42,6 +42,11 @@ class User extends Authenticatable implements Verify
         'phone',
     ];
 
+    public function association()
+{
+    return $this->hasOne(Association::class);
+}
+
     /**
      * The attributes that should be hidden for serialization.
      *

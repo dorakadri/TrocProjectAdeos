@@ -1,5 +1,5 @@
-@extends('admin.components.layout')
-@section('contentadmin')
+@extends('components.layout')
+@section('content')
 <div class="container container-fluide px-5 py-5 " >
 
 <form action="{{ route('contacts.update', ['contact' => $contact->id]) }}" method="post">
@@ -31,27 +31,14 @@
                 <div class="row tab-pane fade show active" id="user-detail">
                     <div class="col-sm-12">
                         <div class="col-md-12 p-0">
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <div class="form-group">
-                                        <label for="association_id">Associations:</label>
-                                        <select id="association_id" name="association_id" class="form-control">
-                                            @foreach($associations as $association)
-                                                <option value="{{ $association->id }}"
-                                                        {{ $contact->association_id == $association->id ? 'selected' : '' }}>
-                                                    {{ $association->name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </li>
-                            </ul>
+                         
 
                             <div class="form-group">
                                 <label class="form-label" for="name">Phone Number</label>
                                 <input type="text" class="form-control" name="number" placeholder="Number"
                                        value="{{ $contact->number }}">
                             </div>
+                       
 
                             <div class="form-group">
                                 <label class="form-label" for="address">Local Address</label>

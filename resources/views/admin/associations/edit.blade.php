@@ -45,24 +45,13 @@
                                 <label class="form-label" for="logo">Logo</label>
                                 <input type="file" class="form-control" name="logo" accept="image/*">
                             </div>
-                        <div class="form-group">
-                            <label class="form-label" for="logo">Responsable</label>
-                            <input type="text" class="form-control" name="responsable" placeholder="responsable" value="{{$association->responsable}}" >
-                        </div>
+                      
                             <div class="form-group">
                             <label class="form-label" for="exampleInputPlaceholder">description</label>
                             <input type="text" class="form-control" name="description" placeholder="description" value="{{$association->description}}" >
                         </div>
                       
 
-
-
-                      
-
-                         
-                        
-                    
-                  
                     
                         <button type="submit" class="btn btn-primary">Submit</button>
                        
