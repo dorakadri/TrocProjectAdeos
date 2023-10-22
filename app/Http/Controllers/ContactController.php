@@ -89,7 +89,7 @@ public function destroy($id)
     $contact = Contact::findOrFail($id);
     $contact->delete();
 
-    return redirect()->route('Userinterface.association.index1')->with('success', 'Contact deleted successfully.');
+    return redirect()->route('Userinterface.associations.index1')->with('success', 'Contact deleted successfully.');
 }
 
 
