@@ -99,14 +99,14 @@
                     <!-- <h6 class="text-danger">{{$post->user->name}}</h6>-->
                         <div class="w-100">
                            <div class="d-flex  justify-content-between">
+                              
+                              <div class="me-3">
+                           <img class=" img-fluid" src="{{ asset('storage/logos/' . $post->image) }}"  alt="post-image" class="img-fluid rounded w-100" alt="blog-img" loading="lazy">
+                        </div>
                               <div class="">
                                  <h5 class="mb-0 d-inline-block">{{$post->title}}</h5>
                                 
                               </div>
-                              <div class="me-3">
-                           <img class=" img-fluid" src="{{ asset('storage/logos/' . $post->image) }}"  alt="post-image" class="img-fluid rounded w-100" alt="blog-img" loading="lazy">
-                        </div>
-                              
                               <div class="card-post-toolbar">
                             
 
