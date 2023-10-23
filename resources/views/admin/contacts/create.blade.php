@@ -1,7 +1,6 @@
 @extends('components.layout')
 @section('content')
-@extends('components.layout')
-@section('content')
+
 <div class="container container-fluide px-5 py-5">
 <form action="{{ route('contacts.store') }}" method="POST">
     @csrf
@@ -42,5 +41,3 @@
 </div>
 @endsection
 
-
-@endsection
