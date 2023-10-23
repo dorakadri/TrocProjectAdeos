@@ -17,6 +17,7 @@ class RoleBasedRedirect
      */
     public function handle($request, Closure $next, ...$roles)
     {
+     
         $user = Auth::user();
     
         // Check if the user's role matches any of the specified roles

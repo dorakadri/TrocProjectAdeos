@@ -74,7 +74,7 @@ public function __construct()
      'description' => $request->input('description'),
         'name' => $request->input('name'),
     ];
-
+  
    if($request->Hasfile('logo')){
             $associationData['logo']=$request->file('logo')->store('logo','public');
         }
@@ -185,6 +185,7 @@ public function show($id)
 {
     $association = Association::find($id);
     $contacts = $association->contacts; // Retrieve contacts associated with this association
+
     return view('admin.associations.show', compact('association', 'contacts'));
 }
 
