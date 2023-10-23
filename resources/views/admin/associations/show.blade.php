@@ -16,7 +16,7 @@
         </tr>
         <tr>
             <th>Logo</th>
-            <td><img src="{{ asset('logos/'.$association->logo) }}" alt="Association Logo" style="max-width: 200px;"></td>
+            <td><img src="{{ asset('storage/'.$association->logo) }}"  alt="Association Logo" style="max-width: 200px;"></td>
         </tr>
         </tr>
         <tr>

@@ -102,13 +102,11 @@ public function __construct()
       ];
   
       // Check if a new logo file was uploaded
-      if ($request->hasFile('logo')) {
-          $logo = $request->file('logo');
-          $logoName = time().'.'.$logo->getClientOriginalExtension();
-          $logo->storeAs('logos', $logoName, 'public'); // Store the logo in the 'public/logos' directory
-          $associationData['logo'] = $logoName;
-      }
   
+      if($request->Hasfile('logo')){
+        $associationData['logo']=$request->file('logo')->store('logo','public');
+    }
+
       $association->update($associationData);
   
       return redirect()->route('associations.index')
@@ -136,12 +134,11 @@ public function __construct()
     ];
 
     // Check if a new logo file was uploaded
-    if ($request->hasFile('logo')) {
-        $logo = $request->file('logo');
-        $logoName = time().'.'.$logo->getClientOriginalExtension();
-        $logo->storeAs('logos', $logoName, 'public'); // Store the logo in the 'public/logos' directory
-        $associationData['logo'] = $logoName;
-    }
+
+    if($request->Hasfile('logo')){
+      $associationData['logo']=$request->file('logo')->store('logo','public');
+  }
+
 
     $association->update($associationData);
 
